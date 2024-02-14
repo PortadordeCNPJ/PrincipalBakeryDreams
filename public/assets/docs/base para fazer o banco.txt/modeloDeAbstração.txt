@@ -1,0 +1,32 @@
+hello everyone 
+
+Abstração bolada do Guilherme de Souza M.
+
+db_bakery
+
+tb_usuarios(id_usuario, usr_nome, usr_email, usr_cpf, usr_senha, idusr_vendas, idusr_endereco, idusr_tipo);
+tb_tipos(id_, vendedor, admin, )
+tb_produtos(id_produto, nome_prdt, valor_prdt);
+tb_vendas(id_venda, idvdn_produto, vnd_preco, vnd_quantidade);
+tb_vndprodutos(id_vndprdUsuario, dtvnd_Produto, dtvnd_Entrega, dtVenda)
+tb_enderecos(id_endereco, rua_endereco, bairr_endereco, nmr_endereco, cep_endereco, ref_endereco);
+tb_entregas()
+
+
+
+Outra Maneira que foi encontrada para fazer:
+
+
+tb_usuarios(id_usuario, usr_nome, usr_email, usr_cpf, usr_senha, idusr_tipo);
+
+tb_tipos(id_tipo, tp_tipo)
+
+tb_produtos(id_produto, nome_prdt, valor_prdt);
+
+tb_vendas(id_venda, idvnd_usuario, vnd_preco, vnd_quantidade, dtvnd_produto);
+
+tb_vndprodutos(id_vndproduto, id_vndprdvenda, id_vndprdproduto, id_vndprdentrega);
+
+tb_enderecos(id_endereco, idend_usuario, end_rua, end_bairro, end_numero, end_referencia);
+
+tb_entregas(id_entrega, identrg_vndproduto, entrg_data);

@@ -1,0 +1,15 @@
+{
+    "name": "guilherme.muller2/bakery-dreams",
+    "autoload": {
+        "psr-4": {
+            "GuilhermeMuller2\\BakeryDreams\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PortadordeCNPJ",
+            "email": "guilhermedesouzamuller@gmail.com"
+        }
+    ],
+    "require": {}
+}

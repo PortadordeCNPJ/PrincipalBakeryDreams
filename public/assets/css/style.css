@@ -1,0 +1,563 @@
+/* ------------------- CSS GERAL DA PÁGINA -------------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.texto {
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-size: 20px;
+  color: #000;
+  margin: 40px 20px 38px 44px;
+}
+
+h2 {
+  margin: 0%;
+  text-align: right;
+}
+
+span {
+  font-size: 34px;
+  font-family: 'Galada', cursive;
+}
+
+.slogan-home{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ------------------- CSS DO CABEÇALHO -------------------- */
+
+.cabecalho {
+  background-color: #FFB6C1;
+  height: 135px;
+  text-align: center;
+  font-family: 'Galada', cursive;
+  display: flex;
+  justify-content: space-around;
+  border: 5px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 60PX;
+  float: left;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+
+/*Nav para deixar o menu na horizontal*/
+
+.header-pg-princ ul {
+  text-align: right;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 30px 0 10px 0;
+}
+
+.header-pg-princ li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header-pg-princ a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* --------------------CSS PARA COLOCAR O BOTÃO DO CABEÇALHO NO LUGAR CORRETO-------------------------- */
+
+
+.comic-button {
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  align-items: center;
+
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+
+/*------------------ CSS TELA DE LOGIN/CADASTRO --------------------------*/
+
+.colorful-form {
+  max-width: 400px;
+  margin: 50px auto 50px;
+  padding: 35px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f69;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.form-button:hover {
+  background-color: #ff5f59;
+}
+
+.button-dois {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f69;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.img-forms {
+  position: relative;
+}
+
+.img-for {
+  position: absolute;
+  top: 35%;
+  width: 500px;
+}
+
+.img-formi {
+  position: absolute;
+  top: 5%;
+  width: 500px;
+}
+
+.img-formi-home {
+  position: absolute;
+  top: 56%;
+  margin-left: 72%;
+  width: 420px;
+}
+
+.error {
+  color: white;
+  background: red;
+  display: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* --------------------CSS PARA COLOCAR O BOTÃO DO OLHO NO LUGAR CORRETO-------------------------- */
+
+.inputwrapper {
+  display: flex;
+}
+
+.eyebt {
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffb6c1 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #b3adad;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffb6c1;
+  border: 3px solid #ffb6c1;
+}
+
+/* ----------------------------------CSS DO RODAPÉ---------------------------------- */
+
+.restApp {
+  /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+  flex-grow: 10;
+  flex-shrink: 10;
+
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: #FFB6C1;
+  width: 100%;
+  /* margin-top: 30px; */
+  padding: 50px 0 25px;
+  color: #f7f7f7;
+  bottom: 0;
+  left: 0;
+  position: relative;
+}
+
+/* ---------------------------------- CSS DA PAGINA DE PRODUTOS --------------------------------------------- */
+
+.produto {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+.container-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 0 20px;
+}
+
+.card {
+  align-items: center;
+  background-color: #ac6730;
+  width: 239px;
+  height: 390px;
+  border-radius: 10px;
+  margin: 20px 44px 50px 100px;
+}
+
+.img-card {
+  width: 200px;
+  height: 170px;
+  margin: 15px 15px;
+  border-radius: 12px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Open Sans';
+  font-weight: 900;
+  color: #202020;
+  cursor: pointer;
+}
+
+.count {
+  all: unset;
+  width: 25px;
+  font-size: 20px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #202020;
+}
+
+.texto-card {
+  display: flex;
+  justify-content: center;
+}
+
+/*botao do valor parte de baixo*/
+.total-amount {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  font-size: 40px;
+  border-radius: 30px;
+}
+
+.amount {
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+
+  95% {
+    left: 100%;
+  }
+
+  98% {
+    left: 100%;
+  }
+
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  98% {
+    left: -300%;
+  }
+
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+
+  97% {
+    scroll-snap-align: none;
+  }
+
+  99% {
+    scroll-snap-align: none;
+  }
+
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+.body {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 75%;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+
+/* ------------------- CSS DA IMAGEM DO CARROSEL -------------------- */
+
+.img-wrapper {
+  width: 100%;
+}
+
+.img-princ {
+  width: 560px;
+  height: 405px;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #FFB6C1;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
