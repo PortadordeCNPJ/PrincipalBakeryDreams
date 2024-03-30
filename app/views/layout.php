@@ -12,6 +12,10 @@
     <script src="././public/assets/js/bootstrap.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="././public/assets/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css">
+    <source src="/public/assets/js/bootstrap.js" type="">
+    <source src="/public/assets/js/jquery.js" type="">
+
     <title>Views</title>
 </head>
 
