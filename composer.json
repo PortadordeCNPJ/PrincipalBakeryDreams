@@ -1,8 +1,9 @@
 {
-    "name": "guilherme.muller2/bakery-dreams",
+    "name": "guilherme.muller2/aprendendo-pdo",
     "autoload": {
         "psr-4": {
-            "GuilhermeMuller2\\BakeryDreams\\": "src/"
+            "GuilhermeMuller2\\AprendendoPdo\\": "src/",
+            "app\\":"app"
         }
     },
     "authors": [
