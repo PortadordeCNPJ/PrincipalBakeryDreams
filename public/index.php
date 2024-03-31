@@ -13,7 +13,13 @@ $routes = [
     '/user_edit' => 'controllers/user_edit',
     '/user_destroy' => 'controllers/user_destroy',
     '/user_update' => 'controllers/user_update',
-    '/add_cart' => 'controllers/add_cart',
+    '/cart' => 'controllers/cart',
+    '/cart_add' => 'controllers/cart_add',
+    '/cart_clear' => 'controllers/cart_clear',
+    '/cart_remove' => 'controllers/cart_remove',
+    '/cart_products' => 'controllers/cart_products',
+    '/cart_quantidade' => 'controllers/cart_quantidade',
+    
 ];
 
 //função uri que carrega as páginas dentro do site
