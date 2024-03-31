@@ -27,6 +27,7 @@
         <div class="btn-group">
             <a class="btn btn-default" href="/" role="button">Início</a>
             <a class="btn btn-default" href="/user_create" role="button">Cadastrar</a>
+            <a class="btn btn-default" href="/add_cart" role="button">Carrinho de Compras</a>
         </div>
         
         <!-- Aqui irao carregar as views de dentro do controller-->
