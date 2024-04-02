@@ -1,6 +1,6 @@
 <?php
 
-//Arquivo para fazer a conecção com o PDO
+//Arquivo para fazer a conexão com o PDO
 namespace app\models;
 
 use PDO;
@@ -15,7 +15,7 @@ class Connection
         //require puxando as informações do config
         $config = require "../config.php";
 
-        new PDO('mysql:host=localhost;dbnmae=curso_pdo;charset=utf8','root', '');
+        new PDO('mysql:host=localhost;dbname=db_bakery;charset=utf8','root', '');
 
         //Aqui estamos atribuindo e criando o PDO, passando para ele as informações que nós colocamos dentro de config.php
         $pdo = new PDO("mysql:host={$config['db']['host']};dbname={$config['db']['dbname']};charset={$config['db']['charset']}", $config['db']['username'], $config['db']['password']);

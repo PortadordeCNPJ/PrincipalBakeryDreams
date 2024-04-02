@@ -8,17 +8,17 @@ use app\classes\Uri;
 //Array com todas as rotas que teram dentro do site
 $routes = [
     '/' => 'controllers/index',
-    '/user_create' => 'controllers/user_create',
-    '/user_store' => 'controllers/user_store',
-    '/user_edit' => 'controllers/user_edit',
-    '/user_destroy' => 'controllers/user_destroy',
-    '/user_update' => 'controllers/user_update',
-    '/cart' => 'controllers/cart',
-    '/cart_add' => 'controllers/cart_add',
-    '/cart_clear' => 'controllers/cart_clear',
-    '/cart_remove' => 'controllers/cart_remove',
-    '/cart_products' => 'controllers/cart_products',
-    '/cart_quantidade' => 'controllers/cart_quantidade',
+    '/user_create' => 'controllers/user/user_create',
+    '/user_store' => 'controllers/user/user_store',
+    '/user_edit' => 'controllers/user/user_edit',
+    '/user_destroy' => 'controllers/user/user_destroy',
+    '/user_update' => 'controllers/user/user_update',
+    '/cart' => 'controllers/cart/cart',
+    '/cart_add' => 'controllers/cart/cart_add',
+    '/cart_clear' => 'controllers/cart/cart_clear',
+    '/cart_remove' => 'controllers/cart/cart_remove',
+    '/cart_products' => 'controllers/cart/cart_products',
+    '/cart_quantidade' => 'controllers/cart/cart_quantidade',
     
 ];
 
