@@ -25,5 +25,3 @@ Esses são os requisitos para o site!!
 - Fazer um footer com o contato para o whatsapp.
 
 - Relatório de vendas, podendo gerar em PDF (Decidir ainda a forma que vms fazer!)
-
-- 
