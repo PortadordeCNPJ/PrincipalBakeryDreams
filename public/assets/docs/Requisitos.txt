@@ -1,0 +1,29 @@
+Esses são os requisitos para o site!!
+
+- Tipos de Produtos que serão vendidos: Bolos, doces e salgadinhos.
+
+- Páginas separadas apenas para os bolos, doces e salgadinhos.
+
+- A compra dos bolos deve ser feita por peso, os salgadinhos e doces por quantidade.
+
+- Colocar as opções de compra como retirada e para compra no site para entrega.
+
+- Cadastro e controle de clientes.
+
+- Na página inicial deve ter um pouco de todos os 3 tipos de produtos para mostrar para o clinte, deve ter uma descrição junto da imagem.
+
+- Na página dos salgadinhos tem que ter uma opção para entregar frito e outra para congelado.
+
+- Deve ter um search para cada página para buscar o tipo de produto correspondente.
+
+- Paleta do site: vermelho, amarelo, rosa e outras.
+
+- Usar apenas uma foto por produto.
+
+- Deve conter um agendamento para poder pegar no balcão, fazer essa opção dentro do carrinho.
+
+- Fazer um footer com o contato para o whatsapp.
+
+- Relatório de vendas, podendo gerar em PDF (Decidir ainda a forma que vms fazer!)
+
+- 
