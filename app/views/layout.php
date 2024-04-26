@@ -25,9 +25,9 @@
 
     <div class="containter">
         <div class="btn-group">
-            <a class="btn btn-default" href="/" role="button">Início</a>
-            <a class="btn btn-default" href="/user_create" role="button">Cadastrar</a>
-            <a class="btn btn-default" href="/cart_products" role="button">Carrinho de Compras</a>
+        <?php echo menuItem("/", "Inicio");?>
+        <?php echo menuItem("/user_create", "Cadastrar");?>
+        <?php echo menuItem("cart_products", "Carrinho de Compra");?>
         </div>
         
         <!-- Aqui irao carregar as views de dentro do controller-->

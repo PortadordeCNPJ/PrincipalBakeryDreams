@@ -4,7 +4,11 @@
         "psr-4": {
             "GuilhermeMuller2\\AprendendoPdo\\": "src/",
             "app\\":"app"
-        }
+        },
+
+        "files": [
+            "app/components/menu_item.php"
+        ]
     },
     "authors": [
         {
