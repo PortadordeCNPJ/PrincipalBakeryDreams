@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 use app\classes\Cart;
 use app\models\ReadCart;
 
