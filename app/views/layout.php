@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,85 +13,61 @@
     <script src="../../assets/js/jquery.js" type=""></script>
     <script src="../../assets/js/bootstrap.js" crossorigin="anonymous"></script>
     <!-- Offiline -->
-    
+
     <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/v4-shims.min.css" integrity="sha512-veZLkufL0qjcloU3GqyNh2cOqjduXLgni09I72g783Fyudzxcm2A7lxj6Qxn4YrnhJdD8rB9vkR+rOtfF4TZ1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
 
     <title>Views</title>
 </head>
 
 <body>
-<header>
+    <header>
         <div class="cabecalho">
-            <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png">
-
-            </div>
-
-            <nav class="header-pg-princ">
-                <ul>
-                    <li class="comic-button">
-                        <h2><?php echo menuItem("/", "Inicio");?></h2>
-                    </li>
-                    <li class="comic-button">
-                        <h2><?php echo menuItem("/user_create", "Cadastrar");?></h2>
-                    </li>
-                    <li class="comic-button">
-                        <h2><a href="?page=login">Login </a></h2>
-                    </li>
-                    <li class="comic-button">
-                        <h2><a href="?page=produto">Produtos </a> </h2>
-                    </li>
-                    <?php print "<li class='comic-button'>
-                            <h2><a href='?page=logout-usuario'>Sair</a></h2>
-                            </li>";
-                    ?>
-                    <li class="comic-button">
-                        <h2><?php echo menuItem("/cart_products", "<i class='fa-sharp fa-regular fa-cart-shopping'></i>");?> </h2>
-                    </li>
-                    <!--<li class="comic-button">
-                       
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Launch demo modal
-                        </button>
-
-                        
-                         Modal <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>-->
-                </ul>
-
+            <nav class="navbar navbar-expand-lg header-pg-princ navBarPgIncio">
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li>
+                            <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png">
+                        </li>
+                        <li>
+                            <h2><?php echo menuItem("/", "Inicio"); ?></h2>
+                        </li>
+                        <li>
+                            <h2><?php echo menuItem("/user_create", "Cadastrar"); ?></h2>
+                        </li>
+                        <li>
+                            <h2><a href="?page=login">Login </a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="?page=produto">Produtos </a> </h2>
+                        </li>
+                        <li>
+                            <h2><?php echo menuItem("/cart_products", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="/login">Login</a></li>
+                                <li><a class="dropdown-item" href="/cadastro">Cadastro</a></li>
+                                <li><a class="dropdown-item" href="/sair">Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+
         </div>
     </header>
 
-
-   <!-- <div class="containter">
-        <div class="btn-group">
-        <?php //echo menuItem("/", "Inicio");?>
-        <?php //echo menuItem("/user_create", "Cadastrar");?>
-        <?php //echo menuItem("/cart_products", "Carrinho de Compra");?>
-        </div>
-    -->
-        <!-- Aqui irao carregar as views de dentro do controller-->
-        <?php require $layout->load(); ?>
+    <!-- Aqui irao carregar as views de dentro do controller-->
+    <?php require $layout->load(); ?>
     </div>
 </body>
 
