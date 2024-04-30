@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 use app\classes\CartProducts;
 use app\classes\Cart;
 
