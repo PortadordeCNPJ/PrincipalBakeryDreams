@@ -7,6 +7,7 @@ body {
   height: 100%;
 }
 
+
 /*----------------- CSS PARA A NAV BAR-------------------------*/
 
 .navBarPgIncio {
@@ -18,6 +19,15 @@ body {
 .navBarBotoes {
   display: flex;
   justify-content: space-evenly;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.collapse.navbar-collapse {
+  justify-content: end;
+  margin: 0 70px 0 0;
 }
 
 /*----------------- FIM CSS PARA A NAV BAR-------------------------*/

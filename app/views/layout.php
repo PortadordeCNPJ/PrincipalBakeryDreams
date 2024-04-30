@@ -21,50 +21,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
     <title>Views</title>
 </head>
 
 <body>
-    <header>
-        <div class="cabecalho">
-            <nav class="navbar navbar-expand-lg header-pg-princ navBarPgIncio">
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                        <li>
-                            <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png">
-                        </li>
-                        <li>
-                            <h2><?php echo menuItem("/", "Inicio"); ?></h2>
-                        </li>
-                        <li>
-                            <h2><?php echo menuItem("/user_create", "Cadastrar"); ?></h2>
-                        </li>
-                        <li>
-                            <h2><a href="?page=login">Login </a></h2>
-                        </li>
-                        <li>
-                            <h2><a href="?page=produto">Produtos </a> </h2>
-                        </li>
-                        <li>
-                            <h2><?php echo menuItem("/cart_products", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-regular fa-user"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="/login">Login</a></li>
-                                <li><a class="dropdown-item" href="/cadastro">Cadastro</a></li>
-                                <li><a class="dropdown-item" href="/sair">Sair</a></li>
-                            </ul>
-                        </li>
+    <nav class="navbar navbar-expand-lg">
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png">
+                </li>
+                <li class="navbar-item">
+                    <h2><?php echo menuItem("/", "Inicio"); ?></h2>
+                </li>
+                <li class="navbar-item">
+                    <h2><?php echo menuItem("/cart_products", "Produtos"); ?></h2>
+                </li>
+                <li class="navbar-item">
+                    <h2><?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
+                </li>
+                <li class="navbar-item" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="/login">Login</a></li>
+                        <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
+                        <li><a class="dropdown-item" href="/sair">Sair</a></li>
                     </ul>
-                </div>
-            </nav>
-
+                </li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Aqui irao carregar as views de dentro do controller-->
     <?php require $layout->load(); ?>
