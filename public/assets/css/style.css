@@ -10,24 +10,66 @@ body {
 
 /*----------------- CSS PARA A NAV BAR-------------------------*/
 
-.navBarPgIncio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.navBarBotoes {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .dropdown-toggle::after {
   display: none;
 }
 
 .collapse.navbar-collapse {
   justify-content: end;
-  margin: 0 70px 0 0;
 }
+
+.header-pg-princ ul {
+  margin: 30px 140px 10px 0px;
+}
+
+.header-pg-princ li {
+  margin-left: 10px;
+}
+
+.header-pg-princ a {
+  color: #000;
+}
+
+.cabecalho {
+  background-color: #FFB6C1;
+  height: 135px;
+  font-family: 'Galada', cursive;
+  display: flex;
+  justify-content: space-between;
+  border: 5px;
+}
+
+/*-------Botões NavBar----------*/
+
+.comic-button {
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  align-items: center;
+
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+/*------- FIM Botões NavBar----------*/
 
 /*----------------- FIM CSS PARA A NAV BAR-------------------------*/

@@ -25,35 +25,34 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-            <ul class="navbar-nav">
-                <li class="navbar-item">
-                    <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png">
-                </li>
-                <li class="navbar-item">
-                    <h2><?php echo menuItem("/", "Inicio"); ?></h2>
-                </li>
-                <li class="navbar-item">
-                    <h2><?php echo menuItem("/cart_products", "Produtos"); ?></h2>
-                </li>
-                <li class="navbar-item">
-                    <h2><?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
-                </li>
-                <li class="navbar-item" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="/login">Login</a></li>
-                        <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
-                        <li><a class="dropdown-item" href="/sair">Sair</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <div class="cabecalho">
+        <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png"></div>
+        <nav class="navbar navbar-expand-lg header-pg-princ">
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="navbar-item comic-button">
+                        <h2><?php echo menuItem("/", "Inicio"); ?></h2>
+                    </li>
+                    <li class="navbar-item comic-button">
+                        <h2><?php echo menuItem("/cart_products", "Produtos"); ?></h2>
+                    </li>
+                    <li class="navbar-item comic-button">
+                        <h2><?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
+                    </li>
+                    <li class="nav-item dropdown comic-button">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/login">Login</a></li>
+                            <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
+                            <li><a class="dropdown-item" href="/sair">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <!-- Aqui irao carregar as views de dentro do controller-->
     <?php require $layout->load(); ?>
     </div>
