@@ -25,18 +25,26 @@
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="logo-wrapper"> <img class="logo" src="./assets/img/logo.png"></div>
-        <nav class="navbar navbar-expand-lg header-pg-princ">
+    <!-- <div class=" cabecalho"> -->
+    <nav class="navbar navbar-expand-lg header-pg-princ navbar-custom">
+        <div class="container">
+            <div class="navbar-brand me-auto d-flex">
+                <a href="#">
+                    <img src="./assets/img/logo.png" alt="" width="30" height="24">
+                </a>
+            </div>
+            <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
-                    <li class="navbar-item comic-button">
+                    <li class="comic-button">
                         <h2><?php echo menuItem("/", "Inicio"); ?></h2>
                     </li>
-                    <li class="navbar-item comic-button">
+                    <li class="comic-button">
                         <h2><?php echo menuItem("/cart_products", "Produtos"); ?></h2>
                     </li>
-                    <li class="navbar-item comic-button">
+                    <li class="comic-button">
                         <h2><?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
                     </li>
                     <li class="nav-item dropdown comic-button">
@@ -51,8 +59,14 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
+            <form class="d-flex form-search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar">asljd</nav>
+    <!-- </div> -->
     <!-- Aqui irao carregar as views de dentro do controller-->
     <?php require $layout->load(); ?>
     </div>
