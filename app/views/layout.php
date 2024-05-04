@@ -39,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
                     <li class="comic-button">
-                        <h2><?php echo menuItem("/", "Inicio"); ?></h2>
+                        <?php echo menuItem("/", "Inicio"); ?>
                     </li>
                     <li class="comic-button">
-                        <h2><?php echo menuItem("/cart_products", "Produtos"); ?></h2>
+                        <?php echo menuItem("/cart_products", "Produtos"); ?>
                     </li>
                     <li class="comic-button">
-                        <h2><?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?> </h2>
+                        <?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?>
                     </li>
                     <li class="nav-item dropdown comic-button">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,14 @@
             </form>
         </div>
     </nav>
-    <nav class="navbar">asljd</nav>
+    <nav class="navbar navbar-down">
+        <ul class="navbar-nav navbar-down-ul">
+            <li class="nav-item-down"> <h2> <?php echo menuItem("/", "Inicio <i class='fa-solid fa-chevron-down'></i>"); ?> </h2> </li>
+            <li class="nav-item-down"><a href="#"> Sobre nós <i class="fa-solid fa-chevron-down"></i> </a></li>
+            <li class="nav-item-down"><a href="#"> Contato <i class="fa-solid fa-chevron-down"></i> </a></li>
+            <li class="nav-item-down"><a href="#">  <i class="fa-solid fa-chevron-down"></i> </a></li>
+        </ul>
+    </nav>
     <!-- </div> -->
     <!-- Aqui irao carregar as views de dentro do controller-->
     <?php require $layout->load(); ?>

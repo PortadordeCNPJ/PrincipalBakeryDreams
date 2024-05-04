@@ -6,7 +6,10 @@ body {
   padding: 0;
   height: 100%;
   background-color: #fcfcf1;
+  font-family: 'Galada', cursive;
 }
+
+/* ------------------- FIM CSS GERAL DA PÁGINA -------------------- */
 
 
 /*----------------- CSS PARA A NAV BAR-------------------------*/
@@ -31,8 +34,24 @@ body {
 .navbar-custom {
   background-color: #FFB6C1;
   height: 200px;
-  font-family: 'Galada', cursive;
   border: 5px;
+}
+
+.navbar-down {
+  justify-content: center;
+  background-color: #C46200;
+}
+
+.navbar-down-ul {
+  flex-direction: row;
+}
+
+.nav-item-down {
+  margin: 0px 10px 0px 5px;
+}
+
+.nav-item-down > a {
+  color: #ffffff;
 }
 
 /*-------Botões NavBar----------*/
@@ -64,6 +83,10 @@ body {
   background-color: #dc506c;
   box-shadow: none;
   transform: translateY(4px);
+}
+
+.btn .btn-default {
+  border: 0;
 }
 
 /*------- FIM Botões NavBar----------*/
