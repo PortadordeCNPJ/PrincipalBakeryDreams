@@ -14,6 +14,11 @@ body {
 
 /*----------------- CSS PARA A NAV BAR-------------------------*/
 
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .dropdown-toggle::after {
   display: none;
 }
@@ -54,6 +59,14 @@ body {
   color: #ffffff;
 }
 
+.nav-item-down:hover {
+  background-color: #d3812f;
+}
+
+.nav-item-down > a:focus {
+  box-shadow: none;
+}
+
 /*-------Botões NavBar----------*/
 
 .comic-button {
@@ -85,8 +98,8 @@ body {
   transform: translateY(4px);
 }
 
-.btn .btn-default {
-  border: 0;
+.comic-button > a:focus{
+  box-shadow: none;
 }
 
 /*------- FIM Botões NavBar----------*/

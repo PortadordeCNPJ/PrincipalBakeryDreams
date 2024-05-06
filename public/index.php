@@ -8,6 +8,7 @@ use app\classes\Uri;
 //Array com todas as rotas que teram dentro do site
 $routes = [
     '/' => 'controllers/index',
+    '/sobre' => 'controllers/pages/sobre',
     '/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
     '/user_edit' => 'controllers/user/user_edit',
