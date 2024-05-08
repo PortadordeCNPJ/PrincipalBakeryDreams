@@ -1,3 +1,3 @@
 <?php 
 
-$layout->add('/sobre');
+$layout->add('sobre');

@@ -9,6 +9,7 @@ use app\classes\Uri;
 $routes = [
     '/' => 'controllers/index',
     '/sobre' => 'controllers/pages/sobre',
+    '/contato' => 'controllers/pages/contato',
     '/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
     '/user_edit' => 'controllers/user/user_edit',
