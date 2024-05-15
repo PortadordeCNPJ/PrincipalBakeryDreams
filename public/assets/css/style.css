@@ -105,3 +105,68 @@ body {
 /*------- FIM Botões NavBar----------*/
 
 /*----------------- FIM CSS PARA A NAV BAR-------------------------*/
+
+
+
+/*----------------- INICIO CSS PARA OS FORMS-------------------------*/
+
+.colorful-form {
+  max-width: 400px;
+  margin: 50px auto 50px;
+  padding: 35px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f69;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.form-button:hover {
+  background-color: #ff5f59;
+}
+
+.button-dois {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f69;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+/*----------------- INICIO CSS PARA OS FORMS-------------------------*/
