@@ -1,8 +1,4 @@
 <?php
 
-use app\models\User;
-
-session_start();
-
-
+$layout->add("user_login");
 

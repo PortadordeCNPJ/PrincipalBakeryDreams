@@ -49,7 +49,7 @@
                             <i class="fa-regular fa-user"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="/login">Login</a></li>
+                            <li><a class="dropdown-item" href="/user_login">Login</a></li>
                             <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
                             <li><a class="dropdown-item" href="/sair">Sair</a></li>
                         </ul>

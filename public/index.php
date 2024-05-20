@@ -15,6 +15,7 @@ $routes = [
     '/user_edit' => 'controllers/user/user_edit',
     '/user_destroy' => 'controllers/user/user_destroy',
     '/user_update' => 'controllers/user/user_update',
+    '/user_login' => 'controllers/user/user_login',
     '/cart' => 'controllers/cart/cart',
     '/cart_add' => 'controllers/cart/cart_add',
     '/cart_clear' => 'controllers/cart/cart_clear',

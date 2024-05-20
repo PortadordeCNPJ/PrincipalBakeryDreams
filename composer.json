@@ -7,7 +7,9 @@
         },
 
         "files": [
-            "app/components/menu_item.php"
+            "app/components/menu_item.php",
+            "app/components/nav_bar.php"
+            
         ]
     },
     "authors": [
