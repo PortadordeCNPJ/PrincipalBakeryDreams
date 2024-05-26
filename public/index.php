@@ -1,6 +1,7 @@
 <?php
 require "../bootstrap.php";
 
+//Teste apenas para dar commit
 use app\classes\Routes;
 use app\classes\Layout;
 use app\classes\Uri;
