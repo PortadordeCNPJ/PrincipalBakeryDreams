@@ -2,7 +2,6 @@
     <img class="img-for" src="./assets/img/cake.png">
 
     <form id="form" class="colorful-form" method="post" action="/user_store">
-        <input type="hidden" name="acao" value="cadastrar">
         <div class="form-group">
             <label class="form-label" for="name">Name:</label>
             <input required="" placeholder="Insira seu nome" class="form-input" name="nome" id="name" type="text">
