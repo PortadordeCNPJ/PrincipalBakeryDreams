@@ -1,4 +1,9 @@
 <?php
+// if (!empty(session_start())) {
+    
+// }
+
+session_start();
 
 //Faz a ligação do autoload para todas as páginas do site
 require "vendor/autoload.php";

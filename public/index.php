@@ -20,6 +20,7 @@ $routes = [
     //Para as páginas de dentro da pasta de user
     '/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
+    '/user_quantidade' => 'controllers/user/user_quantidade',
     '/user_edit' => 'controllers/user/user_edit',
     '/user_destroy' => 'controllers/user/user_destroy',
     '/user_update' => 'controllers/user/user_update',

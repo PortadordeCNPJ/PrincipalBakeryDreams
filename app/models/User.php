@@ -4,7 +4,7 @@ namespace app\models;
 
 class User extends Model 
 {
-    protected $table = 'users';
+    protected $table = 'tb_usuarios';
     
     //função para fazer um intert into dentro da tabela de usuario no bando
     // public function insert(array $attributes) {

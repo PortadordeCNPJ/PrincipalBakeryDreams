@@ -27,8 +27,8 @@ $productsInCart = $cart->cart();
         <!-- Esse código intera na variavel de produtos, mostrando os valores que ela recebe, também transformando $product como
                  a variável que vai receber o valor da variavel $products -->
         <?php foreach ($products as $index => $product) : ?>
-            <li><?php echo $product->name; ?> | R$<?php echo number_format($product->price, 2, ',', '.'); ?>
-                <a href="/cart_add?id=<?php echo $product->id ?>"> | add to cart</a>
+            <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
+                <a href="/cart_add?id=<?php echo $product->id_produto ?>"> | add to cart</a>
             </li>
         <?php endforeach ?>
     </ul>

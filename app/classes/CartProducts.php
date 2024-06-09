@@ -12,7 +12,7 @@ class CartProducts {
     {
          $productsInCart = $cartInterface->cart();
         //  $productsInDatabase = require_once '../app/helpers/products.php';
-         $productsInDatabase = (new ReadCart)->all('tb_products');
+         $productsInDatabase = (new ReadCart)->all('tb_produtos');
          
          //Array vazio onde seram colocados todos os produtos, com nome, preço e etc.
          $products = [];
@@ -20,19 +20,25 @@ class CartProducts {
 
          foreach ($productsInCart as $productId => $quantity) {
             //esses tres pontinhos são usados para poder tornar o Array com itens dentro apenas com indice 0
-            $product = [...array_filter($productsInDatabase, fn ($product) => (int)$product->id === $productId)];
+            $product = [...array_filter($productsInDatabase, fn ($product) => (int)$product->id_produto === $productId)];
 
             // $product = $productsInDatabase[$productId];
             $products[] = [
-                'id' => $productId,
-                'product' => $product[0]->name,
-                'price' => $product[0]->price,
-                'description' => $product[0]->description,
-                'image' => $product[0]->image,
+                'id_produto' => $productId,
+                'nome' => $product[0]->nome,
+                'descricao' => $product[0]->descricao,
+                'valor' => $product[0]->valor,
+                'imagem' => $product[0]->imagem,
+                'sabor' => $product[0]->sabor,
+                'gluten' => $product[0]->gluten,
+                'amedoim' => $product[0]->amedoim,
+                'tiposalgado' => $product[0]->tiposalgado,
+                'tipodoce' => $product[0]->tipodoce,
+                'id_tipoproduto' => $product[0]->id_tipoproduto,
                 'qty' => $quantity,
-                'subtotal' => $quantity * $product[0]->price
+                'subtotal' => $quantity * $product[0]->valor,
             ];
-            $total += $quantity * $product[0]->price;
+            $total += $quantity * $product[0]->valor;
          }
          return [
             'products' => $products,
@@ -40,4 +46,3 @@ class CartProducts {
          ];
     }
 }
-?>

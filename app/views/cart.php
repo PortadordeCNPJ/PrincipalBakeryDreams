@@ -22,14 +22,14 @@ $products = $cartProducts->products(new Cart);
     <?php else : ?>
         <ul>
             <?php foreach ($products['products'] as $product) : ?>
-                <li class="cart-produtc">
-                    <?php echo $product['product']; ?>
-                    <form action="/quantidade" method="get">
-                        <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
-                        <img src="<?php echo $product['image']; ?>" alt="">
+                <li class="cart-product">
+                    <?php echo $product['nome']; ?>
+                    <form action="/cart_quantidade" method="get">
+                        <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
+                        <img src="<?php echo $product['imagem']; ?>" alt="">
                         <input type="text" name="qty" value="<?php echo $product['qty']; ?>" id="cart-input-qty">
-                    </form><?php echo $product['description']; ?> x R$ <?php echo number_format($product['price'], 2, ',', '.') ?> | R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>
-                    <a href="/cart_remove?id=<?php echo $product['id'] ?>" id="cart-remove">Remove</a>
+                    </form><?php echo $product['descricao']; ?> x R$ <?php echo number_format($product['valor'], 2, ',', '.') ?> | R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>
+                    <a href="/cart_remove?id=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
                 </li>
             <?php endforeach ?>
         </ul>

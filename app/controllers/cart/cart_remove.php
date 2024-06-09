@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 //Chamando o vendor do composer
 require '../vendor/autoload.php';
 

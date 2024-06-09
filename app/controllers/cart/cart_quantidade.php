@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 require '../vendor/autoload.php';
 
@@ -13,4 +12,3 @@ $cart = new Cart;
 $cart->quantity($id, $quantity);
 
 header('Location: /cart');
-?>
