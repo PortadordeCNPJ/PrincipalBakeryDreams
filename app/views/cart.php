@@ -27,9 +27,10 @@ $products = $cartProducts->products(new Cart);
                     <form action="/cart_quantidade" method="get">
                         <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
                         <img src="<?php echo $product['imagem']; ?>" alt="">
-                        <input type="text" name="qty" value="<?php echo $product['qty']; ?>" id="cart-input-qty">
-                    </form><?php echo $product['descricao']; ?> x R$ <?php echo number_format($product['valor'], 2, ',', '.') ?> | R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>
-                    <a href="/cart_remove?id=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
+                        <input type="number" name="qty" value="<?php echo $product['qty']; ?>" id="cart-input-qty">
+                    </form>
+                    <?php echo $product['descricao']; ?> x R$ <?php echo number_format($product['valor'], 2, ',', '.') ?> | R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>
+                    <a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
                 </li>
             <?php endforeach ?>
         </ul>

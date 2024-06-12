@@ -28,7 +28,7 @@ $productsInCart = $cart->cart();
                  a variável que vai receber o valor da variavel $products -->
         <?php foreach ($products as $index => $product) : ?>
             <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
-                <a href="/cart_add?id=<?php echo $product->id_produto ?>"> | add to cart</a>
+                <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> | add to cart</a>
             </li>
         <?php endforeach ?>
     </ul>

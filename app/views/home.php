@@ -12,14 +12,14 @@
                 <?php foreach ($users as $user) :
                 ?>
                     <tr>
-                        <td><?= $user->id; ?></td>
-                        <td><?= $user->name; ?></td>
+                        <td><?= $user->id_usuario; ?></td>
+                        <td><?= $user->nome; ?></td>
 
                         <td>
-                            <a href="/user_edit?id=<?= $user->id; ?>" class="btn btn-success">Editar</a>
+                            <a href="/user_edit?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-success">Editar</a>
                         </td>
                         <td>
-                            <a href="/user_destroy?id=<?= $user->id; ?>" class="btn btn-danger">Deletar</a>
+                            <a href="/user_destroy?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-danger">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
