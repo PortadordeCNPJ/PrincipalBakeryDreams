@@ -6,5 +6,7 @@ class SessionUser
 {
     
     public function session()
-    {}
+    {
+        
+    }
 }
