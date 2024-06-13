@@ -14,12 +14,6 @@ $transaction->transactions(function () use ($transaction, $validate){
 
     $transaction->model(User::class)->insert($validate);
 
-    $transaction->model(Post::class)->insert([
-        'title' => 'teste',
-        'user' => '15',
-        'description' => 'Livro sobre metodologia de programação',
-    ]);
-
 });
 
 

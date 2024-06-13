@@ -1,6 +1,6 @@
 <div class="img-forms">
     <img class="img-formi" src="./assets/img/cake2.png">
-    <form id="form" class="colorful-form" method="post" action="/user_login">
+    <form id="form" class="colorful-form" method="POST" action="/user_login">
 
         <div class="form-group">
             <label class="form-label" for="email">Email:</label>

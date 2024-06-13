@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+
+if (empty($_SESSION)) {
+    echo "<script>location.href='/cart';</script>";
+}
+?>
+
 <div class="container">
     <div class="row">
         <table class="table table-striped table-hover">
