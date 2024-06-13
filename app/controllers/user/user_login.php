@@ -23,5 +23,8 @@
 //     }
 // }
 
+//ideia para fazer o login do usuário
+// $userLogin = $user->find($email, $senha);
+
 $layout->add("user_login");
 

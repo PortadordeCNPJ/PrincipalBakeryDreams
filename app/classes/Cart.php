@@ -53,7 +53,6 @@ class Cart implements CartInterface
             return $_SESSION['cart'];
         }
         return [];
-        //batata XD
     }
 
     public function dump()
