@@ -1,10 +1,10 @@
 <?php 
 
-session_start();
+// session_start();
 
-if (empty($_SESSION)) {
-    echo "<script>location.href='/cart';</script>";
-}
+// if (empty($_SESSION)) {
+//     echo "<script>location.href='/cart';</script>";
+// }
 ?>
 
 <div class="container">

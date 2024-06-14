@@ -33,6 +33,9 @@ $routes = [
     '/cart_remove' => 'controllers/cart/cart_remove',
     '/cart_products' => 'controllers/cart/cart_products',
     '/cart_quantidade' => 'controllers/cart/cart_quantidade',
+
+    //Para o formulário que cadastra os produtos
+    '/cadastro_produtos' => 'controllers/cadProds/cadastro_produtos',
 ];
 
 //função uri que carrega as páginas dentro do site

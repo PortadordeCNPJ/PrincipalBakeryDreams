@@ -23,8 +23,50 @@
     </div>
 
     <div class="form-group">
-        <label class="form-label" for="gluten">gluten:</label>
+        <label class="form-label" for="gluten">Sabor:</label>
+        <input required="" placeholder="Insira o sabor" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+    </div>
+
+    <div class="form-group">
+        <!-- <label class="form-label" for="gluten">Produto contem gluten:</label>
+
+        <input required="" placeholder="" name="sim" id="gluten" type="checkbox">
+        <label for="sim">Sim</label>
+        <input required="" placeholder="" name="nao" id="gluten" type="checkbox">
+        <label for="nao">Não</label> -->
+
+        <span class="form-label"> Período: </span>
+        <div class="inf-radio">
+            <div class="radio-input">
+                <label for="sim">sim</label>
+                <label for="nao">não</label>
+            </div>
+            <div class="radio-input">
+                <input type="radio" name="periodo" value="1" id="matutino" class="radio">
+                <input type="radio" name="periodo" value="2" id="vespertino" class="radio">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="gluten">Amendoim:</label>
+        <input required="" placeholder="Tem Amendoim" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="gluten">Tipo salgado:</label>
         <input required="" placeholder="Tem cluten" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="gluten">Tipo Doce:</label>
+        <input required="" placeholder="Tem cluten" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="gluten">Tipo do Produto:</label>
+        <input required="" placeholder="" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
     </div>
 
     <!-- <button onclick="logar()" class="form-button" type="submit">Cadastrar</button> -->
