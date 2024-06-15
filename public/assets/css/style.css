@@ -156,6 +156,14 @@ body {
   background-color: #ff5f59;
 }
 
+.error {
+  color: white;
+  background: red;
+  display: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .button-dois {
   display: block;
   width: 100%;
