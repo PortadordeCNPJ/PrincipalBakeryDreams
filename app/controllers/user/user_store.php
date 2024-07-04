@@ -11,11 +11,12 @@ $validate = $validation->validate($_POST);
 $transaction = new Transaction;
 
 $transaction->transactions(function () use ($transaction, $validate){
-
+    $validate->senha = md5($validate->senha);
     $transaction->model(User::class)->insert($validate);
 
 });
 
+// header('location:/');
 
 // $validation = new Validation;
 // $validate = $validation->validate($_POST);

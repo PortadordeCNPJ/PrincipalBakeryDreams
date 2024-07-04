@@ -29,10 +29,10 @@
 
     <div class="form-group">
         <label class="form-label" for="name">Confirme sua senha: </label>
-        <input required="" placeholder="Confirme sua senha" class="form-input" name="pwd" id="pwd" type="password" onchange="password()">
+        <input required="" placeholder="Confirme sua senha" class="form-input" id="pwd" type="password" onchange="password()">
         <div class="error" id="erro-senha">Senhas não coincidem </div>
     </div>
     <button onclick="logar()" class="form-button" type="submit">Cadastrar</button>
 </form>
 
-<script src="../../public/assets/js/scriptcad.js"></script>
+<script src="/assets/js/scriptcad.js"></script>

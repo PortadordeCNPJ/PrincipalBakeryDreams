@@ -22,7 +22,8 @@ class Transaction extends Model
 
             $this->connection->rollback();
 
-            dd($e->connection->rollback);
+            var_dump($e);
+            // dd($e->connection->rollback);
         }
     }
     public function model($model)

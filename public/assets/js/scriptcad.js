@@ -23,9 +23,8 @@ document.getElementById("eye").addEventListener("click", function () {
 }, false); 
 
 function password() {
-    const senha = document.querySelector('input[name=senha]');
-    const confSenha = document.querySelector('input[name=pwd]');
-
+    const senha = document.queryElementById('senha');
+    const confSenha = document.queryElementById('pwd');
     if (confSenha.value === senha.value) {
         document.getElementById("erro-senha").style.display = "none";
     } else {
