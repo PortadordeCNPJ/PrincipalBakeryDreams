@@ -1,5 +1,5 @@
 CREATE TABLE tb_usuarios (
-    id_usuario INTEGER (11) PRIMARY KEY,
+    id_usuario INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR (150) NOT NULL,
     cpf VARCHAR (11) NOT NULL,
     fone VARCHAR (30) NOT NULL,
@@ -19,7 +19,7 @@ VALUES (1,'AdminGuiWill', '13423812828', '(45) 99134-7667', 'hgHksdhfi234()$@#',
        (3,'Willian', '09823948723', '(45) 99134-4444', 'FWR@@#dffpgfdr32345', 1, 'willian@gmail.com', '2004-09-29' , 'user', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas');
 
 CREATE TABLE tb_vendas (
-    id_venda INTEGER (11) PRIMARY KEY,
+    id_venda INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     tipovenda VARCHAR (20) NOT NULL,
     dtvenda DATE NOT NULL,
     frmpagamento VARCHAR (20) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE tb_vendas (
 );
 
 CREATE TABLE tb_vendaitens (
-    id_compraiten INTEGER (11) PRIMARY KEY,
+    id_compraiten INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     valor DECIMAL (5,2) NOT NULL,
     quantidade INTEGER (4) NOT NULL,
     id_venda INTEGER (11),
@@ -41,7 +41,7 @@ CREATE TABLE tb_vendaitens (
 );
 
 CREATE TABLE tb_tipoprodutos (
-    id_tipoproduto INTEGER (11) PRIMARY KEY,
+    id_tipoproduto INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     tipoproduto VARCHAR (30) NOT NULL
 );
 
@@ -51,7 +51,7 @@ INSERT INTO tb_tipoprodutos (id_tipoproduto, tipoproduto) VALUES
 (3, 'docinho');
 
 CREATE TABLE tb_produtos (
-    id_produto INTEGER (11) PRIMARY KEY,
+    id_produto INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR (150) NOT NULL,
     descricao VARCHAR (300) NOT NULL,
     valor DECIMAL(5,2) NOT NULL,
