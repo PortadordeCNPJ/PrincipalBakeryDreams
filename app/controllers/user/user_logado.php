@@ -5,32 +5,21 @@ session_start();
 use app\models\User;
 
 if (isset($_POST['login'])) {
-    $value = $_POST['loginValue'];
-    $password = $_POST['loginPassword'];
-
-    $sql = "SELECT cod, username, senha FROM tb_usuarios WHERE username = ? OR email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $value, $value);
-    $stmt->execute();
-    $stmt->store_result();
+    $email = $_POST['email'];
+    $senha = md5($_POST['senha']);
 
     $user = new User;
+    $userLogin = $user->find($email, $senha);
+    $userLogin = $rows;
 
-    if ($user->num_rows > 0) {
-        $user->bind_result($id, $username, $hashed_password);
-        $user->fetch();
-
-        if ($hashed_password = $password) {
-            $_SESSION['username'] = $username;
-        } else {
-        }
+    if ($senha = $rows->senha) {
+        $_SESSION['nome'] = $nome;
+        echo "logado!";
+        header('location: /');
     } else {
+        echo "Não foi possível realizar o login, por favor verifique as informações!";
     }
-
-    $stmt->close();
-    $conn->close();
 }
 
-// ideia para fazer o login do usuário
 
-$userLogin = $user->find($email, $senha);
+// ideia para fazer o login do usuário

@@ -1,6 +1,6 @@
 <div class="img-forms">
     <img class="img-formi" src="./assets/img/cake2.png">
-    <form id="form" class="colorful-form" method="POST" action="/user_login">
+    <form id="form" class="colorful-form" method="POST" action="/user_logado">
 
         <div class="form-group">
             <label class="form-label" for="email">Email:</label>
@@ -10,7 +10,7 @@
             <label class="form-label" for="name">Senha:</label>
             <input min="5" required="" placeholder="Insira sua senha" class="form-input" name="senha" id="senha" type="password">
         </div>
-        <button class="form-button" type="submit">Enviar </button>
+        <button class="form-button" name="login" type="submit">Enviar </button>
 
     </form>
 </div>

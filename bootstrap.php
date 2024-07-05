@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 //Faz a ligação do autoload para todas as páginas do site
 require "vendor/autoload.php";
 require "app/functions/helpers.php";  
