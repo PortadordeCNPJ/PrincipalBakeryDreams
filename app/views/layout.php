@@ -4,6 +4,7 @@ session_start();
 if (empty($_SESSION)) {
     echo "<script>location.href='/cart';</script>";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

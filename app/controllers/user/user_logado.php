@@ -1,19 +1,20 @@
 <?php
 
-session_start();
-
 use app\models\User;
 
-if (isset($_POST['login'])) {
+if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
+    echo "<script>alert('Usuario ou senha não encontros');</script>";
+    header('location: /');
+} else {
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
     $user = new User;
-    $userLogin = $user->find($email, $senha);
-    $userLogin = $rows;
+    $userLogado = $user->all();
 
-    if ($senha = $rows->senha) {
-        $_SESSION['nome'] = $nome;
+    if ($userLogado->email == $email && $userLogado->senha == $senha) {
+        $_SESSION['nome'] = $userLodago->nome;
+        $_SESSION['tipo'] = $userLodago->tipo;
         echo "logado!";
         header('location: /');
     } else {

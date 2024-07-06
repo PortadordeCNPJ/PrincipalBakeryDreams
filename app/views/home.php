@@ -1,5 +1,9 @@
 <div class="container">
     <div class="row">
+        <?php
+            echo "Óla, " . $_SESSION["nome"];
+            // echo "<a href='logout.php' class='btn btn-danger'>Sair</a>";
+        ?>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -14,6 +18,7 @@
                     <tr>
                         <td><?= $user->id_usuario; ?></td>
                         <td><?= $user->nome; ?></td>
+                        <td><?= $user->email; ?></td>
 
                         <td>
                             <a href="/user_edit?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-success">Editar</a>

@@ -53,4 +53,14 @@ abstract class Model{
 
         return $delete->rowCount();
     }
+
+    // public function login()
+    // {
+    //     $sql = "select * from {$this->table} where $field = ? and $field = ?"; 
+    //     $login = $this->connection->prepare($sql);
+    //     $login->bindValue(1, 'nome');
+    //     $login->execute();
+
+    //     return $login->fetch();
+    // }
 }
