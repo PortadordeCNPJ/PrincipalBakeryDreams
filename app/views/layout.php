@@ -1,11 +1,3 @@
-<?php
-session_start();
-
-if (empty($_SESSION)) {
-    echo "<script>location.href='/cart';</script>";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +49,7 @@ if (empty($_SESSION)) {
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="/user_login">Login</a></li>
                             <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
-                            <li><a class="dropdown-item" href="/sair">Sair</a></li>
+                            <li><a class="dropdown-item" href="/user_deslogado">Sair</a></li>
                         </ul>
                     </li>
                 </ul>

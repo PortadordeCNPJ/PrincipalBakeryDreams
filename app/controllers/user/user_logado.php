@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 use app\models\User;
 
@@ -10,15 +11,22 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
     $senha = md5($_POST['senha']);
 
     $user = new User;
-    $userLogado = $user->all();
 
-    if ($userLogado->email == $email && $userLogado->senha == $senha) {
-        $_SESSION['nome'] = $userLodago->nome;
-        $_SESSION['tipo'] = $userLodago->tipo;
-        echo "logado!";
-        header('location: /');
+    $emailUser = $user->find('email', $email);
+    $emailLogado = $emailUser->email;
+    $senhaUser = $user->find('senha', $senha);
+    $senhaLogado = $emailUser->senha;
+
+    // dd($emailUser);
+
+    if ($emailLogado == $email && $senhaLogado == $senha) {
+        $_SESSION['nome'] = $emailUser->nome;
+        $_SESSION['tipo'] = $emailUser->tipo;
+        echo "<script>alert('Usuário logado');</script>";;
+        $layout->add('/');
+
     } else {
-        echo "Não foi possível realizar o login, por favor verifique as informações!";
+        echo "<script>alert('Usuario ou senha não encontrados!');</script>";
     }
 }
 

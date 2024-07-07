@@ -26,6 +26,7 @@ $routes = [
     '/user_update' => 'controllers/user/user_update',
     '/user_login' => 'controllers/user/user_login',
     '/user_logado' => 'controllers/user/user_logado',
+    '/user_deslogado' => 'controllers/user/user_deslogado',
 
     //Para as página de dentro da pasta de cart
     '/cart' => 'controllers/cart/cart',
