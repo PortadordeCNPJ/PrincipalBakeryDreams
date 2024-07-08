@@ -22,6 +22,7 @@ $routes = [
     '/user_store' => 'controllers/user/user_store',
     '/user_quantidade' => 'controllers/user/user_quantidade',
     '/user_edit' => 'controllers/user/user_edit',
+    '/user_list' => 'controllers/user/user_list',
     '/user_destroy' => 'controllers/user/user_destroy',
     '/user_update' => 'controllers/user/user_update',
     '/user_login' => 'controllers/user/user_login',
@@ -46,5 +47,6 @@ $uri = Uri::load();
 $layout = new Layout;
 
 require Routes::load($routes, $uri);
+
 //Master layout, carrega todas as views dentro dele
 require $layout->master('layout');

@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +76,13 @@
     </nav>
     <!-- </div> -->
     <!-- Aqui irao carregar as views de dentro do controller-->
-    <?php require $layout->load(); ?>
+    <?php
+    if (empty($_SESSION)) {
+        require $layout->load();
+    } else {
+        require $layout->loadAdmin();
+    }
+    ?>
     </div>
 </body>
 

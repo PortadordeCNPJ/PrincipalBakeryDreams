@@ -4,19 +4,19 @@ CREATE TABLE tb_usuarios (
     cpf VARCHAR (11) NOT NULL,
     fone VARCHAR (30) NOT NULL,
     senha VARCHAR (32) NOT NULL,
-    ativo INTEGER (1) NOT NULL,
+    ativo INTEGER (1) DEFAULT 1 NOT NULL,
     email VARCHAR (100) NOT NULL,
     dt_nasc DATE NOT NULL,
-    tipo VARCHAR (20) NOT NULL,
+    tipo VARCHAR (1) DEFAULT 'U' NOT NULL,
     bairro VARCHAR (30) NOT NULL,
-    nmcasa INTEGER (8) NOT NULL,
+    nmcasa VARCHAR (8) NOT NULL,
     complemento VARCHAR (100) NOT NULL,
     rua VARCHAR (50) NOT NULL
 );
-INSERT INTO tb_usuarios(id_usuario, nome, cpf, fone, senha, ativo, email, dt_nasc, tipo, bairro, nmcasa, complemento, rua) 
-VALUES (1,'AdminGuiWill', '13423812828', '(45) 99134-7667', 'hgHksdhfi234()$@#', 1, 'webmaster@bakery.com', '2006-09-29' , 'admin', '...', 0000, 'Casa', 'Rua da nossa casa'),
-       (2,'Guilherme', '34989387232', '(45) 99134-9887', 'FWR@@#$@#FFwer32345', 1, 'guilherme@gmail.com', '2005-09-29' , 'user', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves'),
-       (3,'Willian', '09823948723', '(45) 99134-4444', 'FWR@@#dffpgfdr32345', 1, 'willian@gmail.com', '2004-09-29' , 'user', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas');
+INSERT INTO tb_usuarios(`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`) VALUES
+(1, 'AdminGuiWill', '13423812828', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', 1, 'Casa', 'Rua da nossa casa'),
+(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves'),
+(3, 'Willian', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas');
 
 CREATE TABLE tb_vendas (
     id_venda INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
@@ -33,7 +33,7 @@ CREATE TABLE tb_vendas (
 );
 
 CREATE TABLE tb_vendaitens (
-    id_compraiten INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
+    id_compraitem INTEGER (11) PRIMARY KEY AUTO_INCREMENT,
     valor DECIMAL (5,2) NOT NULL,
     quantidade INTEGER (4) NOT NULL,
     id_venda INTEGER (11),

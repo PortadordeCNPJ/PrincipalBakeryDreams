@@ -11,7 +11,6 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
     $senha = md5($_POST['senha']);
 
     $user = new User;
-
     $emailUser = $user->find('email', $email);
     $emailLogado = $emailUser->email;
     $senhaUser = $user->find('senha', $senha);
@@ -22,11 +21,13 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
     if ($emailLogado == $email && $senhaLogado == $senha) {
         $_SESSION['nome'] = $emailUser->nome;
         $_SESSION['tipo'] = $emailUser->tipo;
-        echo "<script>alert('Usuário logado');</script>";;
-        $layout->add('/');
+        $_SESSION['id_usuario'] = $emailUser->id_usuario;
+        echo "<script>alert('Usuário logado');</script>";
+        $layout->add('home');
 
     } else {
         echo "<script>alert('Usuario ou senha não encontrados!');</script>";
+        header('location: /user_login');
     }
 }
 
