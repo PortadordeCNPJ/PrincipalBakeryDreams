@@ -14,11 +14,5 @@
         <input type="text" class="form-control" name="email" placeholder="Digite seu email" value="<?= $userEncontrado->email ?>">
     </div>
 
-    <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" class="form-control" name="senha" placeholder="Digite sua senha" value="<?= $userEncontrado->senha ?>">
-    </div>
-
-
     <button type="submit" class="btn btn-primary">cadastrar</button>
 </form>

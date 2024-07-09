@@ -1,3 +1,5 @@
+
+
 <h2>Cadastrar User</h2>
 <img class="img-for" src="./assets/img/cake.png">
 
@@ -47,7 +49,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <div class="form-group">
         <label class="form-label" for="gluten">Amendoim:</label>
@@ -69,7 +70,5 @@
         <input required="" placeholder="" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
     </div>
 
-    <!-- <button onclick="logar()" class="form-button" type="submit">Cadastrar</button> -->
+    <button class="form-button" type="submit">Cadastrar</button>
 </form>
-
-<script src="assets/js/scriptcad.js"></script>

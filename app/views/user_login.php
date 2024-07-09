@@ -25,7 +25,6 @@ if (!empty($_SESSION)) {
                 <input min="5" required="" placeholder="Insira sua senha" class="form-input" name="senha" id="senha" type="password">
             </div>
             <button class="form-button" type="submit">Enviar </button>
-
         </form>
     </div>
 <?php

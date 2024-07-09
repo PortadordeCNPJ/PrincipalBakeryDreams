@@ -1,3 +1,9 @@
+<?php
+    if (empty($_SESSION)) {
+        echo "<script>location.href='/user_login';</script>";
+    }
+?>
+
 <table class="table table-striped table-hover">
     <thead>
         <tr>

@@ -16,7 +16,7 @@ $transaction->transactions(function () use ($transaction, $validate){
 
 });
 
-// header('location:/');
+header('location:/');
 
 // $validation = new Validation;
 // $validate = $validation->validate($_POST);

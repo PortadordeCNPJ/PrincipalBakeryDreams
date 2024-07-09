@@ -1,9 +1,3 @@
-<?php
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,9 +47,18 @@ session_start();
                             <i class="fa-regular fa-user"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="/user_login">Login</a></li>
-                            <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
-                            <li><a class="dropdown-item" href="/user_deslogado">Sair</a></li>
+                            <?php
+                            if (!empty($_SESSION)) {
+                                echo "<label for=''>Email</label>
+                                    <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
+                                    <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
+                            } else {
+                            ?>
+                                <li><a class="dropdown-item" href="/user_login">Login</a></li>
+                                <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </li>
                 </ul>
@@ -77,11 +80,7 @@ session_start();
     <!-- </div> -->
     <!-- Aqui irao carregar as views de dentro do controller-->
     <?php
-    if (empty($_SESSION)) {
-        require $layout->load();
-    } else {
-        require $layout->loadAdmin();
-    }
+    require $layout->load();
     ?>
     </div>
 </body>
