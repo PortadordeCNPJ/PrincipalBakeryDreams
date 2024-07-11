@@ -1,9 +1,9 @@
 <?php
 
-use app\models\Produto;
+use app\models\TipoProduto;
 
-$produtos = new Produto;
+$tipoProduto = new TipoProduto;
 
-$users = $user->all();
+$tipoProdutos = $tipoProduto->all();
 
 $layout->add('cadastro_produtos');

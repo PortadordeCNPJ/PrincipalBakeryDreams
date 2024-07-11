@@ -1,12 +1,14 @@
+<h2>Cadastro de Produtos</h2>
 
 
-<h2>Cadastrar User</h2>
+
 <img class="img-for" src="./assets/img/cake.png">
 
 <form id="form" class="colorful-form" method="post" action="/castro_produtos">
+
     <div class="form-group">
         <label class="form-label" for="name">Nome:</label>
-        <input required="" placeholder="Insira seu nome" class="form-input" name="nome" id="name" type="text">
+        <input required="" placeholder="Insira o nome do produto" class="form-input" name="nome" id="name" type="text">
     </div>
 
     <div class="form-group">
@@ -24,50 +26,27 @@
         <input required="" placeholder="Insira a imagem" class="form-input" name="imagem" id="senha" type="text">
     </div>
 
+    <!-- Fazer um if que vai verificar o tipo do produto e vai com base nele, cadastrar no campo correto -->
+
+    <div class="form-group">
+        <label class="form-label" for="gluten">Tipo do Produto:</label>
+
+        <select>
+            <?php foreach ($tipoProdutos as $tipoProduto) :
+            ?>
+                <option selected name="<?= $tipoProduto->id_tipoproduto ?>"><?= $tipoProduto->tipoproduto ?></option>;
+            <?php endforeach; ?>
+        </select>
+    </div>
+
     <div class="form-group">
         <label class="form-label" for="gluten">Sabor:</label>
         <input required="" placeholder="Insira o sabor" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
     </div>
 
     <div class="form-group">
-        <!-- <label class="form-label" for="gluten">Produto contem gluten:</label>
-
-        <input required="" placeholder="" name="sim" id="gluten" type="checkbox">
-        <label for="sim">Sim</label>
-        <input required="" placeholder="" name="nao" id="gluten" type="checkbox">
-        <label for="nao">Não</label> -->
-
-        <span class="form-label"> Período: </span>
-        <div class="inf-radio">
-            <div class="radio-input">
-                <label for="sim">sim</label>
-                <label for="nao">não</label>
-            </div>
-            <div class="radio-input">
-                <input type="radio" name="periodo" value="1" id="matutino" class="radio">
-                <input type="radio" name="periodo" value="2" id="vespertino" class="radio">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
         <label class="form-label" for="gluten">Amendoim:</label>
         <input required="" placeholder="Tem Amendoim" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
-    </div>
-
-    <div class="form-group">
-        <label class="form-label" for="gluten">Tipo salgado:</label>
-        <input required="" placeholder="Tem cluten" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
-    </div>
-
-    <div class="form-group">
-        <label class="form-label" for="gluten">Tipo Doce:</label>
-        <input required="" placeholder="Tem cluten" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
-    </div>
-
-    <div class="form-group">
-        <label class="form-label" for="gluten">Tipo do Produto:</label>
-        <input required="" placeholder="" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>
