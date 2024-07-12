@@ -1,10 +1,8 @@
 <h2>Cadastro de Produtos</h2>
 
-
-
 <img class="img-for" src="./assets/img/cake.png">
 
-<form id="form" class="colorful-form" method="post" action="/castro_produtos">
+<form id="form" class="colorful-form" method="post" action="/cadastro_store">
 
     <div class="form-group">
         <label class="form-label" for="name">Nome:</label>
@@ -40,13 +38,20 @@
     </div>
 
     <div class="form-group">
-        <label class="form-label" for="gluten">Sabor:</label>
-        <input required="" placeholder="Insira o sabor" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+        <label class="form-label mb-3" for="gluten">Contem Gluten:</label>
+        <label class="form-label-check" for="gluten">Sim</label><input Checked type="checkbox" class="ms-1" name="s">
+        <label class="form-label-check" for="gluten">Não</label><input type="checkbox" class="ms-1" name="n">
     </div>
 
     <div class="form-group">
-        <label class="form-label" for="gluten">Amendoim:</label>
-        <input required="" placeholder="Tem Amendoim" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+        <label class="form-label" for="gluten">Sabor:</label>
+        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label mb-3" for="gluten">Contem Amendoim:</label>
+        <label class="form-label-check" for="gluten">Sim</label><input Checked type="checkbox" class="ms-1" name="s">
+        <label class="form-label-check" for="gluten">Não</label><input type="checkbox" class="ms-1" name="n">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

@@ -39,6 +39,7 @@ $routes = [
 
     //Para o formulário que cadastra os produtos
     '/cadastro_produtos' => 'controllers/cadProds/cadastro_produtos',
+    '/cadastro_store' => 'controllers/cadProds/cadastro_store',
 ];
 
 //função uri que carrega as páginas dentro do site

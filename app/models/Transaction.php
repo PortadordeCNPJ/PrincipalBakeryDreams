@@ -11,6 +11,8 @@ class Transaction extends Model
     public function transactions(Closure $callback)
     {
 
+        //beginTransaction é uma função que não deixa o código dar commit antes que a transação enteja totalmente finalizada
+        //É uma função do PDO
         $this->connection->beginTransaction();
 
         try {

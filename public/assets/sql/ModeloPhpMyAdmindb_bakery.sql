@@ -36,8 +36,6 @@ CREATE TABLE `tb_produtos` (
   `sabor` varchar(30) NOT NULL,
   `gluten` varchar(1) DEFAULT NULL,
   `amedoim` varchar(1) DEFAULT NULL,
-  `tiposalgado` varchar(50) NOT NULL,
-  `tipodoce` varchar(50) NOT NULL,
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
