@@ -39,8 +39,8 @@
 
     <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Gluten:</label>
-        <label class="form-label-check" for="gluten">Sim</label><input Checked type="checkbox" class="ms-1" name="s">
-        <label class="form-label-check" for="gluten">Não</label><input type="checkbox" class="ms-1" name="n">
+        <label class="form-label-check" for="sim">Sim</label><input Checked type="checkbox" class="ms-1" name="gluten">
+        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="gluten">
     </div>
 
     <div class="form-group">
@@ -50,8 +50,8 @@
 
     <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Amendoim:</label>
-        <label class="form-label-check" for="gluten">Sim</label><input Checked type="checkbox" class="ms-1" name="s">
-        <label class="form-label-check" for="gluten">Não</label><input type="checkbox" class="ms-1" name="n">
+        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amendoin">
+        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amendoin">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

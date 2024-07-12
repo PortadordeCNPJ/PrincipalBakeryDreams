@@ -1,6 +1,5 @@
 <?php
 
-use app\models\Post;
 use app\models\User;
 use app\classes\Validation;
 use app\models\Transaction;
@@ -14,6 +13,8 @@ $transaction->transactions(function () use ($transaction, $validate){
     $validate->senha = md5($validate->senha);
     $transaction->model(User::class)->insert($validate);
 });
+
+echo "<script>alert('Usuario cadastrado com sucesso!!');</script>";
 
 header('location:/');
 
