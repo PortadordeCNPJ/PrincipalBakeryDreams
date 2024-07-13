@@ -1,6 +1,6 @@
 <h2>Cadastro de Produtos</h2>
 
-<img class="img-for" src="./assets/img/cake.png">
+<img class="img-form-1" src="../../assets/img/cake.png">
 
 <form id="form" class="colorful-form" method="post" action="/cadastro_store">
 
@@ -50,8 +50,8 @@
 
     <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Amendoim:</label>
-        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amendoin">
-        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amendoin">
+        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amedoim">
+        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amedoim">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

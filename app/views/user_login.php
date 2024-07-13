@@ -1,7 +1,7 @@
 <?php
 if (!empty($_SESSION)) {
     echo '<div class="img-forms">
-            <img class="img-formi" src="./assets/img/cake2.png">
+            <img class="img-form-2" src="../../assets/images/cake2.png">
                 <form id="form" class="colorful-form" method="POST" action="/user_logado">
                     <div class="form-group">
                         <div class=""> Bem vindo,'. $_SESSION['nome'] .'! </div>
@@ -13,7 +13,7 @@ if (!empty($_SESSION)) {
 
 ?>
     <div class="img-forms">
-        <img class="img-formi" src="./assets/img/cake2.png">
+        <img class="img-form-2" src="../../assets/images/cake2.png">
         <form id="form" class="colorful-form" method="POST" action="/user_logado">
 
             <div class="form-group">

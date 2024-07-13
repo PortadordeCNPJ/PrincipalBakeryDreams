@@ -182,4 +182,20 @@ body {
   outline: none;
 }
 
+.img-forms {
+  position: relative;
+}
+
+.img-form-1 {
+  position: absolute;
+  top: 35%;
+  width: 500px;
+}
+
+.img-form-2 {
+  position: absolute;
+  top: 5%;
+  width: 500px;
+}
+
 /*----------------- INICIO CSS PARA OS FORMS-------------------------*/

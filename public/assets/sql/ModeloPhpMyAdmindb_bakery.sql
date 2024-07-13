@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08/07/2024 às 19:57
+-- Tempo de geração: 13/07/2024 às 19:58
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -34,8 +34,8 @@ CREATE TABLE `tb_produtos` (
   `valor` decimal(5,2) NOT NULL,
   `imagem` varchar(200) NOT NULL,
   `sabor` varchar(30) NOT NULL,
-  `gluten` varchar(1) DEFAULT NULL,
-  `amedoim` varchar(1) DEFAULT NULL,
+  `gluten` tinyint(1) DEFAULT 1,
+  `amendoim` tinyint(1) DEFAULT 0,
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,8 +43,8 @@ CREATE TABLE `tb_produtos` (
 -- Despejando dados para a tabela `tb_produtos`
 --
 
-INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `tiposalgado`, `tipodoce`, `id_tipoproduto`) VALUES
-(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, './assets/images/chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 's', 's', 1);
+INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `id_tipoproduto`) VALUES
+(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, './assets/images/chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -78,12 +78,12 @@ CREATE TABLE `tb_usuarios` (
   `cpf` varchar(11) NOT NULL,
   `fone` varchar(30) NOT NULL,
   `senha` varchar(32) NOT NULL,
-  `ativo` int(1) NOT NULL,
+  `ativo` int(1) NOT NULL DEFAULT 1,
   `email` varchar(100) NOT NULL,
   `dt_nasc` date NOT NULL,
-  `tipo` varchar(20) NOT NULL,
+  `tipo` varchar(1) NOT NULL DEFAULT 'U',
   `bairro` varchar(30) NOT NULL,
-  `nmcasa` int(8) NOT NULL,
+  `nmcasa` varchar(8) NOT NULL,
   `complemento` varchar(100) NOT NULL,
   `rua` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -93,9 +93,12 @@ CREATE TABLE `tb_usuarios` (
 --
 
 INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`) VALUES
-(1, 'AdminGuiWill', '13423812828', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'admin', '...', 0, 'Casa', 'Rua da nossa casa'),
-(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'user', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves'),
-(3, 'Willian', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'user', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas');
+(1, 'AdminGuiWill', '13423812828', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa'),
+(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves'),
+(3, 'Willian', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
+(4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', ''),
+(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', ''),
+(7, 'Ivan', '34212345389', '', '2c42e5cf1cdbafea04ed267018ef1511', 1, 'ivan@gmail.com', '0000-00-00', 'U', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -104,7 +107,7 @@ INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`
 --
 
 CREATE TABLE `tb_vendaitens` (
-  `id_compraiten` int(11) NOT NULL,
+  `id_compraitem` int(11) NOT NULL,
   `valor` decimal(5,2) NOT NULL,
   `quantidade` int(4) NOT NULL,
   `id_venda` int(11) DEFAULT NULL,
@@ -158,7 +161,7 @@ ALTER TABLE `tb_usuarios`
 -- Índices de tabela `tb_vendaitens`
 --
 ALTER TABLE `tb_vendaitens`
-  ADD PRIMARY KEY (`id_compraiten`),
+  ADD PRIMARY KEY (`id_compraitem`),
   ADD KEY `FK_tb_vendaitens_2` (`id_venda`),
   ADD KEY `FK_tb_vendaitens_3` (`id_produto`);
 
@@ -189,13 +192,13 @@ ALTER TABLE `tb_tipoprodutos`
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendaitens`
 --
 ALTER TABLE `tb_vendaitens`
-  MODIFY `id_compraiten` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_compraitem` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendas`

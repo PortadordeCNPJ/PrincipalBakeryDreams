@@ -58,9 +58,7 @@ CREATE TABLE tb_produtos (
     imagem VARCHAR (200) NOT NULL,
     sabor VARCHAR (30) NOT NULL,
     gluten VARCHAR (1) DEFAULT NULL,
-    amedoim VARCHAR (1) DEFAULT NULL,
-    tiposalgado VARCHAR (50) NOT NULL,
-    tipodoce VARCHAR (50) NOT NULL,
+    amendoim VARCHAR (1) DEFAULT NULL,
     id_tipoproduto INTEGER (11)
 );
 
