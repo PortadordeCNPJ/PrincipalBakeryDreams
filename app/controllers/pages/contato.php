@@ -1,3 +1,3 @@
 <?php 
 
-$layout->add('contato');
+$layout->add('pages/contato');

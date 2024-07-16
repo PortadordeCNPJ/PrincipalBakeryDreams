@@ -21,7 +21,8 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
         $_SESSION['nome'] = $emailUser->nome;
         $_SESSION['tipo'] = $emailUser->tipo;
         $_SESSION['id_usuario'] = $emailUser->id_usuario;
-        echo "<script>alert('Usuário logado');</script>";
+        $_SESSION['tipo'] = $emailUser->tipo;
+        echo "<script>alert('Usuário logado!');</script>";
         $layout->add('home');
 
     } else {

@@ -6,4 +6,4 @@ $tipoProduto = new TipoProduto;
 
 $tipoProdutos = $tipoProduto->all();
 
-$layout->add('cadastro_produtos');
+$layout->add('administrator/cadastro_produtos');

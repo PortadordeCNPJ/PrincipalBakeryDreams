@@ -72,8 +72,8 @@
     <nav class="navbar navbar-down">
         <ul class="navbar-nav navbar-down-ul">
             <li class="nav-item-down"> <?php echo menuItem("/", "Inicio <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
-            <li class="nav-item-down"> <?php echo menuItem("/sobre", "Sobre Nós <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
-            <li class="nav-item-down"> <?php echo menuItem("/contato", "Contato <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
+            <li class="nav-item-down"> <?php echo menuItem("pages/sobre", "Sobre Nós <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
+            <li class="nav-item-down"> <?php echo menuItem("pages/contato", "Contato <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
             <li class="nav-item-down"><a href="#"> <i class="fa-solid fa-chevron-down"></i> </a></li>
         </ul>
     </nav>

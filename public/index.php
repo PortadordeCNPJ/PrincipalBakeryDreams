@@ -9,20 +9,24 @@ use app\classes\Uri;
 //Array com todas as rotas que teram dentro do site
 $routes = [
 
-    //Para as páginas de dentro da pasta pages
+    //Home do site
     '/' => 'controllers/index',
-    '/sobre' => 'controllers/pages/sobre',
-    '/contato' => 'controllers/pages/contato',
-    '/snacks' => 'controllers/pages/snacks',
-    '/cakes' => 'controllers/pages/cakes',
-    '/sweets' => 'controllers/pages/sweets',
+
+    //Para as páginas de produtos
+    '/produtos/snacks' => 'controllers/pages/snacks',
+    '/produtos/cakes' => 'controllers/pages/cakes',
+    '/produtos/sweets' => 'controllers/pages/sweets',
+
+    //Para as páginas de dentro da pasta pages
+    '/pages/sobre' => 'controllers/pages/sobre',
+    '/pages/contato' => 'controllers/pages/contato',
+    '/pages/page_not_found' => 'controllers/pages/page_not_found',
+
 
     //Para as páginas de dentro da pasta de user
     '/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
-    '/user_quantidade' => 'controllers/user/user_quantidade',
     '/user_edit' => 'controllers/user/user_edit',
-    '/user_list' => 'controllers/user/user_list',
     '/user_destroy' => 'controllers/user/user_destroy',
     '/user_update' => 'controllers/user/user_update',
     '/user_login' => 'controllers/user/user_login',
@@ -38,8 +42,12 @@ $routes = [
     '/cart_quantidade' => 'controllers/cart/cart_quantidade',
 
     //Para o formulário que cadastra os produtos
-    '/cadastro_produtos' => 'controllers/cadProds/cadastro_produtos',
-    '/cadastro_store' => 'controllers/cadProds/cadastro_store',
+    '/cadastro_store' => 'controllers/produtos/cadastro_store',
+
+    //Admin Pages
+    '/administrator/admin' => 'controllers/administrator/admin',
+    '/administrator/user_list' => 'controllers/administrator/user_list',
+    '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
 ];
 
 //função uri que carrega as páginas dentro do site
