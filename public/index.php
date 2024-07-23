@@ -13,9 +13,9 @@ $routes = [
     '/' => 'controllers/index',
 
     //Para as páginas de produtos
-    '/produtos/snacks' => 'controllers/pages/snacks',
-    '/produtos/cakes' => 'controllers/pages/cakes',
-    '/produtos/sweets' => 'controllers/pages/sweets',
+    '/produtos/snacks' => 'controllers/produtos/snacks',
+    '/produtos/cakes' => 'controllers/produtos/cakes',
+    '/produtos/sweets' => 'controllers/produtos/sweets',
 
     //Para as páginas de dentro da pasta pages
     '/pages/sobre' => 'controllers/pages/sobre',

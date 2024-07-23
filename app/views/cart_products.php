@@ -34,8 +34,8 @@ $productsInCart = $cart->cart();
     </ul>
 
     <ul>
-        <li><a href="/cakes">bolos</a></li>
-        <li><a href="/sweets">docinhos</a></li>
-        <li><a href="/snacks">salgadinhos</a></li>
+        <li><a href="/produtos/cakes">bolos</a></li>
+        <li><a href="/produtos/sweets">docinhos</a></li>
+        <li><a href="/produtos/snacks">salgadinhos</a></li>
     </ul>
 </div>
