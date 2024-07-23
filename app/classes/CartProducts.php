@@ -10,7 +10,9 @@ class CartProducts {
     //função que implementa a variavel do cartInterface. Por conta disso, essa função da acesso a o products da página de produtos
     public function products(CartInterface $cartInterface)
     {
+        //Cria a SESSION do carrinho
          $productsInCart = $cartInterface->cart();
+
         //  $productsInDatabase = require_once '../app/helpers/products.php';
          $productsInDatabase = (new ReadCart)->all('tb_produtos');
          
@@ -23,6 +25,7 @@ class CartProducts {
             $product = [...array_filter($productsInDatabase, fn ($product) => (int)$product->id_produto === $productId)];
 
             // $product = $productsInDatabase[$productId];
+            //O $product[0] é básicamente o id_produto, por isso sempre é o indice 0, que no caso é o primeiro
             $products[] = [
                 'id_produto' => $productId,
                 'nome' => $product[0]->nome,
