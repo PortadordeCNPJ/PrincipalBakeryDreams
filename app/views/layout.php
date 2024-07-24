@@ -75,7 +75,7 @@
             <li class="nav-item-down"> <?php echo menuItem("/pages/sobre", "Sobre Nós <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
             <li class="nav-item-down"> <?php echo menuItem("/pages/contato", "Contato <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
             <?php
-            if (!empty($_SESSION) && $_SESSION['tipo'] == 'A') {
+            if (!empty($_SESSION) && $_SESSION['tipo'] == 'A' && empty($_SESSION['tipo'] == '')) {
                 echo "<li class='nav-item-down'>" . menuItem("/administrator/admin", "Admin <i class='fa-solid fa-chevron-down'></i>");
                 "</li>";
             }

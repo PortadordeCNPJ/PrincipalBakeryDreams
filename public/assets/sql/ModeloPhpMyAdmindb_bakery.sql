@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/07/2024 às 19:58
+-- Tempo de geração: 24/07/2024 às 18:44
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -35,7 +35,7 @@ CREATE TABLE `tb_produtos` (
   `imagem` varchar(200) NOT NULL,
   `sabor` varchar(30) NOT NULL,
   `gluten` tinyint(1) DEFAULT 1,
-  `amendoim` tinyint(1) DEFAULT 0,
+  `amedoim` tinyint(1) DEFAULT 0,
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -44,7 +44,8 @@ CREATE TABLE `tb_produtos` (
 --
 
 INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `id_tipoproduto`) VALUES
-(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, './assets/images/chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1);
+(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, './assets/images/chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1),
+(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, './assets/images/bolocenoura.jpg', '', 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -180,7 +181,7 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
