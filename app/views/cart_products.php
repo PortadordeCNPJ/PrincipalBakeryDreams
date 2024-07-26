@@ -2,9 +2,13 @@
 
 use app\classes\Cart;
 use app\models\ReadCart;
+use app\models\TipoProduto;
 
 //Chamando o vendor do composer
 require '../vendor/autoload.php';
+
+$tipoProduto = new TipoProduto;
+$tipoProdutos = $tipoProduto->find('id_tipoproduto', $id_tipoproduto);
 
 //definindo que a variavel $products recebe todos os produtos do arquivo helpers
 // $products = require "../app/helpers/products.php";
