@@ -7,7 +7,8 @@ use app\traits\PersistDb;
 use app\models\Connection;
 
 
-abstract class Model{
+abstract class Model
+{
 
     //Tem este nome, porque quando tem alguma coisa dentro do banco de dados ele persiste nos dados
     use PersistDb;
@@ -15,7 +16,8 @@ abstract class Model{
     //Essa função protege a conecção com o banco, permitindo que apenas quem está dentro de Model possar usar a conecção.
     protected $connection;
 
-    public function __construct() {
+    public function __construct()
+    {
         //$this chamando a conecção com o banco e chamando junto a classe com o método do banco
         $this->connection = Bind::get('connection');
     }
@@ -33,7 +35,7 @@ abstract class Model{
     //Essa função faz a busca das informações dentro da tabela
     public function find($field, $value)
     {
-        $sql = "select * from {$this->table} where {$field} = :{$field}" ;
+        $sql = "select * from {$this->table} where {$field} = :{$field}";
         //o bindValue é oque vai fazer a substituição dos doque esta no select, pela ? que está sendo chamada
         $list = $this->connection->prepare($sql);
 
@@ -46,7 +48,7 @@ abstract class Model{
 
     public function delete()
     {
-        $sql = "delete from {$this->table} where $field = ?"; 
+        $sql = "delete from {$this->table} where $field = ?";
         $delete = $this->connection->prepare($sql);
         $delete->bindValue(1, $value);
         $delete->execute();
@@ -54,13 +56,4 @@ abstract class Model{
         return $delete->rowCount();
     }
 
-    // public function login()
-    // {
-    //     $sql = "select * from {$this->table} where $field = ? and $field = ?"; 
-    //     $login = $this->connection->prepare($sql);
-    //     $login->bindValue(1, 'nome');
-    //     $login->execute();
-
-    //     return $login->fetch();
-    // }
 }
