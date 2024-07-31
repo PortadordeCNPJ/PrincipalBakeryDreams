@@ -7,11 +7,11 @@ use app\models\TipoProduto;
 //Chamando o vendor do composer
 require '../vendor/autoload.php';
 
-$tipoProduto = new TipoProduto;
-$tipoProdutos = $tipoProduto->find('id_tipoproduto', $id_tipoproduto);
-
 //definindo que a variavel $products recebe todos os produtos do arquivo helpers
 // $products = require "../app/helpers/products.php";
+
+$tipoProduto = new TipoProduto;
+$id_tipoproduto = $tipoProduto->find('id_tipoproduto', 2);
 
 $cart = new Cart;
 
@@ -30,10 +30,13 @@ $productsInCart = $cart->cart();
     <ul>
         <!-- Esse código intera na variavel de produtos, mostrando os valores que ela recebe, também transformando $product como
                  a variável que vai receber o valor da variavel $products -->
-        <?php foreach ($products as $index => $product) : ?>
-            <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
-                <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> | add to cart</a>
-            </li>
+
+        <?php foreach ($id_tipoproduto as $tipoProdutos) : ?>
+            <?php foreach ($products as $index => $product) : ?>
+                <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
+                    <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> | add to cart</a>
+                </li>
+            <?php endforeach ?>
         <?php endforeach ?>
     </ul>
 
