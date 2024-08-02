@@ -28,7 +28,7 @@
         <div class="container">
             <div class="navbar-brand me-auto d-flex">
                 <a href="#">
-                    <img src="./assets/img/logo.png" alt="" width="30" height="24">
+                    <img src="../../assets/images/logoSite.jfif" alt="" width="250" height="150">
                 </a>
             </div>
             <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">

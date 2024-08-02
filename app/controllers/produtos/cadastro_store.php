@@ -22,4 +22,4 @@ $transaction->transactions(function () use ($transaction, $validate){
 
 echo "<script>alert('Produto cadastrado com sucesso!!');</script>";
 
-header('location:/cart');   
+header('location:/cart_products');   

@@ -6,7 +6,7 @@
 
 
         <?php foreach ($products as $index => $product) : ?>
-            <?php if ($product->id_tipoproduto == 3) : ?>
+            <?php if ($product->id_tipoproduto == 2) : ?>
                 <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
                     <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> | add to cart</a>
                 </li>
