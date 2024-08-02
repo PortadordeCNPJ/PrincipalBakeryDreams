@@ -11,7 +11,7 @@ require '../vendor/autoload.php';
 // $products = require "../app/helpers/products.php";
 
 $tipoProduto = new TipoProduto;
-$id_tipoproduto = $tipoProduto->find('id_tipoproduto', 2);
+$id_tipoproduto = $tipoProduto->find('id_tipoproduto', 3);
 
 $cart = new Cart;
 
@@ -23,26 +23,19 @@ $products = $read->all('tb_produtos');
 
 $productsInCart = $cart->cart();
 ?>
+<H3>Cart: <?php echo count($productsInCart) ?> | <a href="/cart">Go To Cart</a></H3>
 
-
-<div id="container">
-    <H3>Cart: <?php echo count($productsInCart) ?> | <a href="/cart">Go To Cart</a></H3>
-    <ul>
-        <!-- Esse código intera na variavel de produtos, mostrando os valores que ela recebe, também transformando $product como
-                 a variável que vai receber o valor da variavel $products -->
-
-        <?php foreach ($id_tipoproduto as $tipoProdutos) : ?>
-            <?php foreach ($products as $index => $product) : ?>
-                <li><?php echo $product->nome; ?> | R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
-                    <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> | add to cart</a>
-                </li>
-            <?php endforeach ?>
-        <?php endforeach ?>
-    </ul>
-
-    <ul>
-        <li><a href="/produtos/cakes">bolos</a></li>
-        <li><a href="/produtos/sweets">docinhos</a></li>
-        <li><a href="/produtos/snacks">salgadinhos</a></li>
-    </ul>
+<div class="container containerProdutos">
+    <div class="cardTipoProdtudos">
+        <a href="/produtos/cakes"><img src="./assets/images/boloImgLink.jpg" class="imgsCards"></a>
+        <span>Bolos</span>
+    </div>
+    <div class="cardTipoProdtudos">
+        <a href="/produtos/sweets"><img src="./assets/images/boloImgLink.jpg" class="imgsCards"></a>
+        <span> Docinhos</span>
+    </div>
+    <div class="cardTipoProdtudos">
+        <a href="/produtos/snacks"><img src="./assets/images/boloImgLink.jpg" class="imgsCards"></a>
+        <span> Salgadinhos</span>
+    </div>
 </div>

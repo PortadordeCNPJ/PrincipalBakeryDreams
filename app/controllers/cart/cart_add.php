@@ -9,9 +9,8 @@ $id = filter_input(INPUT_GET, 'id_produto', FILTER_SANITIZE_NUMBER_INT);
 
 //cart agora recebe os valores da Classe Cart Interface
 $cart = new Cart;
-$cart->add($id);
 
-$cart->dump();
+$cart->add($id);
 
 header('Location: /cart_products');
 

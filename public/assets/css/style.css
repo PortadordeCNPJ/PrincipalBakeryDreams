@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #fcfcf1;
+  background-color: #9c9c4c;
   font-family: 'Galada', cursive;
 }
 
@@ -198,4 +198,24 @@ body {
   width: 500px;
 }
 
-/*----------------- INICIO CSS PARA OS FORMS-------------------------*/
+/*----------------- FINAL CSS PARA OS FORMS -------------------------*/
+
+
+
+/*----------------- INICIO CSS PARA OS CARDS -------------------------*/
+.imgsCards {
+  width: 300px;
+}
+
+.containerProdutos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardTipoProdtudos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 600px;
+}

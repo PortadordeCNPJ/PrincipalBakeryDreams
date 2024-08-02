@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label class="form-label" for="imagem">imagem:</label>
-        <input required="" placeholder="Insira a imagem" class="form-input" name="imagem" id="senha" type="text">
+        <input  class="form-input" name="imagem" id="senha" type="file">
     </div>
 
     <!-- Fazer um if que vai verificar o tipo do produto e vai com base nele, cadastrar no campo correto -->
@@ -29,11 +29,10 @@
     <div class="form-group">
         <label class="form-label" for="gluten">Tipo do Produto:</label>
 
-        <select>
-            <?php foreach ($tipoProdutos as $tipoProduto) :
-            ?>
-                <option selected name="<?= $tipoProduto->id_tipoproduto ?>"><?= $tipoProduto->tipoproduto ?></option>;
-            <?php endforeach; ?>
+        <select name="id_tipoproduto">
+                <option selected value="1">Bolo</option>
+                <option selected value="2">Salgadinho</option>
+                <option selected value="3">Docinho</option>
         </select>
     </div>
 
