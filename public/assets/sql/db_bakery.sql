@@ -212,7 +212,7 @@ ALTER TABLE `tb_vendas`
   MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Restrições para tabelas despejadas
+-- Restrições para tabelas despejadashgf
 --
 
 --
