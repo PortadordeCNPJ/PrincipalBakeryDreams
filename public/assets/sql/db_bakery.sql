@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/07/2024 às 18:44
+-- Tempo de geração: 04/08/2024 às 19:15
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -45,7 +45,10 @@ CREATE TABLE `tb_produtos` (
 
 INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `id_tipoproduto`) VALUES
 (1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, './assets/images/chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1),
-(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, './assets/images/bolocenoura.jpg', '', 0, 0, NULL);
+(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, './assets/images/bolocenoura.jpg', '', 0, 0, 1),
+(3, 'salgadinho', 'Salgadinho com frango', 122.00, './assets/images/bolocenoura.jpg', '', 0, 0, 2),
+(4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, './assets/images/bolocenoura.jpg', '', 0, 0, 3),
+(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, './assets/images/bolocenoura.jpg', '', 0, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -96,10 +99,11 @@ CREATE TABLE `tb_usuarios` (
 INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`) VALUES
 (1, 'AdminGuiWill', '13423812828', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa'),
 (2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves'),
-(3, 'Willian', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
+(3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
 (4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', ''),
 (5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', ''),
-(7, 'Ivan', '34212345389', '', '2c42e5cf1cdbafea04ed267018ef1511', 1, 'ivan@gmail.com', '0000-00-00', 'U', '', '', '', '');
+(7, 'Ivan é gay dms', '34212345389', '', '2c42e5cf1cdbafea04ed267018ef1511', 1, 'ivan@gmail.com', '0000-00-00', 'U', '', '', '', ''),
+(8, 'Celia', '12345678912', '', 'a0ee94b392b37c57751877cd6de5c586', 1, 'celia@gmail.com', '0000-00-00', 'U', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -181,7 +185,7 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
@@ -193,7 +197,7 @@ ALTER TABLE `tb_tipoprodutos`
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendaitens`
