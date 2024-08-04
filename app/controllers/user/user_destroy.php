@@ -7,9 +7,10 @@ $id_usuario = filter_input(INPUT_GET, 'id_usuario', FILTER_SANITIZE_NUMBER_INT);
 
 $user = new User;
 
-//Carrega dentro da variavel $user que recebe da tabela de users, para dar um Update utilizando a função update
+//Carrega dentro da variavel $user que recebe da tabela de users, para dar um delete utilizando a função update
 $user_destroy = $user->delete('id_usuario', $id_usuario);
 
 if($user_destroy) {
-    header('location:/');
+    echo "<script>alert('Produto cadastrado com sucesso!!');</script>";
+    header('location: /administrator/user_list');
 }
