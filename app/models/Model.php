@@ -24,7 +24,7 @@ abstract class Model
 
     public function all()
     {
-        $sql = "select * from {$this->table}";
+        $sql = "SELECT * FROM {$this->table}";
         //o prepare() é usado para poder substituir o valor que está vindo do sql
         $list = $this->connection->prepare($sql);
         $list->execute();
@@ -35,7 +35,7 @@ abstract class Model
     //Essa função faz a busca das informações dentro da tabela
     public function find($field, $value)
     {
-        $sql = "select * from {$this->table} where {$field} = :{$field}";
+        $sql = "SELECT * FROM {$this->table} WHERE {$field} = :{$field}";
         //o bindValue é oque vai fazer a substituição dos doque esta no select, pela ? que está sendo chamada
         $list = $this->connection->prepare($sql);
 
@@ -50,10 +50,9 @@ abstract class Model
     {
         $sql = "delete from {$this->table} where $field = ?";
         $delete = $this->connection->prepare($sql);
-        $delete->bindValue($field, $value);
+        $delete->bindValue(1, $value);
         $delete->execute();
 
         return $delete->rowCount();
     }
-
 }
