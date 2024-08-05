@@ -48,7 +48,7 @@ abstract class Model
 
     public function delete($field, $value)
     {
-        $sql = "delete from {$this->table} where $field = $value";
+        $sql = "delete from {$this->table} where $field = ?";
         $delete = $this->connection->prepare($sql);
         $delete->bindValue(1, $value);
         $delete->execute();

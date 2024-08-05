@@ -5,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #9c9c4c;
-  font-family: 'Galada', cursive;
+  background-color: #ffffff;
+  font-family: 'quicksand_bold', Sans-serif;
 }
 
 /* ------------------- FIM CSS GERAL DA PÁGINA -------------------- */
@@ -37,8 +37,8 @@ body {
 }
 
 .navbar-custom {
-  background-color: #c79766;
-  height: 200px;
+  background-color: #f77a01;
+  height: 150px;
   border: 5px;
 }
 
@@ -55,7 +55,7 @@ body {
   margin: 0px 10px 0px 5px;
 }
 
-.nav-item-down > a {
+.nav-item-down>a {
   color: #ffffff;
 }
 
@@ -63,20 +63,20 @@ body {
   background-color: #d3812f;
 }
 
-.nav-item-down > a:focus {
+.nav-item-down>a:focus {
   box-shadow: none;
 }
 
 /*-------Botões NavBar----------*/
 
 .comic-button {
-  padding: 2px 5px;
+  padding: 2px 10px;
   font-size: 1.0rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #dc143c;
+  background-color: #f9bf76;
   border: 2px solid #000;
   border-radius: 10px;
   box-shadow: 5px 5px 0px #000;
@@ -87,18 +87,18 @@ body {
 
 .comic-button:hover {
   background-color: #fff;
-  color: #dc143c;
-  border: 2px solid #dc143c;
-  box-shadow: 5px 5px 0px #dc143c;
+  color: #f9bf76;
+  border: 2px solid #f9bf76;
+  box-shadow: 5px 5px 0px #f9bf76;
 }
 
 .comic-button:active {
-  background-color: #dc506c;
+  background-color: #f9bf76;
   box-shadow: none;
   transform: translateY(4px);
 }
 
-.comic-button > a:focus{
+.comic-button>a:focus {
   box-shadow: none;
 }
 
@@ -202,20 +202,94 @@ body {
 
 
 
-/*----------------- INICIO CSS PARA OS CARDS -------------------------*/
+/*------------------------ INICIO CSS PARA OS CARDS ------------------------------*/
+
+/*------------- INICIO CSS PARA OS CARDS DE TIPO PRODUTOS --------------------*/
 .imgsCards {
   width: 300px;
+  height: 310px;
+  border-radius: 15px;
 }
 
-.containerProdutos {
+.textCardsTipoProd {
+  margin: 25px 0 0 0;
+  font-size: 1.5rem;
+}
+
+.containerTipoProdutos {
   display: flex;
   justify-content: space-between;
 }
 
 .cardTipoProdtudos {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 500px;
-  height: 600px;
+  width: 355px;
+  height: 450px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #000;
+  background-color: #eec38f;
 }
+
+.cardTipoProdtudos:hover {
+  outline: 1px solid #000;
+  box-shadow: 0 2px 6px rgba(117, 117, 117, .7);
+  position: relative;
+  top: 1px;
+}
+
+
+/*------------- FIM CSS PARA OS CARDS DE TIPO PRODUTOS --------------------*/
+
+
+/*------------- INICIO CSS PARA OS CARDS DOS PRODUTOS --------------------*/
+
+.imgsCardProduct {
+  width: 260px;
+  height: 210px;
+  border-radius: 15px;
+}
+
+.containerProds {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cardProds {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 480px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #000;
+  background-color: #eec38f;
+}
+
+.productsInsideCart {
+  margin-top: 25px;
+}
+
+.textProduct {
+  font-size: 1.15rem;
+  margin: 10px 17px 5px 17px;
+}
+
+.textProduct>p {
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+.textProduct>p:first-child {
+  font-size: 1.3rem;
+}
+
+
+/*------------- FIM CSS PARA OS CARDS DOS PRODUTOS --------------------*/
+
+
+/*----------------------- FIM CSS PARA OS CARDS -------------------------------*/

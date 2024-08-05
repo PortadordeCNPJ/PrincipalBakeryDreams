@@ -1,4 +1,21 @@
+<?php
+
+use app\classes\Cart;
+use app\models\ReadCart;
+
+$cart = new Cart;
+
+$read = new ReadCart;
+$products = $read->all('tb_produtos');
+
+//cart dump é uma função para dar um var_dump dentro da funçao cart
+// $cart->dump();
+
+$productsInCart = $cart->cart();
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -28,7 +45,7 @@
         <div class="container">
             <div class="navbar-brand me-auto d-flex">
                 <a href="#">
-                    <img src="../../assets/images/logoSite.jfif" alt="" width="250" height="150">
+                    <img src="../../assets/images/logoSite.png" alt="" width="250" height="150">
                 </a>
             </div>
             <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +56,11 @@
                     <li class="comic-button">
                         <?php echo menuItem("/cart_products", "Produtos"); ?>
                     </li>
-                    <li class="comic-button">
+                    <li class="comic-button d-flex">
                         <?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?>
+                        <div style="color: #000">
+                            <?php echo count($productsInCart); ?>
+                        </div>
                     </li>
                     <li class="nav-item dropdown comic-button">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
