@@ -58,7 +58,7 @@ $productsInCart = $cart->cart();
                     </li>
                     <li class="comic-button d-flex">
                         <?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?>
-                        <div style="color: #000">
+                        <div style="color: #000; cursor: pointer;">
                             <?php echo count($productsInCart); ?>
                         </div>
                     </li>
