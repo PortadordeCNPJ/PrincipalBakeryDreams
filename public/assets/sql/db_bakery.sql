@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/08/2024 às 04:15
+-- Tempo de geração: 05/08/2024 às 05:03
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -46,12 +46,13 @@ CREATE TABLE `tb_produtos` (
 INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `id_tipoproduto`) VALUES
 (1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, 'chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1),
 (2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 0, 0, 1),
-(3, 'salgadinho', 'Salgadinho com frango', 122.00, 'bolocenoura.jpg', '', 0, 0, 2),
+(3, 'salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 0, 0, 2),
 (4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, 'bolocenoura.jpg', '', 0, 0, 3),
-(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'bolocenoura.jpg', '', 0, 0, 2),
+(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'empadinhas.jpg', '', 0, 0, 2),
 (7, ' Beijinho', 'Beijinho bem gostoso', 12.00, 'beijinho.webp', '', 0, 0, 3),
 (8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 0, 0, 1),
-(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, 'boloFormigueiro.jpg', '', 0, 0, 1);
+(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, 'boloFormigueiro.jpg', '', 0, 0, 2),
+(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 0, 0, 3);
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,8 @@ INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`
 (2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves'),
 (3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
 (4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', ''),
-(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', '');
+(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', ''),
+(10, 'Guilherme de Souza', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '0000-00-00', 'U', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -186,7 +188,7 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
@@ -198,7 +200,7 @@ ALTER TABLE `tb_tipoprodutos`
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendaitens`
