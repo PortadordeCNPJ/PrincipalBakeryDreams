@@ -74,8 +74,8 @@ $productsInCart = $cart->cart();
                                     <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
                             } else {
                             ?>
-                                <li><a class="dropdown-item" href="/user_login">Login</a></li>
-                                <li><a class="dropdown-item" href="/user_create">Cadastro</a></li>
+                                <li><a class="dropdown-item" href="/user/user_login">Login</a></li>
+                                <li><a class="dropdown-item" href="/user/user_create">Cadastro</a></li>
                             <?php
                             }
                             ?>

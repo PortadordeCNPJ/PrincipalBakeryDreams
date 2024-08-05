@@ -8,7 +8,9 @@ class Routes
     {
         if(!array_key_exists($uri, $routes)) {
 
-            header('location: /pages/page_not_found');
+            throw new \Exception("Rota não existe {$uri}");
+            
+            // header('location: /pages/page_not_found');
 
         }
         

@@ -23,14 +23,14 @@ $routes = [
     '/pages/page_not_found' => 'controllers/pages/page_not_found',
 
 
-    //Para as páginas de dentro da pasta de user
-    '/user_create' => 'controllers/user/user_create',
+    //Caminho das views do usuário
+    '/user/user_edit' => 'controllers/user/user_edit',
+    '/user/user_login' => 'controllers/user/user_login',
+    '/user/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
-    '/user_edit' => 'controllers/user/user_edit',
-    '/user_destroy' => 'controllers/user/user_destroy',
-    '/user_update' => 'controllers/user/user_update',
-    '/user_login' => 'controllers/user/user_login',
     '/user_logado' => 'controllers/user/user_logado',
+    '/user_update' => 'controllers/user/user_update',
+    '/user_destroy' => 'controllers/user/user_destroy',
     '/user_deslogado' => 'controllers/user/user_deslogado',
 
     //Para as página de dentro da pasta de cart

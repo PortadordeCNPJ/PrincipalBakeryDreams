@@ -15,7 +15,7 @@
                 <td><?= $user->email; ?></td>
 
                 <td>
-                    <a href="/user_edit?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-success">Editar</a>
+                    <a href="/user/user_edit?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-success">Editar</a>
                 </td>
                 <td>
                     <a href="/user_destroy?id_usuario=<?= $user->id_usuario; ?>" class="btn btn-danger">Deletar</a>

@@ -9,4 +9,4 @@ $user = new User;
 //Função find que procura os dados dentro das tabelas (Para Busca)
 $userEncontrado = $user->find('id_usuario', $id_usuario);
 
-$layout->add('user_edit');
+$layout->add('user/user_edit');
