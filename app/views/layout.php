@@ -62,7 +62,7 @@ $productsInCart = $cart->cart();
                             <?php echo count($productsInCart); ?>
                         </div>
                     </li>
-                    <li class="nav-item dropdown comic-button">
+                    <li class="nav-item dropdown comic-button" style="z-index: 1;">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-regular fa-user"></i>
                         </a>

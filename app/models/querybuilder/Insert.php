@@ -9,10 +9,15 @@ class Insert
     //Todas as vez dentro do código
     public static function sql($table, $attributes){
     
+    //$sql que recebe o valor da tabela
     $sql = "insert into {$table}(";
-    //Essa propriedade $sql, está fazendo um insert e está concatenando o resultado dos atributos dentro 
-    //dos campos corretos
+    
+    //$sql está concatenando as informações com implode, assim dentro colocando uma "," e passando os atributos
+    //ficando da seguinte forma ex: INSERT ... tb... (valor1, valor2) values(
     $sql .= implode(',', array_keys($attributes)) . ') values(';
+
+    //aqui está sendo concatenado a segunda parte do insert
+    //:valor1, valor2)
     $sql .= ':' . implode(', :', array_keys($attributes)) . ')';
 
     return $sql;

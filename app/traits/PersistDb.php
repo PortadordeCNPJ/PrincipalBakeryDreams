@@ -5,12 +5,22 @@ namespace app\traits;
 use app\models\querybuilder\Insert;
 use app\models\querybuilder\Update;
 
+
+/**
+ * É usado para utiliza-la apensa para puxar ela dentro do arquivo de Models, 
+ * para poder usar a conexão 
+ */
 trait PersistDb
 {
 
-    //função que vai dar um INSERT geral, poderá ser usada em todo o código
+    
+    /**
+     * @param array $attributes
+     * 
+     * @return [type]
+     */
     public function insert($attributes)
-    {
+    {   
         $attributes = (array) $attributes;
 
         $sql = Insert::sql($this->table, $attributes);

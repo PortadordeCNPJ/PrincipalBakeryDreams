@@ -7,13 +7,15 @@ use app\traits\PersistDb;
 use app\models\Connection;
 
 
+//abstract class é usada para que todas as classes filhas possam usar seus métodos
+//Apenas as classes filhas podem usar os métodos de dentro dela
 abstract class Model
 {
 
-    //Tem este nome, porque quando tem alguma coisa dentro do banco de dados ele persiste nos dados
+    //Usado para que o arquivo do PersistDb possa ter acesso ao banco de dados.
     use PersistDb;
 
-    //Essa função protege a conecção com o banco, permitindo que apenas quem está dentro de Model possar usar a conecção.
+    //Essa função protege a conexão com o banco, permitindo que apenas os métodos e classes filhas de Model possam utilizar dela.
     protected $connection;
 
     public function __construct()
