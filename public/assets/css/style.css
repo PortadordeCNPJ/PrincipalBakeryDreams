@@ -287,6 +287,11 @@ body {
   margin: 5px 0 0 0;
 }
 
+.textProduct>p>a {
+  color: #000;
+  text-decoration: none;
+}
+
 .textProduct>p>span {
   font-size: 1.7rem;
   font-weight: 700;
