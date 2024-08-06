@@ -3,9 +3,6 @@
 use app\classes\CartProducts;
 use app\classes\Cart;
 
-//Chamando o vendor do composer
-require '../vendor/autoload.php';
-
 //Objeto concreto que implementa o cartInterface
 $cartProducts = new CartProducts();
 
@@ -20,20 +17,33 @@ $products = $cartProducts->products(new Cart);
     <?php if (count($products['products']) <= 0) : ?>
         <h3>Nenhum produto dentro do carrinho de compras</h3>
     <?php else : ?>
-        <ul>
-            <?php foreach ($products['products'] as $product) : ?>
-                <li class="cart-product">
-                    <?php echo $product['nome']; ?>
+        <?php foreach ($products['products'] as $product) : ?>
+            <div class="cardProds">
+                <div class="productsInsideCart">
+                    <img src="./assets/images/<?php echo $product['imagem']; ?>" alt="">
+                </div>
+
+                <div class="textProduct">
+                    <p>
+                        <?php echo $product['nome']; ?>
+                    </p>
+                    <p>
+                        <?php echo $product['descricao']; ?>
+                    </p>
+                    <p>
+                        <span>R$ <?php echo number_format($product['valor'], 2, ',', '.') ?></span>
+                    </p>
+                    <p>
+                        <span>R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?></span>
+                    </p>
                     <form action="/cart_quantidade" method="get">
                         <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
-                        <img src="./assets/images/<?php echo $product['imagem']; ?>" alt="">
                         <input type="number" name="qty" value="<?php echo $product['qty']; ?>" id="cart-input-qty">
                     </form>
-                    <?php echo $product['descricao']; ?> x R$ <?php echo number_format($product['valor'], 2, ',', '.') ?> | R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>
                     <a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
-                </li>
-            <?php endforeach ?>
-        </ul>
+                </div>
+            </div>
+        <?php endforeach ?>
         <div id="cart-total-clear">
             <span id="cart-total">
                 Total: R$ <?php echo number_format($products['total'], 2, ',', '.') ?>

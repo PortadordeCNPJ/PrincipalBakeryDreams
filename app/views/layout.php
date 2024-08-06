@@ -45,7 +45,7 @@ $productsInCart = $cart->cart();
         <div class="container">
             <div class="navbar-brand me-auto d-flex">
                 <a href="#">
-                    <img src="../../assets/images/logoSite.png" alt="" width="250" height="150">
+                    <img src="../../assets/images/logoSite.png" alt="" width="200" height="150">
                 </a>
             </div>
             <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">

@@ -18,8 +18,8 @@
                         <?php echo $product->descricao; ?>
                     </p>
                     <p>
-                        R$<?php echo number_format($product->valor, 2, ',', '.'); ?>
-                        <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> Adicionar para o carrinho</a>
+                        <span>R$<?php echo number_format($product->valor, 2, ',', '.'); ?></span>
+                        <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> Adicionar <i class='fa-solid fa-cart-shopping'></i></a>
                     </p>
                 </div>
             </div>
