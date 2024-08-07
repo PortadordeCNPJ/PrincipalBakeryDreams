@@ -12,17 +12,16 @@ use app\models\querybuilder\Update;
  */
 trait PersistDb
 {
-
-    
     /**
      * @param array $attributes
      * 
      * @return [type]
      */
     public function insert($attributes)
-    {   
+    {
         $attributes = (array) $attributes;
 
+        //tb_usuarios e array com os valores
         $sql = Insert::sql($this->table, $attributes);
 
         $insert = $this->connection->prepare($sql);

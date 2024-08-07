@@ -19,7 +19,13 @@ $transaction->transactions(function () use ($transaction, $validate){
     
     //Passa a senha como md5 para o Innsert
     $validate->senha = md5($validate->senha);
-    //Aqui ele passa o objeto e passa a função de model que pega o caminho com o namespace e acha a tabela para dar o insert, assim da o insert nas informações
+    /** Aqui ele passa o objeto e passa a função de model que pega o caminho com o 
+     * namespace e acha a tabela para dar o insert, assim da o insert nas informações
+     * 
+     * model(User::class) = tb_usuarios
+     * 
+     * $validate = Dados do fommulario que vem filtrados
+     * */
     $transaction->model(User::class)->insert($validate);
 });
 
