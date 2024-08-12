@@ -26,7 +26,7 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
         $layout->add('home');
     } else {
         echo "<script>alert('Usuario ou senha não encontrados!');</script>";
-        $layout->add('user_login');
+        echo "<script>location.href='/user/user_login';</script>";
     }
 }
 

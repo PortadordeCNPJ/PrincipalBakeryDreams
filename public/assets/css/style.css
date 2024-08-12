@@ -206,8 +206,8 @@ body {
 
 /*------------- INICIO CSS PARA OS CARDS DE TIPO PRODUTOS --------------------*/
 .imgsCards {
-  width: 300px;
-  height: 310px;
+  width: 260px;
+  height: 210px;
   border-radius: 15px;
 }
 
@@ -303,6 +303,13 @@ body {
   font-size: 1.5rem;
 }
 
+.count {
+  all: unset;
+  width: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #202020;
+}
 
 /*------------- FIM CSS PARA OS CARDS DOS PRODUTOS --------------------*/
 
