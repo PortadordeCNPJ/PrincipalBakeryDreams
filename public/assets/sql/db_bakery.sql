@@ -35,7 +35,7 @@ CREATE TABLE `tb_produtos` (
   `imagem` varchar(200) NOT NULL,
   `sabor` varchar(30) NOT NULL,
   `gluten` tinyint(1) DEFAULT 1,
-  `amedoim` tinyint(1) DEFAULT 0,
+  `amendoim` tinyint(1) DEFAULT 0,
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,7 +43,7 @@ CREATE TABLE `tb_produtos` (
 -- Despejando dados para a tabela `tb_produtos`
 --
 
-INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amedoim`, `id_tipoproduto`) VALUES
+INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amendoim`, `id_tipoproduto`) VALUES
 (1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, 'chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1),
 (2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 0, 0, 1),
 (3, 'salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 0, 0, 2),

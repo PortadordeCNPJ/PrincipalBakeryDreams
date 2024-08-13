@@ -3,15 +3,15 @@
 </div>
 <div class="container containerTipoProdutos">
     <div class="cardTipoProdtudos">
-        <a href="/produtos/cakes"><img src="./assets/images/boloImgLink.jpg" class="imgsCards"></a>
+        <a href="/produtos/cakes"><img src="./assets/images/boloImgLink.jpg" class="imgsTipoCardProduct"></a>
         <span class="textCardsTipoProd">BOLOS</span>
     </div>
     <div class="cardTipoProdtudos">
-        <a href="/produtos/sweets"><img src="./assets/images/docinhos.jpg" class="imgsCards"></a>
+        <a href="/produtos/sweets"><img src="./assets/images/docinhos.jpg" class="imgsTipoCardProduct"></a>
         <span class="textCardsTipoProd"> DOCINHOS</span>
     </div>
     <div class="cardTipoProdtudos">
-        <a href="/produtos/snacks"><img src="./assets/images/salgadinhos.jpg" class="imgsCards"></a>
+        <a href="/produtos/snacks"><img src="./assets/images/salgadinhos.jpg" class="imgsTipoCardProduct"></a>
         <span class="textCardsTipoProd"> SALGADINHOS</span>
     </div>
 </div>
