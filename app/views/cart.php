@@ -37,7 +37,7 @@ $products = $cartProducts->products(new Cart);
         <?php foreach ($products['products'] as $product) : ?>
             <div class="cardProds">
                 <div class="productsInsideCart">
-                    <img src="./assets/images/<?php echo $product['imagem']; ?>" class="imgsCards" alt="">
+                    <img src="./assets/images/<?php echo $product['imagem']; ?>" class="imgsCardProduct" alt="">
                 </div>
 
                 <div class="textProduct">
@@ -47,16 +47,21 @@ $products = $cartProducts->products(new Cart);
                     <p>
                         <?php echo $product['descricao']; ?>
                     </p>
-                    <p>
-                        <input id="subtotalCardCart" value="R$ <?php echo number_format($product['subtotal'], 2, ',', '.') ?>"></input>
-                    </p>
+
+                    <!-- <p>
+                        <input id="subtotalCardCart" value="<?php //echo $product['subtotal'];
+                                                            ?>"></input>
+                    </p> -->
                     <!-- <form action="/cart_quantidade" method="get" id="prodCart"> -->
                     <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
                     <div class="texto-card">
-                        <div class="btn-count" onclick="abaixarKg('productInCart')">-</div>
-                        <input class="count" name="qty" id="cart-input-qty" readonly value="<?php echo $product['qty']; ?>" />
-                        <div class="btn-count" onclick="almentarKg('productInCart')">+</div>
+                        <div class="btn-count" onclick="abaixarKg(<?php echo $product['id_produto']; ?>)">-</div>
+                        <input class="count" name="qty" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
+                        <div class="btn-count" onclick="almentarKg(<?php echo $product['id_produto']; ?>)">+</div>
                     </div>
+                    <p>
+                        <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
+                    </p>
                     <!-- </form> -->
                     <a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
                 </div>
