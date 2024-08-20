@@ -1,0 +1,1 @@
+SELECT tb_produtos.nome, tb_produtos.valor, tb_tipoprodutos.tipoproduto FROM tb_produtos LEFT JOIN tb_tipoprodutos ON tb_tipoprodutos.id_tipoproduto = tb_produtos.id_tipoproduto;
