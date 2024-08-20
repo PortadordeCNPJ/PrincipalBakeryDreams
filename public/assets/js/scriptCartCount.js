@@ -4,8 +4,9 @@ function calcValor(id_produto) {
     console.log(id_produto);
     
     var precoProdutos = document.getElementById("valorCardCart-" + id_produto);
-
+    
     if (precoProdutos.value > 0) {
+        debugger
         var inputcontagem = document.getElementById("cart-input-qty-" + id_produto);
         var preco = parseInt(inputcontagem.value) * precoProdutos.value;
         precoProdutos.value = preco;
@@ -14,7 +15,7 @@ function calcValor(id_produto) {
     }
 }
 
-function almentarKg(id_produto) {
+function almentarQtd(id_produto) {
 
     var inputcontagem = document.getElementById("cart-input-qty-" + id_produto);
     console.log(inputcontagem);
@@ -23,4 +24,16 @@ function almentarKg(id_produto) {
     inputcontagem.value = novovalor;
 
     calcValor(id_produto);
-}
+};
+
+
+function abaixarQtd(id_produto) {
+    var inputcontagem = document.getElementById("cart-input-qty-" + id_produto);
+    var ContagemProdutos = inputcontagem.value
+    if (ContagemProdutos > 1) {
+        var novovalor = parseInt(ContagemProdutos) - 1;
+        inputcontagem.value = novovalor;
+
+        calcValor(id_produto);
+    }
+};

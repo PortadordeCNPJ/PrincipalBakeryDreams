@@ -14,22 +14,6 @@ $products = $cartProducts->products(new Cart);
 
 <h2>Cart | <a href="/cart_products">Home</a></h2>
 
-
-
-<div class="card">
-    <div class="texto-card">
-        <div class="btn" onclick="abaixarKg('canudoNinhoNut')">-</div>
-        <input class="count" id="contCanudoNinhoNut" readonly value="0" />
-        <div class="btn" onclick="almentarKg('canudoNinhoNut')">+</div>
-    </div>
-    <div class="prices">
-        <button type="button" class="form-button" name="cmpBoloDe4Leites" onclick="adicionarAoCarrinho(8)">Mandar ao carrinho</button>
-        <input class="amount" id="precoCanudoNinhoNut" readonly value="R$0,00" />
-    </div>
-</div>
-
-
-<hr>
 <div id="container">
     <?php if (count($products['products']) <= 0) : ?>
         <h3>Nenhum produto dentro do carrinho de compras</h3>
@@ -55,9 +39,9 @@ $products = $cartProducts->products(new Cart);
                     <!-- <form action="/cart_quantidade" method="get" id="prodCart"> -->
                     <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
                     <div class="texto-card">
-                        <div class="btn-count" onclick="abaixarKg(<?php echo $product['id_produto']; ?>)">-</div>
+                        <div class="btn-count" onclick="abaixarQtd(<?php echo $product['id_produto']; ?>)">-</div>
                         <input class="count" name="qty" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
-                        <div class="btn-count" onclick="almentarKg(<?php echo $product['id_produto']; ?>)">+</div>
+                        <div class="btn-count" onclick="almentarQtd(<?php echo $product['id_produto']; ?>)">+</div>
                     </div>
                     <p>
                         <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
