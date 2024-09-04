@@ -17,10 +17,10 @@
             <td><?= $produto->tipoproduto; ?></td>
 
             <td>
-                <a href="/admin/products_edit?id_produto=<?= $produto->id_produto; ?>" class="btn btn-success">Editar</a>
+                <a href="/administrator/products_edit?id_produto=<?= $produto->id_produto; ?>" class="btn btn-success">Editar</a>
             </td>
             <td>
-                <a href="administrator/admin/products_destroy?id_produto=<?= $produto->id_produto; ?>" class="btn btn-danger">Deletar</a>
+                <a href="/administrator/products_destroy?id_produto=<?= $produto->id_produto; ?>" class="btn btn-danger">Deletar</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -9,4 +9,4 @@ $products = new ReadCart;
 //Função find que procura os dados dentro das tabelas (Para Busca)
 $productsFound = $products->find('id_produto', $id_produto);
 
-$layout->add('produtos/products_edit');
+$layout->add('administrator/products_edit');

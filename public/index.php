@@ -49,7 +49,7 @@ $routes = [
     '/administrator/user_list' => 'controllers/administrator/user_list',
     '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
     '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
-    '/administrator/products_edit.php' => 'controllers/administrator/products_edit.php'
+    '/administrator/products_edit' => 'controllers/administrator/products_edit'
 ];
 
 //função uri que carrega as páginas dentro do site
