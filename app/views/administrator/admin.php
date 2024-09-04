@@ -9,6 +9,7 @@ if (empty($_SESSION) or $_SESSION['tipo'] == '' or $_SESSION['tipo'] == 'U') {
             <ul>
                 <li><a href="/administrator/user_list">Lista de Usuários</a></li>
                 <li><a href="/administrator/cadastro_produtos">Cadastro Produtos</a></li>
+                <li><a href="/administrator/consulta_produto">Consulta Produtos</a></li>
             </ul>
         </tbody>
     </table>
