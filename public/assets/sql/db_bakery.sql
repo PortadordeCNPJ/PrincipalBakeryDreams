@@ -34,8 +34,9 @@ CREATE TABLE `tb_produtos` (
   `valor` decimal(5,2) NOT NULL,
   `imagem` varchar(200) NOT NULL,
   `sabor` varchar(30) NOT NULL,
-  `gluten` tinyint(1) DEFAULT 1,
-  `amendoim` tinyint(1) DEFAULT 0,
+  `gluten` varchar(1) DEFAULT 'S',
+  `amendoim` varchar(1) DEFAULT 'N',
+  `ativo` varchar(1) DEFAULT 'S',
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,16 +44,17 @@ CREATE TABLE `tb_produtos` (
 -- Despejando dados para a tabela `tb_produtos`
 --
 
-INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amendoim`, `id_tipoproduto`) VALUES
-(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, 'chocolate.jpg', 'Bolo de Chocolate', NULL, NULL, 1),
-(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 0, 0, 1),
-(3, 'salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 0, 0, 2),
-(4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, 'bolocenoura.jpg', '', 0, 0, 3),
-(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'empadinhas.jpg', '', 0, 0, 2),
-(7, ' Beijinho', 'Beijinho bem gostoso', 12.00, 'beijinho.webp', '', 0, 0, 3),
-(8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 0, 0, 1),
-(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, 'boloFormigueiro.jpg', '', 0, 0, 2),
-(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 0, 0, 3);
+INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amendoim`, `ativo`, `id_tipoproduto`) VALUES
+(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, 'chocolate.jpg', 'Bolo de Chocolate', 'S', 'N', 'S', 1),
+(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 'N', 'N', 'S', 1),
+(3, 'Salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 'N', 'N', 'S', 2),
+(4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, 'brigadeiro.jpg', '', 'N', 'N', 'S', 3),
+(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'empadinhas.jpg', '', 'N', 'N', 'S', 2),
+(7, 'Beijinho', 'Beijinho bem gostoso', 12.00, 'beijinho.webp', '', 'N', 'N', 'S', 3),
+(8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 'N', 'N', 'S', 1),
+(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, 'boloFormigueiro.jpg', '', 'N', 'N', 'S', 2),
+(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 'N', 'N', 'S', 3);
+
 
 -- --------------------------------------------------------
 

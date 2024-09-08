@@ -1,1 +1,16 @@
 SELECT tb_produtos.nome, tb_produtos.valor, tb_tipoprodutos.tipoproduto FROM tb_produtos LEFT JOIN tb_tipoprodutos ON tb_tipoprodutos.id_tipoproduto = tb_produtos.id_tipoproduto;
+
+
+
+SELECT DISTINCT clientes.*,cidades.id AS id_cidade, 
+                cursos.id AS id_curso ,
+                cidades.nome AS nome_cidade, 
+                cursos.nome AS nome_curso,
+                periodos.nome AS nome_periodo
+                FROM tb_clientes AS clientes 
+                INNER JOIN tb_cidades AS cidades ON clientes.id_cidade = cidades.id 
+                INNER JOIN tb_cursos AS cursos ON clientes.id_curso = cursos.id
+                INNER JOIN tb_periodos AS periodos ON clientes.id_periodo = periodos.id";
+
+
+SELECT DISTINCT tb_usuario.*, tb_produtos.*, tb_tipoprodutos.* FROM tb_usuarios INNER JOIN tb_produtos ON 
