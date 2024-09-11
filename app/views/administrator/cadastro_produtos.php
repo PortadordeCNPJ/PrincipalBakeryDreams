@@ -44,13 +44,13 @@
 
     <div class="form-group">
         <label class="form-label" for="gluten">Sabor:</label>
-        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" type="text">
     </div>
 
     <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Amendoim:</label>
-        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amedoim">
-        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amedoim">
+        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amendoim">
+        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amendoim">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

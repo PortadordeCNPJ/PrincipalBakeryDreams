@@ -31,33 +31,33 @@
         <label class="form-label" for="gluten">Tipo do Produto:</label>
 
         <select name="id_tipoproduto">
-            <option selected value="<?= $productsFound->tipoproduto ?>">Bolo</option>
-            <option selected value="<?= $productsFound->tipoproduto ?>">Salgadinho</option>
-            <option selected value="<?= $productsFound->tipoproduto ?>">Docinho</option>
+            <?php foreach ($kindProducts as $kindProduct) {
+                echo "<option selected value='" . $kindProduct->id_tipoproduto . "'>" . $kindProduct->tipoproduto . "</option>";
+            } ?>
         </select>
     </div>
 
     <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Gluten:</label>
-        <label class="form-label-check" for="sim">Sim</label><input Checked type="checkbox" class="ms-1" name="gluten" value="S">
-        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="gluten" value="N">
+        <label class="form-label-check" for="sim">Sim</label><input Checked type="checkbox" class="ms-1" name="gluten" value="<?= $productsFound->gluten ?>">
+        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="gluten" value="<?= $productsFound->gluten ?>">
     </div>
 
     <div class="form-group">
         <label class="form-label" for="gluten">Sabor:</label>
-        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" id="pwd" type="text" onchange="password()">
+        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" id="pwd" type="text" value="<?= $productsFound->sabor ?>">
     </div>
 
     <div class="form-group">
         <label class="form-label mb-3" for="amendoim">Contem Amendoim:</label>
-        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amedoim" value="S">
-        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amedoim" value="N">
+        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amendoim" value="<?= $productsFound->amendoim ?>">
+        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amendoim" value="<?= $productsFound->amendoim ?>">
     </div>
 
     <div class="form-group">
         <label class="form-label mb-3" for="ativo">Produto Ativo:</label>
-        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="ativo" value="S">
-        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="ativo" value="N">
+        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" Checked class="ms-1" name="ativo" value="<?= $productsFound->ativo ?>">
+        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="ativo" value="<?= $productsFound->ativo ?>">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>
