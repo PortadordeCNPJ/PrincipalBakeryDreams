@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label class="form-label" for="imagem">imagem:</label>
-        <input  class="form-input" name="imagem" id="senha" type="file">
+        <input class="form-input" name="imagem" id="senha" type="file">
     </div>
 
     <!-- Fazer um if que vai verificar o tipo do produto e vai com base nele, cadastrar no campo correto -->
@@ -30,16 +30,16 @@
         <label class="form-label" for="gluten">Tipo do Produto:</label>
 
         <select name="id_tipoproduto">
-                <option selected value="1">Bolo</option>
-                <option selected value="2">Salgadinho</option>
-                <option selected value="3">Docinho</option>
+            <option selected value="1">Bolo</option>
+            <option selected value="2">Salgadinho</option>
+            <option selected value="3">Docinho</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label class="form-label mb-3" for="gluten">Contem Gluten:</label>
-        <label class="form-label-check" for="sim">Sim</label><input Checked type="checkbox" class="ms-1" name="gluten">
-        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="gluten">
+        <label class="form-label" for="imagem">Contem Gluten:</label>
+        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="gluten" value="S" class="radio">
+        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="gluten" value="N" class="radio">
     </div>
 
     <div class="form-group">
@@ -48,9 +48,9 @@
     </div>
 
     <div class="form-group">
-        <label class="form-label mb-3" for="gluten">Contem Amendoim:</label>
-        <label class="form-label-check" for="sim">Sim</label><input type="checkbox" class="ms-1" name="amendoim">
-        <label class="form-label-check" for="não">Não</label><input Checked type="checkbox" class="ms-1" name="amendoim">
+        <label class="form-label" for="imagem">Contem Amendoim:</label>
+        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="amendoim" value="S" class="radio">
+        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="amendoim" value="N" class="radio">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

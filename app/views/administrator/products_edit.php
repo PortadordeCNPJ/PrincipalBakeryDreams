@@ -38,9 +38,30 @@
     </div>
 
     <div class="form-group">
+        Contem Gluten:
+        <div class="inf-radio">
+            <label class="form-label" for="sim">Sim</label> <input type="radio" name="gluten" value="S" class="radio">
+            <label class="form-label" for="nao">Não</label> <input type="radio" name="gluten" value="N" class="radio">
+        </div>
+    </div>
+
+
+    <div class="form-group">
         <label class="form-label mb-3" for="gluten">Contem Gluten:</label>
-        <label class="form-label-check" for="sim">Sim</label><input Checked type="checkbox" class="ms-1" name="gluten" value="<?= $productsFound->gluten ?>">
-        <label class="form-label-check" for="não">Não</label><input type="checkbox" class="ms-1" name="gluten" value="<?= $productsFound->gluten ?>">
+        <?php foreach ($productsFound as $productsFounds) {
+            if ($productsFounds->gluten == "S") {
+                echo "<label class='form-label-radio' for='sim'>Sim</label> <input Checked type='radio' name='gluten' value='" . $productsFounds->gluten . "' class='radio'>";
+            } else {
+                echo "<label class='form-label-radio' for='nao'>Não</label> <input type='radio' name='gluten' value='" . $productsFounds->gluten . "' class='radio'>";
+            }
+        }
+        ?>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="imagem">Contem Gluten:</label>
+        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="gluten" value="S" class="radio">
+        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="gluten" value="N" class="radio">
     </div>
 
     <div class="form-group">

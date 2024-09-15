@@ -34,7 +34,7 @@ class CartProducts {
                 'imagem' => $product[0]->imagem,
                 'sabor' => $product[0]->sabor,
                 'gluten' => $product[0]->gluten,
-                'amendoim' => $product[0]->amedoim,
+                'amendoim' => $product[0]->amendoim,
                 'id_tipoproduto' => $product[0]->id_tipoproduto,
                 'qty' => $quantity,
                 'subtotal' => $quantity * $product[0]->valor,
