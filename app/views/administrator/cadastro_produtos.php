@@ -38,19 +38,19 @@
 
     <div class="form-group">
         <label class="form-label" for="imagem">Contem Gluten:</label>
-        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="gluten" value="S" class="radio">
-        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="gluten" value="N" class="radio">
+        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="gluten" value="S">
+        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="gluten" value="N">
     </div>
 
     <div class="form-group">
         <label class="form-label" for="gluten">Sabor:</label>
-        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="gluten" type="text">
+        <input required="" placeholder="Ex: 4 Leites e chocolate" class="form-input" name="sabor" type="text">
     </div>
 
     <div class="form-group">
         <label class="form-label" for="imagem">Contem Amendoim:</label>
-        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="amendoim" value="S" class="radio">
-        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="amendoim" value="N" class="radio">
+        <label class="form-label-radio" for="sim">Sim</label> <input type="radio" name="amendoim" value="S">
+        <label class="form-label-radio" for="nao">Não</label> <input type="radio" name="amendoim" value="N">
     </div>
 
     <button class="form-button" type="submit">Cadastrar</button>

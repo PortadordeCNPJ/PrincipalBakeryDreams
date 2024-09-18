@@ -4,9 +4,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
   background-color: #ffffff;
   font-family: 'quicksand_bold', Sans-serif;
+
 }
 
 /* ------------------- FIM CSS GERAL DA PÁGINA -------------------- */
@@ -353,3 +354,56 @@ body {
 
 
 /*----------------------- FIM CSS PARA OS CARDS -------------------------------*/
+
+
+
+
+
+/*------------- INICIO CSS PARA A PÁGINA DE ADMIN --------------------*/
+
+.btn-administrator {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 200px;
+}
+
+.btn-administrator > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 290px;
+  height: 155px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #000;
+  background-color: #eec38f;
+  font-size: 1.8rem;
+  margin: 0 60px 0 0 ;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/
