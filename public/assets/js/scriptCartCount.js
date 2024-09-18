@@ -4,11 +4,12 @@ function calcValor(id_produto) {
     console.log(id_produto);
     
     var precoProdutos = document.getElementById("valorCardCart-" + id_produto);
+    var precoProd = document.getElementById("valorCardCartFix-" + id_produto);
     
     if (precoProdutos.value > 0) {
-        debugger
+        // debugger
         var inputcontagem = document.getElementById("cart-input-qty-" + id_produto);
-        var preco = parseInt(inputcontagem.value) * precoProdutos.value;
+        var preco = parseInt(inputcontagem.value) * precoProd.value;
         precoProdutos.value = preco;
     } else {
         console.log("Ta caindo aqui rapaz");

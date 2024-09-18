@@ -44,6 +44,7 @@ $products = $cartProducts->products(new Cart);
                         <div class="btn-count" onclick="almentarQtd(<?php echo $product['id_produto']; ?>)">+</div>
                     </div>
                     <p>
+                        <input type="hidden" id="valorCardCartFix-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
                         <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
                     </p>
                     <!-- </form> -->
