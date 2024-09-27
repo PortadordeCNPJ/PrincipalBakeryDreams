@@ -12,6 +12,12 @@ $products = $read->all('tb_produtos');
 // $cart->dump();
 
 $productsInCart = $cart->cart();
+
+// $userNaoLogado = $_SESSION['tipo'] = "";
+
+// if ($userNaoLogado) {
+//     $_SESSION['tipo'] = "U";
+// }
 ?>
 
 <!DOCTYPE html>
