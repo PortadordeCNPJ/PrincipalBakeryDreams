@@ -269,6 +269,7 @@ body {
 .cardProds {
   display: flex;
   align-items: center;
+  margin-top: 50px;
   flex-direction: column;
   width: 300px;
   height: 480px;
@@ -387,23 +388,26 @@ body {
   text-decoration: none;
 }
 
+/*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/
 
 
+/*------------- INICIO CSS PARA AS ROWS DA PÁGINA INICIAL --------------------*/
 
+.row-cakes {
+  background-color: #f8e5cc;
+  height: 1200px;
+  margin-top: 50px;
+}
 
+.row-snacks {
+  background-color: #f8e5cc;
+  height: 1200px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.row-sweets {
+  background-color: #f8e5cc;
+  height: 1200px;
+}
 
 
 /*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/
