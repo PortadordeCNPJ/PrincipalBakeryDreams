@@ -2,6 +2,7 @@
     <div class="single-item">
         <img src="../assets/images/banners/bannerBolo.jpg" alt="" height="300">
         <img src="../assets/images/banners/bannerDoces.jpg" alt="" height="300">
+        <img src="../assets/images/banners/banner.webp" alt="" height="300">
     </div>
     <div class="d-flex justify-content-center" style="margin: 56px 0 75px 0;">
         <h1 style="font-weight: 700;">Os Produtos de Melhor Qualidade do Mercado Aqui!!</h1>
@@ -47,7 +48,7 @@
         </div>
     </div>
 
-    <div class="row-cakes">
+    <div class="row-snacks">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
             <h1>Os Melhores Bolos do Mercado!</h1>
             <p style="text-align: justify;">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
@@ -86,7 +87,7 @@
         </div>
     </div>
 
-    <div class="row-cakes">
+    <div class="row-sweets">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
             <h1>Os Melhores Bolos do Mercado!</h1>
             <p style="text-align: justify;">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
