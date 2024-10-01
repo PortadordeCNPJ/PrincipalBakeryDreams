@@ -409,5 +409,9 @@ body {
   height: 1200px;
 }
 
+.slick-next {
+  right: 0;
+}
+
 
 /*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/

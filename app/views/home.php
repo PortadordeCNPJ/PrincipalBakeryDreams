@@ -1,8 +1,6 @@
 <main>
     <div class="single-item">
-        <img src="../assets/images/banners/bannerBolo.jpg" alt="" height="300">
-        <img src="../assets/images/banners/bannerDoces.jpg" alt="" height="300">
-        <img src="../assets/images/banners/banner.webp" alt="" height="300">
+        <img src="../assets/images/banners/bannerOficial.png" alt="" height="300">
     </div>
     <div class="d-flex justify-content-center" style="margin: 56px 0 75px 0;">
         <h1 style="font-weight: 700;">Os Produtos de Melhor Qualidade do Mercado Aqui!!</h1>
