@@ -36,8 +36,7 @@
                                         <?php echo $product->descricao; ?>
                                     </p>
                                     <p>
-                                        <span>R$<?php echo number_format($product->valor, 2, ',', '.'); ?></span>
-                                        <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> Adicionar <i class='fa-solid fa-cart-shopping'></i></a>
+                                        <a href="/produtos/cakes"> Visitar Página de Bolos </a>
                                     </p>
                                 </div>
                             </div>
@@ -75,8 +74,7 @@
                                         <?php echo $product->descricao; ?>
                                     </p>
                                     <p>
-                                        <span>R$<?php echo number_format($product->valor, 2, ',', '.'); ?></span>
-                                        <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> Adicionar <i class='fa-solid fa-cart-shopping'></i></a>
+                                    <a href="/produtos/snacks"> Visitar Página de Bolos </a>
                                     </p>
                                 </div>
                             </div>
@@ -114,8 +112,7 @@
                                         <?php echo $product->descricao; ?>
                                     </p>
                                     <p>
-                                        <span>R$<?php echo number_format($product->valor, 2, ',', '.'); ?></span>
-                                        <a href="/cart_add?id_produto=<?php echo $product->id_produto ?>"> Adicionar <i class='fa-solid fa-cart-shopping'></i></a>
+                                    <a href="/produtos/sweets"> Visitar Página de Bolos </a>
                                     </p>
                                 </div>
                             </div>

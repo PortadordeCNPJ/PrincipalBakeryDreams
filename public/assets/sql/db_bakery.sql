@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/08/2024 às 05:03
+-- Tempo de geração: 01/10/2024 às 02:56
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -45,16 +45,21 @@ CREATE TABLE `tb_produtos` (
 --
 
 INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amendoim`, `ativo`, `id_tipoproduto`) VALUES
-(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, 'chocolate.jpg', 'Bolo de Chocolate', 'S', 'N', 'S', 1),
+(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, '', 'Bolo de Chocolate', 'S', 'N', 'S', 1),
 (2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 'N', 'N', 'S', 1),
 (3, 'Salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 'N', 'N', 'S', 2),
 (4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, 'brigadeiro.jpg', '', 'N', 'N', 'S', 3),
 (5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'empadinhas.jpg', '', 'N', 'N', 'S', 2),
 (7, 'Beijinho', 'Beijinho bem gostoso', 12.00, 'beijinho.webp', '', 'N', 'N', 'S', 3),
 (8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 'N', 'N', 'S', 1),
-(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, 'boloFormigueiro.jpg', '', 'N', 'N', 'S', 2),
-(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 'N', 'N', 'S', 3);
-
+(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, '', 'formigueiro', 'S', 'N', 'S', 2),
+(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 'N', 'N', 'S', 3),
+(11, 'teste', 'teste', 23.00, 'chocolate.jpg', '', 't', 'N', 'S', 3),
+(12, 'Bolo de morango', 'Bolo de Morango com glace real', 12.00, 'morangobolo.jpg', 'morango', 'S', 'N', 'S', 1),
+(13, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 13.00, 'boloFormigueiro.jpg', 'formigueiro', 'S', 'N', 'S', 1),
+(14, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 12.00, 'salgadinhos.jpg', 'frango', 'S', 'N', 'S', 2),
+(15, 'Mini coxinhas de frango com catupiry', 'Beijinho bem gostoso', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2),
+(16, 'Empadas de frango', 'teste', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2);
 
 -- --------------------------------------------------------
 
@@ -103,7 +108,7 @@ CREATE TABLE `tb_usuarios` (
 --
 
 INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`) VALUES
-(1, 'AdminGuiWillian', '13423812828', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa'),
+(1, 'AdminGuiWillian', '13423812812', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa'),
 (2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves'),
 (3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
 (4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', ''),
@@ -190,7 +195,7 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
