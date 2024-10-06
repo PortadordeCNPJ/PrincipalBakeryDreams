@@ -205,6 +205,15 @@ body {
   width: 500px;
 }
 
+.inputwrapper {
+  display: flex;
+}
+
+.eyebt {
+  outline: none;
+  background: none;
+  border: 0;
+}
 /*----------------- FINAL CSS PARA OS FORMS -------------------------*/
 
 

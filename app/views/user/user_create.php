@@ -24,7 +24,7 @@
             <div class="inputwrapper">
                 <input required="" placeholder="Senha" class="form-input" name="senha" id="senha" type="password" onchange="password()">
                 <button class="eyebt" type="button" id="eye">
-                    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+                    <i class="fa-solid fa-eye"></i>
                 </button>
             </div>
         </div>
