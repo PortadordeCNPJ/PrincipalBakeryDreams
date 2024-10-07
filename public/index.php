@@ -51,7 +51,8 @@ $routes = [
     '/administrator/user_list' => 'controllers/administrator/user_list',
     '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
     '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
-    '/administrator/products_edit' => 'controllers/administrator/products_edit'
+    '/administrator/products_edit' => 'controllers/administrator/products_edit',
+    '/products_destroy' => 'controllers/administrator/products_destroy'
 ];
 
 //função uri que carrega as páginas dentro do site
