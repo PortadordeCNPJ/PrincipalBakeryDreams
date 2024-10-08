@@ -25,6 +25,8 @@ document.getElementById("eye").addEventListener("click", function () {
 function password() {
     const senha = document.queryElementById('senha');
     const confSenha = document.queryElementById('pwd');
+    console.log(confSenha);
+    debugger
     if (confSenha.value === senha.value) {
         document.getElementById("erro-senha").style.display = "none";
     } else {

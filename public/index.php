@@ -52,7 +52,12 @@ $routes = [
     '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
     '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
     '/administrator/products_edit' => 'controllers/administrator/products_edit',
-    '/products_destroy' => 'controllers/administrator/products_destroy'
+    '/administrator/type_product_create' => 'controllers/administrator/type_product_create',
+    '/administrator/type_product_store' => 'controllers/administrator/type_product_store',
+    '/products_destroy' => 'controllers/administrator/products_destroy',
+    '/type_product_update' => 'controllers/administrator/type_product_update',
+    '/administrator/type_product_edit' => 'controllers/administrator/type_product_edit',
+    '/administrator/type_product_consult' => 'controllers/administrator/type_product_consult'
 ];
 
 //função uri que carrega as páginas dentro do site

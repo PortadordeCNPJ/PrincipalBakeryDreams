@@ -1,7 +1,7 @@
 <?php
 
 use app\classes\Validation;
-use app\models\Produto;
+use app\models\ReadCart;
 use app\models\Transaction;
 
 $validation = new Validation;
@@ -17,7 +17,7 @@ $transaction = new Transaction;
 $transaction->transactions(function () use ($transaction, $validate){
 
     //Aqui ele passa o objeto e passa a função de model que pega o caminho com o namespace e acha a tabela para dar o insert, assim da o insert nas informações
-    $transaction->model(Produto::class)->insert($validate);
+    $transaction->model(ReadCart::class)->insert($validate);
 });
 
 echo "<script>alert('Produto cadastrado com sucesso!!');</script>";
