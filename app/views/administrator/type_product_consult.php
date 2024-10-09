@@ -16,7 +16,7 @@
                 <a href="/administrator/type_product_edit?id_tipoproduto=<?= $type_product->id_tipoproduto; ?>" class="btn btn-success">Editar</a>
             </td>
             <td>
-                <a href="/products_destroy?id_tipoproduto=<?= $type_product->id_tipoproduto; ?>" class="btn btn-danger">Deletar</a>
+                <a href="/type_product_destroy?id_tipoproduto=<?= $type_product->id_tipoproduto; ?>" class="btn btn-danger">Deletar</a>
             </td>
         </tr>
     <?php endforeach; ?>

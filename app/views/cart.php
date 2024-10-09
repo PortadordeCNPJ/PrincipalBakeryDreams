@@ -46,6 +46,7 @@ $products = $cartProducts->products(new Cart);
                     <p>
                         <input type="hidden" id="valorCardCartFix-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
                         <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
+                        <!-- <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="R$<?php echo number_format($product['valor'], 2, ',', '.'); ?>"> -->
                     </p>
                     <!-- </form> -->
                     <a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>

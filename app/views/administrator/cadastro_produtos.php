@@ -16,7 +16,7 @@
 
     <div class="form-group">
         <label class="form-label" for="valor">valor:</label>
-        <input required="" placeholder="Insira o valor do produto" class="form-input" maxlength="11" name="valor" id="CPF" type="number">
+        <input required="" placeholder="Insira o valor do produto" class="form-input" maxlength="11" name="valor" id="CPF" type="text" inputmode="numeric">
     </div>
 
     <div class="form-group">

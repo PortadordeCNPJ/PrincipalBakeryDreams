@@ -6,7 +6,6 @@ use app\models\TipoProduto;
 $type_product = new TipoProduto;
 $validation = new Validation;
 
-
 $validate = $validation->validate($_POST);
 
 //Carrega dentro da variavel $user que recebe da tabela de users, para dar um Update utilizando a função update

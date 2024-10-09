@@ -13,9 +13,9 @@ $routes = [
     '/' => 'controllers/index',
 
     //Para as páginas de produtos
-    '/produtos/snacks' => 'controllers/produtos/snacks',
     '/produtos/cakes' => 'controllers/produtos/cakes',
     '/produtos/sweets' => 'controllers/produtos/sweets',
+    '/produtos/snacks' => 'controllers/produtos/snacks',
     '/products_update' => 'controllers/produtos/products_update',
 
 
@@ -26,14 +26,14 @@ $routes = [
 
 
     //Caminho das views do usuário
-    '/user/user_edit' => 'controllers/user/user_edit',
-    '/user/user_login' => 'controllers/user/user_login',
-    '/user/user_create' => 'controllers/user/user_create',
     '/user_store' => 'controllers/user/user_store',
     '/user_logado' => 'controllers/user/user_logado',
     '/user_update' => 'controllers/user/user_update',
     '/user_destroy' => 'controllers/user/user_destroy',
     '/user_deslogado' => 'controllers/user/user_deslogado',
+    '/user/user_edit' => 'controllers/user/user_edit',
+    '/user/user_login' => 'controllers/user/user_login',
+    '/user/user_create' => 'controllers/user/user_create',
 
     //Para as página de dentro da pasta de cart
     '/cart' => 'controllers/cart/cart',
@@ -47,17 +47,18 @@ $routes = [
     '/cadastro_store' => 'controllers/produtos/cadastro_store',
 
     //Admin Pages
-    '/administrator/admin' => 'controllers/administrator/admin',
-    '/administrator/user_list' => 'controllers/administrator/user_list',
-    '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
-    '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
-    '/administrator/products_edit' => 'controllers/administrator/products_edit',
-    '/administrator/type_product_create' => 'controllers/administrator/type_product_create',
-    '/administrator/type_product_store' => 'controllers/administrator/type_product_store',
     '/products_destroy' => 'controllers/administrator/products_destroy',
     '/type_product_update' => 'controllers/administrator/type_product_update',
+    '/type_product_destroy' => 'controllers/administrator/type_product_destroy',
+    '/administrator/admin' => 'controllers/administrator/admin',
+    '/administrator/user_list' => 'controllers/administrator/user_list',
+    '/administrator/products_edit' => 'controllers/administrator/products_edit',
+    '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
+    '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
     '/administrator/type_product_edit' => 'controllers/administrator/type_product_edit',
-    '/administrator/type_product_consult' => 'controllers/administrator/type_product_consult'
+    '/administrator/type_product_store' => 'controllers/administrator/type_product_store',
+    '/administrator/type_product_create' => 'controllers/administrator/type_product_create',
+    '/administrator/type_product_consult' => 'controllers/administrator/type_product_consult',
 ];
 
 //função uri que carrega as páginas dentro do site
