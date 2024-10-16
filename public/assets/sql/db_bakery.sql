@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/10/2024 às 02:56
+-- Tempo de geração: 16/10/2024 às 01:59
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -54,12 +54,13 @@ INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`,
 (8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 'N', 'N', 'S', 1),
 (9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, '', 'formigueiro', 'S', 'N', 'S', 2),
 (10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 'N', 'N', 'S', 3),
-(11, 'teste', 'teste', 23.00, 'chocolate.jpg', '', 't', 'N', 'S', 3),
+(11, 'teste', 'teste', 23.00, 'chocolate.jpg', '', 'S', 'N', 'S', 3),
 (12, 'Bolo de morango', 'Bolo de Morango com glace real', 12.00, 'morangobolo.jpg', 'morango', 'S', 'N', 'S', 1),
 (13, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 13.00, 'boloFormigueiro.jpg', 'formigueiro', 'S', 'N', 'S', 1),
 (14, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 12.00, 'salgadinhos.jpg', 'frango', 'S', 'N', 'S', 2),
 (15, 'Mini coxinhas de frango com catupiry', 'Beijinho bem gostoso', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2),
-(16, 'Empadas de frango', 'teste', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2);
+(16, 'Empadas de frango', 'teste', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2),
+(17, 'teste', 'teste', 12.12, 'bolocenoura.jpg', 'teste', 'S', 'S', 'S', 1);
 
 -- --------------------------------------------------------
 
@@ -100,20 +101,23 @@ CREATE TABLE `tb_usuarios` (
   `bairro` varchar(30) NOT NULL,
   `nmcasa` varchar(8) NOT NULL,
   `complemento` varchar(100) NOT NULL,
-  `rua` varchar(50) NOT NULL
+  `rua` varchar(50) NOT NULL,
+  `token` varchar(250) DEFAULT NULL,
+  `token_validade` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`) VALUES
-(1, 'AdminGuiWillian', '13423812812', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa'),
-(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves'),
-(3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas'),
-(4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', ''),
-(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', ''),
-(10, 'Guilherme de Souza', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '0000-00-00', 'U', '', '', '', '');
+INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`, `token`, `token_validade`) VALUES
+(1, 'AdminGuiWillian', '13423812812', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa', NULL, NULL),
+(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves', NULL, NULL),
+(3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas', NULL, NULL),
+(4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
+(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
+(10, 'Guilherme de Souza', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
+(11, 'teste', '13423812828', '', '202cb962ac59075b964b07152d234b70', 1, 'teste@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -195,19 +199,19 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
 --
 ALTER TABLE `tb_tipoprodutos`
-  MODIFY `id_tipoproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_tipoproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendaitens`
