@@ -1,26 +1,27 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
+use app\models\User;
 use PHPMailer\PHPMailer\Exception;
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+use PHPMailer\PHPMailer\PHPMailer;
+
+
 
 // Função para enviar e-mail
-function enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto) {
+function enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto)
+{
     $mail = new PHPMailer(true);
     try {
         // Configurações do servidor SMTP
         $mail->isSMTP();
         $mail->SMTPAuth = true;
-        $mail->Username = 'karllonkeysson@gmail.com'; // Substitua pelo seu e-mail SMTP
-        $mail->Password = 'bmnu kduc waeh yfmn';             // Substitua pela sua senha SMTP
+        $mail->Username = 'guilhermedesouzamuller@gmail.com'; // Substitua pelo seu e-mail SMTP
+        $mail->Password = 'jckq uvvn vkjg mswr';             // Substitua pela sua senha SMTP
         $mail->SMTPSecure = 'tls';             // Use 'tls' ou 'ssl' conforme seu provedor
         $mail->Host = 'smtp.gmail.com';        // Substitua pelo servidor SMTP correto
         $mail->Port = 587;                     // Porta TLS
 
         // Configurações do e-mail
-        $mail->setFrom('karllonkeysson@gmail.com', 'Sua Empresa ou Nome'); // Substitua pelo seu e-mail
+        $mail->setFrom('guilhermedesouzamuller@gmail.com', 'Sua Empresa ou Nome'); // Substitua pelo seu e-mail
         $mail->addAddress($email);                                  // Destinatário
 
         $mail->isHTML(true);                                        // Formato HTML
@@ -39,8 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
     // Verifique se o e-mail existe no banco de dados
-    $sql = "SELECT * FROM tb_usuarios WHERE email = :email";
-    $stmt = $pdo->prepare($sql);
+    // $sql = "SELECT * FROM tb_usuarios WHERE email = :email";
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->bindParam(1, $email, PDO::PARAM_STR);
+    // $stmt->execute();
+    // $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $user = new User;
+    $email = $user->find('email', $email);
     $stmt->bindParam(1, $email, PDO::PARAM_STR);
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -65,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Envie o e-mail usando PHPMailer
         if (enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto)) {
             echo "<script>alert ('Um link de redefinição de senha foi enviado para o seu e-mail.');</script>";
-            header("Location: confirmacao.php"); 
+            header("Location: confirmacao.php");
             //echo "<script>location.href='redefinir_senha.php?token$token';</script>";
         } else {
             echo "Erro ao enviar o e-mail. Tente novamente.";

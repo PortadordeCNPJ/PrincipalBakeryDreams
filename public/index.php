@@ -23,6 +23,9 @@ $routes = [
     '/pages/sobre' => 'controllers/pages/sobre',
     '/pages/contato' => 'controllers/pages/contato',
     '/pages/page_not_found' => 'controllers/pages/page_not_found',
+    '/pages/confirmacao' => 'controllers/pages/confirmacao',
+    '/pages/esqueceu_senha' => 'controllers/pages/esqueceu_senha',
+    '/pages/redefinir_senha' => 'controllers/pages/redefinir_senha',
 
 
     //Caminho das views do usuário
