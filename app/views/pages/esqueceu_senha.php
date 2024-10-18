@@ -36,6 +36,8 @@ function enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto)
     }
 }
 
+$user = new User;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
@@ -46,22 +48,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $stmt->execute();
     // $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $user = new User;
-    $email = $user->find('email', $email);
-    $stmt->bindParam(1, $email, PDO::PARAM_STR);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $emailUser = $user->find('email', $email);
+    $emailCorrect = $emailUser->email;
+    // $stmt->bindParam(1, $email, PDO::PARAM_STR);
+    // $stmt->execute();
 
-    if ($result) {
+    if ($emailCorrect) {
         // Gera um token seguro
         $token = bin2hex(random_bytes(50));
 
         // Armazena o token e a validade no banco de dados
-        $query = "UPDATE tb_usuarios SET token = ?, token_expira = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = ?";
-        $stmt = $pdo->prepare($query);
-        $stmt->bindParam(1, $token, PDO::PARAM_STR);
-        $stmt->bindParam(2, $email, PDO::PARAM_STR);
-        $stmt->execute();
+        $funcao = updateRecuperacaoSenha();
 
         // Gera o link de redefinição de senha
         $link = "http://localhost/Tcc%20Site/redefinir_senha.php?token=$token";

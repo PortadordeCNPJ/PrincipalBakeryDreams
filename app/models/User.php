@@ -2,10 +2,10 @@
 
 namespace app\models;
 
-class User extends Model 
+class User extends Model
 {
     protected $table = 'tb_usuarios';
-    
+
     //função para fazer um intert into dentro da tabela de usuario no bando
     // public function insert(array $attributes) {
     //     $sql = "INSERT INTO {$this->table}(name,email,password) values(:name,:email,:password)";
@@ -21,12 +21,20 @@ class User extends Model
     //     return $insert->execute($attributes);
     // }
 
-//         public function update(array $attributes)
-//         {
-//             $sql  = "update {$this->table} set name = :name, email = :email, password = :password where id = :id";
-//             $update = $this->connection->prepare($sql);
-//             $update->execute($attributes);
+    //         public function update(array $attributes)
+    //         {
+    //             $sql  = "update {$this->table} set name = :name, email = :email, password = :password where id = :id";
+    //             $update = $this->connection->prepare($sql);
+    //             $update->execute($attributes);
 
-//             return $update->rowCount();
-//         }
+    //             return $update->rowCount();
+    //         }
+
+    public function updateRecuperacaoSenha()
+    {
+        $sql = "UPDATE $this->table SET token = ?, token_validate = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = ?";
+        $list = $this->connection->prepare($sql);
+        $list->execute();
+        
+    }
 }
