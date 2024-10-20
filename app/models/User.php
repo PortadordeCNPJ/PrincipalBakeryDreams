@@ -30,11 +30,22 @@ class User extends Model
     //             return $update->rowCount();
     //         }
 
-    public function updateRecuperacaoSenha()
+    // public function getUser(){
+    //     $sql = "SELECT * FROM {$this->table} WHERE nome LIKE nome ORDER BY :nome ASC";
+    //     $list = $this->connection->prepare($sql);
+    //     $list->execute();
+
+    //     return $list->fetchAll();
+    // }
+
+    public function updateRecuperacaoSenha($email, $token)
     {
-        $sql = "UPDATE $this->table SET token = ?, token_validate = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = ?";
-        $list = $this->connection->prepare($sql);
-        $list->execute();
+        $sql = "UPDATE {$this->table} SET token = ?, token_validate = :DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = ?";
+        $update = $this->connection->prepare($sql);
+        $update->bind_param("s", $token);
+        $update->bind_param("s", $email);
+        $update->execute();
         
+        return $update->rowCount();
     }
 }

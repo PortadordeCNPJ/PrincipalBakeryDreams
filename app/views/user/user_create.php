@@ -37,6 +37,6 @@
         <button onclick="logar()" class="form-button" type="submit">Cadastrar</button>
     </form>
 </div>
-<a href="/pages/esqueceu_senha">Esqueceu a senha vagabundo</a>
+<a href="/pages/esqueceu_senha">Esqueceu a senha</a>
 
 <script src="/assets/js/scriptcad.js"></script>

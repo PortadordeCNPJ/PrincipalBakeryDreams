@@ -4,8 +4,6 @@ use app\models\User;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
-
-
 // Função para enviar e-mail
 function enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto)
 {
@@ -56,9 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($emailCorrect) {
         // Gera um token seguro
         $token = bin2hex(random_bytes(50));
-
+        $user->updateRecuperacaoSenha($emailCorrect, $token);
+        
         // Armazena o token e a validade no banco de dados
-        $funcao = updateRecuperacaoSenha();
+        
 
         // Gera o link de redefinição de senha
         $link = "http://localhost/Tcc%20Site/redefinir_senha.php?token=$token";
