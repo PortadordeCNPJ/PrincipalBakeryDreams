@@ -26,6 +26,7 @@ $routes = [
     '/pages/confirmacao' => 'controllers/pages/confirmacao',
     '/pages/esqueceu_senha' => 'controllers/pages/esqueceu_senha',
     '/pages/redefinir_senha' => 'controllers/pages/redefinir_senha',
+    '/pages/esqueceu_senha_validation' => 'controllers/pages/esqueceu_senha_validation',
 
 
     //Caminho das views do usuário

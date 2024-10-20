@@ -38,14 +38,19 @@ class User extends Model
     //     return $list->fetchAll();
     // }
 
-    public function updateRecuperacaoSenha($email, $token)
+    public function updateRecuperacaoSenha($emailCorrect, $token)
     {
-        $sql = "UPDATE {$this->table} SET token = ?, token_validate = :DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = ?";
+        $sql = "UPDATE {$this->table} SET token = :token, token_validade = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = :email";
         $update = $this->connection->prepare($sql);
-        $update->bind_param("s", $token);
-        $update->bind_param("s", $email);
+        $update->bindParam(":token", $token);
+        $update->bindParam(":email", $emailCorrect);
         $update->execute();
-        
+
         return $update->rowCount();
+    }
+
+    public function selecUserToken()
+    {
+        
     }
 }

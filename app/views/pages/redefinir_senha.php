@@ -1,14 +1,20 @@
 <?php
 
+use app\models\User;
+
+$user = new User;
+
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
 
     // Verificar se o token é válido e ainda não expirou
-    $query = "SELECT * FROM tb_usuarios WHERE token = ? AND token_expira > NOW()";
+    $query = "SELECT * FROM tb_usuarios WHERE token = ? AND token_validade > NOW()";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(1, $token, PDO::PARAM_STR);
     $stmt->execute();
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $user = 
 
     if ($usuario) {
         // Se o token for válido, exibe o formulário para redefinir a senha
@@ -21,7 +27,7 @@ if (isset($_GET['token'])) {
                 $senha_criptografada = password_hash($nova_senha, PASSWORD_DEFAULT);
 
                 // Atualiza a senha no banco de dados e remove o token
-                $query = "UPDATE tb_usuarios SET senha = :senha, token = NULL, token_expira = NULL WHERE codusuario = :codusuario";
+                $query = "UPDATE tb_usuarios SET senha = :senha, token = NULL, token_validade = NULL WHERE codusuario = :codusuario";
                 $stmt = $pdo->prepare($query);
                 $stmt->bindParam(1, $senha_criptografada, PDO::PARAM_STR);
                 $stmt->bindParam(2, $usuario['codusuario'], PDO::PARAM_INT);
