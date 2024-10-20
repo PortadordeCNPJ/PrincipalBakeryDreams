@@ -14,7 +14,7 @@ if (isset($_GET['token'])) {
     $stmt->execute();
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $user = 
+    $userToken = ;
 
     if ($usuario) {
         // Se o token for válido, exibe o formulário para redefinir a senha
