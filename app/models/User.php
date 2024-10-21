@@ -49,8 +49,24 @@ class User extends Model
         return $update->rowCount();
     }
 
-    public function selecUserToken()
+    public function tokenExpire($token)
     {
-        
+        $sql = "SELECT * FROM {$this->table} WHERE token = :token AND token_validade > NOW()";
+        $list = $this->connection->prepare($sql);
+        $list->bindParam(":token", $token);
+        $list->execute();
+
+        return $list->fetchAll();
+    }
+
+    public function updateResetPassword($nova_senha, $userToken)
+    {
+        $sql = "UPDATE {$this->table} SET senha = :senha, token = NULL, token_validade = NULL WHERE id_usuario = :id_usuario";
+        $update = $this->connection->prepare($sql);
+        $update->bindParam(':senha', $nova_senha);
+        $update->bindParam(":id_usuario", $userToken->id_usuario);
+        $update->execute();
+
+        return $update->rowCount();
     }
 }
