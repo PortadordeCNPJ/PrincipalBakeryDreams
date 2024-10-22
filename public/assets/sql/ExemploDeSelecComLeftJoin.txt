@@ -14,3 +14,6 @@ SELECT DISTINCT clientes.*,cidades.id AS id_cidade,
 
 
 SELECT DISTINCT tb_usuario.*, tb_produtos.*, tb_tipoprodutos.* FROM tb_usuarios INNER JOIN tb_produtos ON 
+
+
+SELECT * FROM tb_usuarios WHERE nome LIKE '%Guilherme%';

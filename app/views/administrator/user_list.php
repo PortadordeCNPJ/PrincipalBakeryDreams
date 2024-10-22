@@ -1,3 +1,6 @@
+<form action="/search/users" method="POST">
+    <input type="text" placeholder="Filtro" name="filter_user">
+</form>
 <table class="table table-striped table-hover">
     <thead>
         <tr>
