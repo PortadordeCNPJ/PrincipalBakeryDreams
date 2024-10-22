@@ -63,12 +63,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $assunto = "Redefinir sua senha";
         $mensagemHTML = "Clique no link para redefinir sua senha: <a href='$link'>$link</a>";
         $mensagemTexto = "Clique no link para redefinir sua senha: $link";
-
+        
         // Envie o e-mail usando PHPMailer
         if (enviarEmail($email, $assunto, $mensagemHTML, $mensagemTexto)) {
             echo "<script>alert ('Um link de redefinição de senha foi enviado para o seu e-mail.');</script>";
             header('Location: /pages/confirmacao');
-            //echo "<script>location.href='redefinir_senha.php?token$token';</script>";
+
         } else {
             echo "Erro ao enviar o e-mail. Tente novamente.";
         }
@@ -76,3 +76,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "E-mail não encontrado!";
     }
 }
+

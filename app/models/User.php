@@ -64,7 +64,7 @@ class User extends Model
         $sql = "UPDATE {$this->table} SET senha = :senha, token = NULL, token_validade = NULL WHERE id_usuario = :id_usuario";
         $update = $this->connection->prepare($sql);
         $update->bindParam(':senha', $nova_senha);
-        $update->bindParam(":id_usuario", $userToken->id_usuario);
+        $update->bindParam(":id_usuario", $userToken[0]->id_usuario);
         $update->execute();
 
         return $update->rowCount();
