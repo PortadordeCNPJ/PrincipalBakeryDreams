@@ -12,7 +12,7 @@ if (!empty($_POST) && !empty($_POST['filter_user'])) {
 
     $users = $user->searchUser($search_user);
 
-    $layout->add('administrator/user_list');
+    $layout_adm->add('user_list');
 
 } else {
     echo "Nenhum filtro pesquisado";

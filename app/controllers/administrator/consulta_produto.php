@@ -7,4 +7,4 @@ $produto = new ReadCart;
 
 $produtos = $produto->getProduts();
 
-$layout->add('administrator/consulta_produto');
+$layout_adm->add('consulta_produto');

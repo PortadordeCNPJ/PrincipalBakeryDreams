@@ -13,4 +13,4 @@ $productsFound = $products->find('id_produto', $id_produto);
 
 $kindProducts = $kindProduct->all();
 
-$layout->add('administrator/products_edit');
+$layout_adm->add('products_edit');

@@ -7,4 +7,4 @@ $user = new User;
 
 $users = $user->all();
 
-$layout->add('administrator/user_list');
+$layout_adm->add('user_list');

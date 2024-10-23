@@ -12,5 +12,5 @@ $products_destroy = $produtos->delete('id_produto', $id_produto);
 
 if($products_destroy) {
     echo "<script>alert('Produto excluido com sucesso!!');</script>";
-    header('location: /administrator/consulta_produto');
+    header('location: /consulta_produto');
 }
