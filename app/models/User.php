@@ -38,6 +38,16 @@ class User extends Model
     //     return $list->fetchAll();
     // }
 
+    public function searchUser($search_user)
+    {
+       $sql = "SELECT * FROM {$this->table} WHERE nome LIKE '%$search_user%'" ;
+       $select = $this->connection->prepare($sql);
+       $select->execute();
+
+       return $select;
+    }
+
+    //Função que faz o update na recuparação de senha e é usado no arquivo recuperacao_senha_validation
     public function updateRecuperacaoSenha($emailCorrect, $token)
     {
         $sql = "UPDATE {$this->table} SET token = :token, token_validade = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE email = :email";
@@ -49,6 +59,7 @@ class User extends Model
         return $update->rowCount();
     }
 
+    //Função que faz um SELECT e procura o usuário que tem o token que está sendo usado e pega a data atual para o token_validade
     public function tokenExpire($token)
     {
         $sql = "SELECT * FROM {$this->table} WHERE token = :token AND token_validade > NOW()";
@@ -59,6 +70,7 @@ class User extends Model
         return $list->fetchAll();
     }
 
+    //Função que faz o update da nova senha que o usuário selecionou
     public function updateResetPassword($nova_senha, $userToken)
     {
         $sql = "UPDATE {$this->table} SET senha = :senha, token = NULL, token_validade = NULL WHERE id_usuario = :id_usuario";

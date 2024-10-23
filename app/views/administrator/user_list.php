@@ -1,4 +1,4 @@
-<form action="/search/users" method="POST">
+<form action="/search_user" method="POST"><button type="submit">Pesquisar</button>
     <input type="text" placeholder="Filtro" name="filter_user">
 </form>
 <table class="table table-striped table-hover">
