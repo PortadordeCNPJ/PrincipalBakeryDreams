@@ -7,4 +7,4 @@ $type_product = new TipoProduto;
 
 $type_products = $type_product->all();
 
-$layout->add('administrator/type_product_consult');
+$layout_adm->add('type_product_consult');

@@ -9,4 +9,4 @@ $type_product = new TipoProduto;
 //Função find que procura os dados dentro das tabelas (Para Busca)
 $type_product_found = $type_product->find('id_tipoproduto', $id_tipoproduto);
 
-$layout->add('/administrator/type_product_edit');
+$layout_adm->add('type_product_edit');

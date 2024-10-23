@@ -50,9 +50,44 @@ $productsInCart = $cart->cart();
 </head>
 
 <body>
+
     <!-- <div class=" cabecalho"> -->
     <nav class="navbar navbar-expand-lg header-pg-princ navbar-custom">
         <div class="container">
+            <div>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Try scrolling the rest of the page to see this option in action.</p>
+                        <ul>
+                            <li class="nav-item dropdown comic-button" style="z-index: 1;">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-regular fa-user"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <?php
+                                    if (!empty($_SESSION)) {
+                                        echo "<label for=''>Email</label>
+                                <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
+                                <li><a class='dropdown-item' href='/adm_logout'>Sair</a></li>";
+                                    } else {
+                                    ?>
+                                        <li><a class="dropdown-item" href="/user/user_login">Login</a></li>
+                                        <li><a class="dropdown-item" href="/user/user_create">Cadastro</a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="navbar-brand me-auto d-flex">
                 <a href="#">
                     <img src="../../assets/images/logoSite.png" alt="" width="200" height="150">
@@ -61,56 +96,7 @@ $productsInCart = $cart->cart();
             <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav">
-                    <li class="comic-button">
-                        <?php echo menuItem("/cart_products", "Produtos"); ?>
-                    </li>
-                    <li class="comic-button d-flex">
-                        <?php echo menuItem("/cart", "<i class='fa-solid fa-cart-shopping'></i>"); ?>
-                        <div style="color: #000; cursor: pointer;">
-                            <?php echo count($productsInCart); ?>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown comic-button" style="z-index: 1;">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-regular fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <?php
-                            if (!empty($_SESSION)) {
-                                echo "<label for=''>Email</label>
-                                    <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
-                                    <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
-                            } else {
-                            ?>
-                                <li><a class="dropdown-item" href="/user/user_login">Login</a></li>
-                                <li><a class="dropdown-item" href="/user/user_create">Cadastro</a></li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <form class="d-flex form-search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
-    </nav>
-    <nav class="navbar navbar-down">
-        <ul class="navbar-nav navbar-down-ul">
-            <li class="nav-item-down"> <?php echo menuItem("/", "Inicio <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
-            <li class="nav-item-down"> <?php echo menuItem("/pages/sobre", "Sobre Nós <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
-            <li class="nav-item-down"> <?php echo menuItem("/pages/contato", "Contato <i class='fa-solid fa-chevron-down'></i>"); ?> </li>
-            <?php
-            if (!empty($_SESSION) && $_SESSION['tipo'] == 'A' && empty($_SESSION['tipo'] == '')) {
-                echo "<li class='nav-item-down'>" . menuItem("/administrator/admin", "Admin <i class='fa-solid fa-chevron-down'></i>");
-                "</li>";
-            }
-            ?>
-        </ul>
     </nav>
     <!-- </div> -->
     <!-- Aqui irao carregar as views de dentro do controller-->

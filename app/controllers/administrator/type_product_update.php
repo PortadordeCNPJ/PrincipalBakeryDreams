@@ -12,5 +12,5 @@ $validate = $validation->validate($_POST);
 $updated = $type_product->update($validate,['id_tipoproduto' => $validate->id_tipoproduto]);
 
 if($updated) {
-    header('location: /administrator/type_product_consult');
+    header('location: /type_product_consult');
 }

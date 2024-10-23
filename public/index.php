@@ -40,7 +40,6 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         '/user_update' => 'controllers/user/user_update',
         '/user_destroy' => 'controllers/user/user_destroy',
         '/user_deslogado' => 'controllers/user/user_deslogado',
-        '/user/user_edit' => 'controllers/user/user_edit',
         '/user/user_login' => 'controllers/user/user_login',
         '/user/user_create' => 'controllers/user/user_create',
 
@@ -76,7 +75,9 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         '/products_destroy' => 'controllers/administrator/products_destroy',
         '/type_product_update' => 'controllers/administrator/type_product_update',
         '/type_product_destroy' => 'controllers/administrator/type_product_destroy',
+        '/user_edit' => 'controllers/administrator/user_edit',
         '/user_list' => 'controllers/administrator/user_list',
+        '/adm_logout' => 'controllers/administrator/adm_logout',
         '/products_edit' => 'controllers/administrator/products_edit',
         '/consulta_produto' => 'controllers/administrator/consulta_produto',
         '/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',

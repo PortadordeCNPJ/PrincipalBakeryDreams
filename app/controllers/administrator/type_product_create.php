@@ -1,3 +1,3 @@
 <?php
 
-$layout->add('administrator/type_product_create');
+$layout_adm->add('type_product_create');

@@ -12,5 +12,5 @@ $type_products_destroy = $type_products->delete('id_tipoproduto', $id_tipoprodut
 
 if($type_products_destroy) {
     echo "<script>alert('Tipo de Produto excluido com sucesso!!');</script>";
-    header('location: /administrator/type_product_consult');
+    header('location: /type_product_consult');
 }
