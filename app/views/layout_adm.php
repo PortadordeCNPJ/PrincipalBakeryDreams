@@ -84,6 +84,15 @@ $productsInCart = $cart->cart();
                                     ?>
                                 </ul>
                             </li>
+                            <li class="comic-button">
+                                <?php echo menuItem("/user_list", "Lista de Usuários"); ?>
+                            <li>
+                            <li class="comic-button">
+                                <?php echo menuItem("/cadastro_produtos", "Cadastrar Produto"); ?>
+                            <li>
+                            <li class="comic-button">
+                                <?php echo menuItem("/consulta_produto", "Lista de Produtos"); ?>
+                            <li>
                         </ul>
                     </div>
                 </div>
