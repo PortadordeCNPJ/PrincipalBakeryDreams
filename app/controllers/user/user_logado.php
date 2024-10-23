@@ -23,7 +23,12 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
         $_SESSION['id_usuario'] = $emailUser->id_usuario;
         $_SESSION['tipo'] = $emailUser->tipo;
         echo "<script>alert('Usuário logado!');</script>";
-        $layout->add('home');
+
+        if ($_SESSION['tipo'] == "U") {
+            $layout->add('home');
+        } else {
+            $layout_adm->add('admin');
+        }
     } else {
         echo "<script>alert('Usuario ou senha não encontrados!');</script>";
         echo "<script>location.href='/user/user_login';</script>";

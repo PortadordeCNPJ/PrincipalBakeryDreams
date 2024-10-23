@@ -2,7 +2,7 @@
 
 <img class="img-form-1" src="../../assets/img/cake.png">
 
-<form id="form" class="colorful-form" method="post" action="/administrator/type_product_store">
+<form id="form" class="colorful-form" method="post" action="/type_product_store">
 
     <div class="form-group">
         <label class="form-label" for="name">Nome:</label>

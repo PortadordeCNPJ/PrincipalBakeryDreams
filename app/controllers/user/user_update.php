@@ -13,5 +13,5 @@ $validate = $validation->validate($_POST);
 $updated = $user->update($validate,['id_usuario' => $validate->id_usuario]);
 
 if($updated) {
-    header('location:/');
+    header('location: /user_list');
 }

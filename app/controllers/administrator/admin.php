@@ -1,3 +1,3 @@
 <?php
 
-$layout_adm->add('/admin');
+$layout_adm->add('admin');

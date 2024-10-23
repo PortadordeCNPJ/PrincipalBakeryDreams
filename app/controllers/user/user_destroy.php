@@ -12,5 +12,5 @@ $user_destroy = $user->delete('id_usuario', $id_usuario);
 
 if($user_destroy) {
     echo "<script>alert('Usuário excluido!!');</script>";
-    header('location: /administrator/user_list');
+    header('location: /user_list');
 }

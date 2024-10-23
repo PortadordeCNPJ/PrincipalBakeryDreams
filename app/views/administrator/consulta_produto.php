@@ -17,7 +17,7 @@
             <td><?= $produto->tipoproduto; ?></td>
 
             <td>
-                <a href="/administrator/products_edit?id_produto=<?= $produto->id_produto; ?>" class="btn btn-success">Editar</a>
+                <a href="/products_edit?id_produto=<?= $produto->id_produto; ?>" class="btn btn-success">Editar</a>
             </td>
             <td>
                 <a href="/products_destroy?id_produto=<?= $produto->id_produto; ?>" class="btn btn-danger">Deletar</a>

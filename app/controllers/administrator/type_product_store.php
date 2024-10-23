@@ -31,7 +31,7 @@ $typeProduct = new TipoProduto;
     });
     echo "<script>alert('Usuario cadastrado com sucesso!!');</script>";
 
-    header('location:/');
+    header('location: /consulta_produto');
 
 // $validation = new Validation;
 // $validate = $validation->validate($_POST);

@@ -13,5 +13,5 @@ $validate = $validation->validate($_POST);
 $updated = $product->update($validate,['id_produto' => $validate->id_produto]);
 
 if($updated) {
-    header('location:/');
+    header('location: /consulta_produto');
 }
