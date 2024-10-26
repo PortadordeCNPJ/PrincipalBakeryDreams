@@ -1,7 +1,4 @@
- <div class="btn-administrator">
-     <a href="/user_list">Lista de Usuários</a>
-     <a href="/cadastro_produtos">Cadastro de Produtos</a>
-     <a href="/consulta_produto">Consulta de Produtos</a>
-     <a href="/type_product_create">Cadastrar tipo de Produtos</a>
-     <a href="/type_product_consult">Consultar tipo de Produtos</a>
- </div>
+<div class="text-adm-home">
+    <h1>Bem vindo ao painel de Administrador!!</h1>
+    <h2><?php echo $_SESSION['nome']; ?></h2>
+</div>

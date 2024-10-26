@@ -83,7 +83,10 @@ body {
   box-shadow: 5px 5px 0px #000;
   transition: all 0.3s ease;
   align-items: center;
+}
 
+ul {
+  list-style-type: none;
 }
 
 .comic-button:hover {
@@ -104,6 +107,7 @@ body {
 }
 
 /*------- FIM Botões NavBar----------*/
+
 
 /*----------------- FIM CSS PARA A NAV BAR-------------------------*/
 
@@ -214,6 +218,7 @@ body {
   background: none;
   border: 0;
 }
+
 /*----------------- FINAL CSS PARA OS FORMS -------------------------*/
 
 
@@ -371,6 +376,54 @@ body {
 
 /*------------- INICIO CSS PARA A PÁGINA DE ADMIN --------------------*/
 
+
+/*-------Botões NavBar ADM----------*/
+
+.comic-button-adm {
+  padding: 10px 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #f9bf76;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  align-items: center;
+  margin-bottom: 35px;
+  margin-right: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.comic-button-adm:hover {
+  background-color: #fff;
+  color: #f9bf76;
+  border: 2px solid #f9bf76;
+  box-shadow: 5px 5px 0px #f9bf76;
+}
+
+.comic-button-adm:active {
+  background-color: #f9bf76;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.comic-button-adm>a:focus {
+  box-shadow: none;
+}
+
+.offcanvas {
+  background-color: #dbc2a4;
+}
+
+/*------- FIM Botões NavBar ADM----------*/
+
+
 .btn-administrator {
   display: flex;
   text-align: center;
@@ -379,7 +432,7 @@ body {
   margin-top: 200px;
 }
 
-.btn-administrator > a {
+.btn-administrator>a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,10 +444,18 @@ body {
   box-shadow: 5px 5px 0px #000;
   background-color: #eec38f;
   font-size: 1.8rem;
-  margin: 0 60px 0 0 ;
+  margin: 0 60px 0 0;
   color: #000;
   font-weight: 700;
   text-decoration: none;
+}
+
+.text-adm-home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
 }
 
 /*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/

@@ -55,7 +55,9 @@ $productsInCart = $cart->cart();
     <nav class="navbar navbar-expand-lg header-pg-princ navbar-custom">
         <div class="container">
             <div>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+                <button class="comic-button-adm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="fa-solid fa-list"></i>
+                </button>
 
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                     <div class="offcanvas-header">
@@ -65,14 +67,26 @@ $productsInCart = $cart->cart();
                     <div class="offcanvas-body">
                         <p>Try scrolling the rest of the page to see this option in action.</p>
                         <ul>
-                            <li class="nav-item dropdown comic-button" style="z-index: 1;">
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/admin", "Página Inicial"); ?>
+                            </li>
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/user_list", "Lista de Usuários"); ?>
+                            </li>
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/cadastro_produtos", "Cadastrar Produto"); ?>
+                            </li>
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/consulta_produto", "Lista de Produtos"); ?>
+                            </li>
+                            <li class="nav-item dropdown comic-button-adm" style="z-index: 1;">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-regular fa-user"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <?php
                                     if (!empty($_SESSION)) {
-                                        echo "<label for=''>Email</label>
+                                        echo "<label for=''>Nome:</label>
                                 <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
                                 <li><a class='dropdown-item' href='/adm_logout'>Sair</a></li>";
                                     } else {
@@ -84,15 +98,6 @@ $productsInCart = $cart->cart();
                                     ?>
                                 </ul>
                             </li>
-                            <li class="comic-button">
-                                <?php echo menuItem("/user_list", "Lista de Usuários"); ?>
-                            <li>
-                            <li class="comic-button">
-                                <?php echo menuItem("/cadastro_produtos", "Cadastrar Produto"); ?>
-                            <li>
-                            <li class="comic-button">
-                                <?php echo menuItem("/consulta_produto", "Lista de Produtos"); ?>
-                            <li>
                         </ul>
                     </div>
                 </div>
