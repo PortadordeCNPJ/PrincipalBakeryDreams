@@ -1,3 +1,6 @@
+<form action="/search_products" method="POST"><button type="submit">Pesquisar</button>
+    <input type="text" placeholder="Filtro" name="filter_products">
+</form>
 <table class="table table-striped table-hover">
 <thead>
     <tr>

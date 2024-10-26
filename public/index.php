@@ -70,28 +70,37 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
 } else {
     $routes = [
 
-        //páginas de ADM
+        //Home da página de ADM
         '/admin' => 'controllers/administrator/admin',
-        '/products_destroy' => 'controllers/administrator/products_destroy',
-        '/type_product_update' => 'controllers/administrator/type_product_update',
-        '/type_product_destroy' => 'controllers/administrator/type_product_destroy',
-        '/user_edit' => 'controllers/administrator/user_edit',
-        '/user_list' => 'controllers/administrator/user_list',
-        '/user_destroy' => 'controllers/user/user_destroy',
-        '/user_update' => 'controllers/user/user_update',
-        '/adm_logout' => 'controllers/administrator/adm_logout',
+
+        //Páginas para produtos
         '/products_edit' => 'controllers/administrator/products_edit',
         '/products_update' => 'controllers/produtos/products_update',
+        '/products_destroy' => 'controllers/administrator/products_destroy',
         '/consulta_produto' => 'controllers/administrator/consulta_produto',
         '/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
+        '/cadastro_store' => 'controllers/produtos/cadastro_store',
+
+        //Página para tipo de produtos
         '/type_product_edit' => 'controllers/administrator/type_product_edit',
         '/type_product_store' => 'controllers/administrator/type_product_store',
         '/type_product_create' => 'controllers/administrator/type_product_create',
         '/type_product_consult' => 'controllers/administrator/type_product_consult',
-        '/cadastro_store' => 'controllers/produtos/cadastro_store',
+        '/type_product_update' => 'controllers/administrator/type_product_update',
+        '/type_product_destroy' => 'controllers/administrator/type_product_destroy',
+
+        //Rotas sobre os users
+        '/user_edit' => 'controllers/administrator/user_edit',
+        '/user_list' => 'controllers/administrator/user_list',
+        '/user_destroy' => 'controllers/user/user_destroy',
+        '/user_update' => 'controllers/user/user_update',
+
+        //Página de ADM logout
+        '/adm_logout' => 'controllers/administrator/adm_logout',
 
         //controllers para fazer o search das páginas
         '/search_user' => 'controllers/search/search_user',
+        '/search_products' => 'controllers/search/search_products',
     ];
 }
 
