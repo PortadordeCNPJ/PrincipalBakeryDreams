@@ -153,6 +153,18 @@ CREATE TABLE `tb_vendas` (
   `id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Inserção de dados aleatórios na tabela `tb_vendas`
+INSERT INTO `tb_vendas` (`id_venda`, `tipovenda`, `dtvenda`, `frmpagamento`, `entregue`, `vlrentrega`, `data_entrega`, `dataagendamento`, `entregar`, `retirar`, `id_usuario`) VALUES 
+(1, 'online', '2024-10-29', 'cartão', 'sim', 5.00, '2024-11-01', '2024-10-29', '2024-10-30', '2024-10-30', 1), 
+(2, 'presencial', '2024-10-28', 'dinheiro', 'não', 0.00, '2024-10-30', '2024-10-28', '2024-10-28', '2024-10-29', 2), 
+(3, 'online', '2024-10-27', 'pix', 'sim', 7.00, '2024-11-02', '2024-10-27', '2024-10-28', '2024-10-29', 3);
+
+-- Inserção de dados aleatórios na tabela `tb_vendaitens`
+INSERT INTO `tb_vendaitens` (`id_compraitem`, `valor`, `quantidade`, `id_venda`, `id_produto`) VALUES 
+(1, 25.00, 2, 1, 1), 
+(2, 30.00, 1, 2, 2), 
+(3, 50.00, 3, 3, 3);
+
 --
 -- Índices para tabelas despejadas
 --
