@@ -17,3 +17,10 @@ SELECT DISTINCT tb_usuario.*, tb_produtos.*, tb_tipoprodutos.* FROM tb_usuarios 
 
 
 SELECT * FROM tb_usuarios WHERE nome LIKE '%Guilherme%';
+
+
+
+select * from tb_vendaitens 
+inner join tb_vendas on tb_vendas.id_venda = tb_vendaitens.id_venda 
+inner join tb_produtos on tb_produtos.id_produto = tb_vendaitens.id_produto
+where tb_produtos.id_tipoproduto = 1;

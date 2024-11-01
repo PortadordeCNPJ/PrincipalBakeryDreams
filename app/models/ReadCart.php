@@ -26,4 +26,13 @@ class ReadCart extends Model
 
         return $select;
     }
+
+    public function salesReportCake()
+    {
+        $sql = "SELECT * FROM tb_vendaitens INNER JOIN tb_vendas ON tb_vendas.id_venda = tb_vendaitens.id_venda INNER JOIN {$this->table} ON {$this->table}.id_produto = tb_vendaitens.id_produto WHERE {$this->table}.id_tipoproduto = 1;";
+        $select = $this->connection->prepare($sql);
+        $select->execute();
+
+        return $select;
+    }
 }

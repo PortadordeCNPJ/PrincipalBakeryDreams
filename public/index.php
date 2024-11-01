@@ -101,6 +101,9 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         //controllers para fazer o search das páginas
         '/search_user' => 'controllers/search/search_user',
         '/search_products' => 'controllers/search/search_products',
+
+        //Página sobre relatório de vendas
+        '/sales_report' => 'controllers/administrator/sales_report',
     ];
 }
 

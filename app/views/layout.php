@@ -18,6 +18,8 @@ $productsInCart = $cart->cart();
 // if ($userNaoLogado) {
 //     $_SESSION['tipo'] = "U";
 // }
+
+// phpinfo();
 ?>
 
 <!DOCTYPE html>
