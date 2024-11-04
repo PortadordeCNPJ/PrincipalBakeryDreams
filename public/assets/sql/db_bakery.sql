@@ -91,15 +91,15 @@ INSERT INTO `tb_tipoprodutos` (`id_tipoproduto`, `tipoproduto`) VALUES
 CREATE TABLE `tb_usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
-  `cpf` varchar(11) NOT NULL,
-  `fone` varchar(30) NOT NULL,
+  `cpf` bigint (11) NOT NULL,
+  `fone` bigint (11) NOT NULL,
   `senha` varchar(32) NOT NULL,
   `ativo` int(1) NOT NULL DEFAULT 1,
   `email` varchar(100) NOT NULL,
   `dt_nasc` date NOT NULL,
   `tipo` varchar(1) NOT NULL DEFAULT 'U',
   `bairro` varchar(30) NOT NULL,
-  `nmcasa` varchar(8) NOT NULL,
+  `nmcasa` int (5) NOT NULL,
   `complemento` varchar(100) NOT NULL,
   `rua` varchar(50) NOT NULL,
   `token` varchar(250) DEFAULT NULL,
@@ -111,13 +111,13 @@ CREATE TABLE `tb_usuarios` (
 --
 
 INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`, `token`, `token_validade`) VALUES
-(1, 'AdminGuiWillian', '13423812812', '(45) 99134-7667', 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', '...', '1', 'Casa', 'Rua da nossa casa', NULL, NULL),
-(2, 'Guilherme', '34989387232', '(45) 99134-9887', '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', '1908', 'Casa de esquina', 'Rua das coves', NULL, NULL),
-(3, 'William a', '09823948723', '(45) 99134-4444', '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', '4910', 'Prédio', 'Rua das Andorinhas', NULL, NULL),
-(4, 'Angélica', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
-(5, 'Thomas', '12356789045', '', 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
-(10, 'Guilherme de Souza', '12312312312', '', '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL),
-(11, 'teste', '13423812828', '', '202cb962ac59075b964b07152d234b70', 1, 'teste@gmail.com', '0000-00-00', 'U', '', '', '', '', NULL, NULL);
+(1, 'AdminGuiWillian', 13423812812, 45991347667, 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', 'Bairro Exemplo', 1, 'Casa', 'Rua da nossa casa', NULL, NULL),
+(2, 'Guilherme', 34989387232, 45991349887, '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves', NULL, NULL),
+(3, 'William a', 9823948723, 45991344444, '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas', NULL, NULL),
+(4, 'Angélica', 12312312312, 0, '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(5, 'Thomas', 12356789045, 0, 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(10, 'Guilherme de Souza', 12312312312, 0, '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(11, 'teste', 13423812828, 0, '202cb962ac59075b964b07152d234b70', 1, 'teste@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -146,8 +146,8 @@ CREATE TABLE `tb_vendas` (
   `frmpagamento` varchar(20) NOT NULL,
   `entregue` varchar(32) NOT NULL,
   `vlrentrega` decimal(5,2) NOT NULL,
-  `data_entrega` date NOT NULL,
-  `dataagendamento` date NOT NULL,
+  `data_entrega` date DEFAULT NULL,
+  `dataagendamento` date DEFAULT NULL,
   `entregar` date DEFAULT NULL,
   `retirar` date DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL
