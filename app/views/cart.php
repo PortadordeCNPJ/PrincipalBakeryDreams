@@ -18,7 +18,7 @@ $products = $cartProducts->products(new Cart);
     <?php if (count($products['products']) <= 0) : ?>
         <h3>Nenhum produto dentro do carrinho de compras</h3>
     <?php else : ?>
-        <form action="/cart/    confirm_purchase" method="POST">
+        <form action="/cart/confirm_purchase" method="POST">
             <?php foreach ($products['products'] as $product) : ?>
                 <div class="cardProds">
                     <div class="productsInsideCart">

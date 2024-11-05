@@ -3,10 +3,10 @@
 <div class="img_forms">
     <img class="img-form-1" src="../../assets/images/cake.png">
 
-    <form id="form" class="colorful-form" method="post" action="/confirm_purchase_store">
+    <form id="form" class="colorful-form" method="post" action="/cart/confirm_purchase_store">
         <input type="hidden" name="id_usuario" value="<?php echo $_SESSION["id_usuario"]; ?>">
         <div class="form-group">
-            <label class="form-label" for="name">Telefone:</label>
+            <label class="form-label" for="fone">Telefone:</label>
             <input required="" placeholder="Insira seu Telefone" class="form-input" name="fone" id="fone" type="text">
         </div>
 
