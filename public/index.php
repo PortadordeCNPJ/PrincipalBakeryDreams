@@ -55,19 +55,6 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         //Para o formulário que cadastra os produtos
         '/cadastro_store' => 'controllers/produtos/cadastro_store',
 
-        //Admin Pages
-        '/products_destroy' => 'controllers/administrator/products_destroy',
-        '/type_product_update' => 'controllers/administrator/type_product_update',
-        '/type_product_destroy' => 'controllers/administrator/type_product_destroy',
-        '/administrator/admin' => 'controllers/administrator/admin',
-        '/administrator/user_list' => 'controllers/administrator/user_list',
-        '/administrator/products_edit' => 'controllers/administrator/products_edit',
-        '/administrator/consulta_produto' => 'controllers/administrator/consulta_produto',
-        '/administrator/cadastro_produtos' => 'controllers/administrator/cadastro_produtos',
-        '/administrator/type_product_edit' => 'controllers/administrator/type_product_edit',
-        '/administrator/type_product_store' => 'controllers/administrator/type_product_store',
-        '/administrator/type_product_create' => 'controllers/administrator/type_product_create',
-        '/administrator/type_product_consult' => 'controllers/administrator/type_product_consult',
     ];
 } else {
     $routes = [
