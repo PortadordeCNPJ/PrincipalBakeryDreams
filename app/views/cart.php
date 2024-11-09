@@ -41,12 +41,12 @@ $products = $cartProducts->products(new Cart);
                         <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
                         <div class="texto-card">
                             <div class="btn-count" onclick="abaixarQtd(<?php echo $product['id_produto']; ?>)">-</div>
-                            <input class="count" name="qty" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
+                            <input class="count" name="quantidade" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
                             <div class="btn-count" onclick="almentarQtd(<?php echo $product['id_produto']; ?>)">+</div>
                         </div>
                         <p>
                             <input type="hidden" id="valorCardCartFix-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
-                            <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
+                            <input id="valorCardCart-<?php echo $product['id_produto']; ?>" name="valor" value="<?php echo $product['valor']; ?>">
                             <!-- <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="R$<?php echo number_format($product['valor'], 2, ',', '.'); ?>"> -->
                         </p>
                         <!-- </form> -->
