@@ -4,13 +4,16 @@
 
 <form id="form" class="colorful-form" method="post" action="/cadastro_store">
 
-<div class="form-group">
-        <label class="form-label" for="produto">Tipo de venda:</label>
+    <div class="form-group">
+        <label class="form-label" for="imagem">Tipo da venda:</label>
+        <label class="form-label-radio" for="sim">Entrega</label> <input type="radio" name="tipovenda" value="agendamento">
+        <label class="form-label-radio" for="nao">Retirada no local</label> <input type="radio" name="tipovenda" value="retirada">
+    </div>
 
-        <select name="tipovenda">
-            <option selected value="agendamento">Agendar compra</option>
-            <option selected value="confCompra">Finalizar compra</option>
-        </select>
+    <div class="form-group">
+        <label class="form-label" for="imagem">Tipo da Recebimento:</label>
+        <label class="form-label-radio" for="sim">Agendamento</label> <input type="radio" name="tiporecebi" value="agendamento">
+        <label class="form-label-radio" for="nao">Pronta Entrega</label> <input type="radio" name="tiporecebi" value="confCompra">
     </div>
 
     <div class="form-group">
