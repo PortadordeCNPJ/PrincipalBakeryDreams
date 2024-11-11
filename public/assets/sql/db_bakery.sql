@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/10/2024 às 01:59
+-- Tempo de geração: 11/11/2024 às 06:23
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -36,7 +36,7 @@ CREATE TABLE `tb_produtos` (
   `sabor` varchar(30) NOT NULL,
   `gluten` varchar(1) DEFAULT 'S',
   `amendoim` varchar(1) DEFAULT 'N',
-  `ativo` VARCHAR(1) NOT NULL DEFAULT 'S' CHECK (ativo IN ('S', 'N')),
+  `ativo` varchar(1) NOT NULL DEFAULT 'S' CHECK (`ativo` in ('S','N')),
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -91,15 +91,15 @@ INSERT INTO `tb_tipoprodutos` (`id_tipoproduto`, `tipoproduto`) VALUES
 CREATE TABLE `tb_usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
-  `cpf` bigint (11) NOT NULL,
-  `fone` bigint (11) NOT NULL,
+  `cpf` bigint(11) NOT NULL,
+  `fone` bigint(11) NOT NULL,
   `senha` varchar(32) NOT NULL,
-  `ativo` VARCHAR(1) NOT NULL DEFAULT 'S' CHECK (ativo IN ('S', 'N')),
+  `ativo` varchar(1) NOT NULL DEFAULT 'S' CHECK (`ativo` in ('S','N')),
   `email` varchar(100) NOT NULL,
   `dt_nasc` date NOT NULL,
   `tipo` varchar(1) NOT NULL DEFAULT 'U',
   `bairro` varchar(30) NOT NULL,
-  `nmcasa` int (5) NOT NULL,
+  `nmcasa` int(5) NOT NULL,
   `complemento` varchar(100) NOT NULL,
   `rua` varchar(50) NOT NULL,
   `token` varchar(250) DEFAULT NULL,
@@ -117,7 +117,8 @@ INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`
 (4, 'Angélica', 12312312312, 45991344440, '202cb962ac59075b964b07152d234b70', 'S', 'angelica@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
 (5, 'Thomas', 12356789045, 45991344494, 'ef6e65efc188e7dffd7335b646a85a21', 'S', 'thomas@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
 (10, 'Guilherme de Souza', 12312312312, 45991344744, '202cb962ac59075b964b07152d234b70', 'S', 'guilheroiiiidaSilva@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
-(11, 'teste', 13423812828, 45991344478, '202cb962ac59075b964b07152d234b70', 'S', 'teste@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL);
+(11, 'teste', 13423812828, 45991344478, '202cb962ac59075b964b07152d234b70', 'S', 'teste@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(12, 'Guilherme de Souza Muller', 12398765419, 0, '202cb962ac59075b964b07152d234b70', 'S', 'guilhermedesouzamuller@gmail.com', '0000-00-00', 'U', '', 0, '', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -132,6 +133,17 @@ CREATE TABLE `tb_vendaitens` (
   `id_venda` int(11) DEFAULT NULL,
   `id_produto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tb_vendaitens`
+--
+
+INSERT INTO `tb_vendaitens` (`id_compraitem`, `valor`, `quantidade`, `id_venda`, `id_produto`) VALUES
+(1, 45.45, 1, 1, 18),
+(2, 300.00, 1, 1, 24),
+(3, 70.56, 1, 2, 29),
+(4, 120.00, 2, 3, 26),
+(5, 44.43, 1, 4, 20);
 
 -- --------------------------------------------------------
 
@@ -153,7 +165,15 @@ CREATE TABLE `tb_vendas` (
   `id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Inserção de dados aleatórios na tabela `tb_vendas`
+--
+-- Despejando dados para a tabela `tb_vendas`
+--
+
+INSERT INTO `tb_vendas` (`id_venda`, `tipovenda`, `dtvenda`, `frmpagamento`, `entregue`, `vlrentrega`, `data_entrega`, `dataagendamento`, `entregar`, `retirar`, `id_usuario`) VALUES
+(1, 'agendamento', '2024-11-01', 'pix', 'sim', 5.00, '2024-11-02', NULL, '2024-11-02', NULL, 2),
+(2, 'retirada', '2024-11-03', 'pix', 'sim', 0.00, '2024-11-03', NULL, NULL, '2024-11-03', 3),
+(3, 'agendamento', '2024-11-05', 'pix', 'não', 10.00, NULL, '2024-11-07', '2024-11-07', NULL, 4),
+(4, 'retirada', '2024-11-08', 'pix', 'sim', 0.00, '2024-11-08', NULL, NULL, '2024-11-08', 5);
 
 --
 -- Índices para tabelas despejadas
@@ -201,7 +221,7 @@ ALTER TABLE `tb_vendas`
 -- AUTO_INCREMENT de tabela `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de tabela `tb_tipoprodutos`
@@ -213,19 +233,19 @@ ALTER TABLE `tb_tipoprodutos`
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendaitens`
 --
 ALTER TABLE `tb_vendaitens`
-  MODIFY `id_compraitem` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_compraitem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `tb_vendas`
 --
 ALTER TABLE `tb_vendas`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restrições para tabelas despejadas

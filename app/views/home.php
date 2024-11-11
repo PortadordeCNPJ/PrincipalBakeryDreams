@@ -8,8 +8,8 @@
 
     <div class="row-cakes">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
-            <h1>Os Melhores Bolos do Mercado!</h1>
-            <p style="text-align: justify;">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
+            <h1 style="color: #fff"> Os Melhores Bolos do Mercado!</h1>
+            <p style="text-align: justify; color: #fff">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
                 Nossos bolos são feitos com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão encantar seu paladar.
                 <br />
                 Cada receita é elaborada com carinho e atenção aos detalhes,
@@ -85,8 +85,8 @@
 
     <div class="row-sweets">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
-            <h1>Os Melhores Docinhos do Mercado!</h1>
-            <p style="text-align: justify;">Se você está em busca dos melhores docinhos do mercado, não precisa procurar mais!
+            <h1 style="color: #fff">Os Melhores Docinhos do Mercado!</h1>
+            <p style="text-align: justify; color: #fff">Se você está em busca dos melhores docinhos do mercado, não precisa procurar mais!
                 Nossos docinhos são feitos com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão encantar seu paladar.
                 <br />
                 Cada receita é elaborada com carinho e atenção aos detalhes,
