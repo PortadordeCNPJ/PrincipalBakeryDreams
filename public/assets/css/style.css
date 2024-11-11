@@ -316,14 +316,14 @@ ul {
 }
 
 .textProduct>p>span {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
 .textProduct>p:first-child {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .textProduct>p>a {
@@ -464,24 +464,84 @@ ul {
 /*------------- INICIO CSS PARA AS ROWS DA PÁGINA INICIAL --------------------*/
 
 .row-cakes {
-  background-color: #f8e5cc;
-  height: 1200px;
+  background-color: #e3a048;
+  height: 850px;
   margin-top: 50px;
 }
 
 .row-snacks {
-  background-color: #e7b832;
-  height: 1200px;
+  background-color: #bd7d45;
+  height: 850px;
 }
 
 .row-sweets {
-  background-color: #f8e5cc;
-  height: 1200px;
+  background-color: #c1762a;
+  height: 850px;
 }
-
-.slick-next {
-  right: 0;
-}
-
 
 /*------------- FIM CSS PARA A PÁGINA DE ADMIN --------------------*/
+
+
+/*------------- INICIO CSS PARA O FOOTER --------------------*/
+
+/* Estilo do Footer */
+.footer {
+  background-color: #D35400;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #F7D6A0;
+  border-bottom: 1px solid #F7D6A0;
+  padding: 15px 0;
+}
+
+.footer-social a {
+  color: #000000;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FFC300;
+}
+
+.footer-logo {
+  margin: 20px 0;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #F7D6A0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #F7D6A0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFC300;
+}
+/*------------- FIM CSS PARA FOOTER --------------------*/

@@ -86,7 +86,7 @@
     right: -25px;
     left: auto;
 }
-.slick-prev:before
+/* .slick-prev:before
 {
     content: '←';
 }
@@ -111,7 +111,7 @@
 [dir='rtl'] .slick-next:before
 {
     content: '←';
-}
+} */
 
 /* Dots */
 .slick-dotted.slick-slider

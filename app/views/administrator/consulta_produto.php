@@ -7,6 +7,7 @@
         <th>Id</th>
         <th>Nome</th>
         <th>Preço</th>
+        <th>Sabor</th>
         <th>Tipo</th>
     </tr>
 </thead>
@@ -17,6 +18,7 @@
             <td><?= $produto->id_produto; ?></td>
             <td><?= $produto->nome; ?></td>
             <td><?= $produto->valor; ?></td>
+            <td><?= $produto->sabor; ?></td>
             <td><?= $produto->tipoproduto; ?></td>
 
             <td>

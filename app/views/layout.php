@@ -119,7 +119,29 @@ $productsInCart = $cart->cart();
     <?php
     require $layout->load();
     ?>
-    </div>
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="footer-logo">
+            <h2>Minha Empresa</h2>
+            <p>&copy; 2024 Minha Empresa, Inc.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Termos Legais</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Segurança</a>
+            <a href="#">Acessibilidade</a>
+            <a href="#">Gerenciar Cookies</a>
+        </div>
+    </footer>
 </body>
 
 </html>

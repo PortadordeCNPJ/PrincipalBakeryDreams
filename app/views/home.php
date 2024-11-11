@@ -47,12 +47,12 @@
 
     <div class="row-snacks">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
-            <h1>Os Melhores Bolos do Mercado!</h1>
-            <p style="text-align: justify;">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
-                Nossos bolos são feitos com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão encantar seu paladar.
+            <h1>Os Melhores Salgadinhos do Mercado!</h1>
+            <p style="text-align: justify;">Se você está em busca dos melhores salgadinhos do mercado, não precisa procurar mais!
+                Nossos salgadinhos são preparados com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão conquistar seu paladar.
                 <br />
                 Cada receita é elaborada com carinho e atenção aos detalhes,
-                garantindo uma experiência única a cada fatia. Venha experimentar e descubra por que nossos bolos são a escolha favorita de todos!
+                garantindo uma experiência única a cada mordida. Venha experimentar e descubra por que nossos salgadinhos são a escolha favorita de todos!
             </p>
         </div>
         <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
@@ -72,7 +72,7 @@
                                         <?php echo $product->descricao; ?>
                                     </p>
                                     <p>
-                                    <a href="/produtos/snacks"> Visitar Página de Bolos </a>
+                                        <a href="/produtos/snacks"> Visitar Página de Bolos </a>
                                     </p>
                                 </div>
                             </div>
@@ -85,12 +85,12 @@
 
     <div class="row-sweets">
         <div style="padding-left: 65px;padding-top: 50px;/* margin-top: 50px;">
-            <h1>Os Melhores Bolos do Mercado!</h1>
-            <p style="text-align: justify;">Se você está em busca dos melhores bolos do mercado, não precisa procurar mais!
-                Nossos bolos são feitos com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão encantar seu paladar.
+            <h1>Os Melhores Docinhos do Mercado!</h1>
+            <p style="text-align: justify;">Se você está em busca dos melhores docinhos do mercado, não precisa procurar mais!
+                Nossos docinhos são feitos com ingredientes frescos e de alta qualidade, resultando em sabores irresistíveis que vão encantar seu paladar.
                 <br />
                 Cada receita é elaborada com carinho e atenção aos detalhes,
-                garantindo uma experiência única a cada fatia. Venha experimentar e descubra por que nossos bolos são a escolha favorita de todos!
+                garantindo uma experiência única a cada doce. Venha experimentar e descubra por que nossos docinhos são a escolha favorita de todos!
             </p>
         </div>
         <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
@@ -110,7 +110,7 @@
                                         <?php echo $product->descricao; ?>
                                     </p>
                                     <p>
-                                    <a href="/produtos/sweets"> Visitar Página de Bolos </a>
+                                        <a href="/produtos/sweets"> Visitar Página de Bolos </a>
                                     </p>
                                 </div>
                             </div>

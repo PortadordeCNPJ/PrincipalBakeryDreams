@@ -36,7 +36,7 @@ CREATE TABLE `tb_produtos` (
   `sabor` varchar(30) NOT NULL,
   `gluten` varchar(1) DEFAULT 'S',
   `amendoim` varchar(1) DEFAULT 'N',
-  `ativo` varchar(1) DEFAULT 'S',
+  `ativo` VARCHAR(1) NOT NULL DEFAULT 'S' CHECK (ativo IN ('S', 'N')),
   `id_tipoproduto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -45,22 +45,22 @@ CREATE TABLE `tb_produtos` (
 --
 
 INSERT INTO `tb_produtos` (`id_produto`, `nome`, `descricao`, `valor`, `imagem`, `sabor`, `gluten`, `amendoim`, `ativo`, `id_tipoproduto`) VALUES
-(1, 'Bolo Chocolate', 'Bolo de chocolate com toque refinado de chocolate importado da América do Norte', 45.60, '', 'Bolo de Chocolate', 'S', 'N', 'S', 1),
-(2, 'Bolo de cenoura', 'Bolo de cenoura com cobertura de chocolate', 45.00, 'bolocenoura.jpg', '', 'N', 'N', 'S', 1),
-(3, 'Salgadinho', 'Salgadinho com frango', 122.00, 'salgadinhosSortidos.jpg', '', 'N', 'N', 'S', 2),
-(4, 'Brigadeiro', 'Brigadeiro de chocolate', 30.00, 'brigadeiro.jpg', '', 'N', 'N', 'S', 3),
-(5, 'Empadinha de frango', 'Empadinha de frango Cremoso', 22.00, 'empadinhas.jpg', '', 'N', 'N', 'S', 2),
-(7, 'Beijinho', 'Beijinho bem gostoso', 12.00, 'beijinho.webp', '', 'N', 'N', 'S', 3),
-(8, 'Bolo de morango', 'Bolo de Morango com glace real', 45.00, 'morangobolo.jpg', '', 'N', 'N', 'S', 1),
-(9, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 30.00, '', 'formigueiro', 'S', 'N', 'S', 2),
-(10, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 36.00, 'coxinhaDeFrango.jpg', '', 'N', 'N', 'S', 3),
-(11, 'teste', 'teste', 23.00, 'chocolate.jpg', '', 'S', 'N', 'S', 3),
-(12, 'Bolo de morango', 'Bolo de Morango com glace real', 12.00, 'morangobolo.jpg', 'morango', 'S', 'N', 'S', 1),
-(13, 'Bolo Formigueiro', 'Bolo Formigueiro com chocolate especial. Super fofinho', 13.00, 'boloFormigueiro.jpg', 'formigueiro', 'S', 'N', 'S', 1),
-(14, 'Coxinhas de Frango', 'Mini coxinhas de frango com catupiry', 12.00, 'salgadinhos.jpg', 'frango', 'S', 'N', 'S', 2),
-(15, 'Mini coxinhas de frango com catupiry', 'Beijinho bem gostoso', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2),
-(16, 'Empadas de frango', 'teste', 13.00, 'empadinhas.jpg', 'frango', 'S', 'N', 'S', 2),
-(17, 'teste', 'teste', 12.12, 'bolocenoura.jpg', 'teste', 'S', 'S', 'S', 1);
+(18, 'Bolo de 4 Leites', 'Bolo de 4 Leites molhadinho', 45.45, 'bolo4Leites.jpg', '4 Leites', 'S', 'N', 'S', 1),
+(19, 'Bolo de Cenoura com cobertura de Chocolate', 'Bolo de Cenoura com Chocolate', 45.12, 'boloBolocenoura.jpg', 'Cenoura e Chocolate', 'S', 'N', 'S', 1),
+(20, 'Bolo de Chocolate', 'Bolo de chocolate com doce de leite', 44.43, 'boloChocolate.jpg', 'Chocolate e Doce de Leite', 'S', 'N', 'S', 1),
+(21, 'Bolo de Morango', 'Bolo de Morango do himalaia', 23.12, 'boloMorango.jpg', 'Morango', 'S', 'N', 'S', 1),
+(22, 'Bolo de Formigueiro', 'Bolo de Formigueiro com cobertura de doce de leite', 35.99, 'boloFormigueiro.jpg', 'Formigueiro e doce de leite', 'S', 'N', 'S', 1),
+(23, 'Bolo de Prestigio', 'Bolo de Prestigio de chocolate', 38.99, 'boloPrestigio.jpg', 'Coco e chocolate', 'S', 'N', 'S', 1),
+(24, 'Cento Beijinho', 'Beijinho de Leite Ninho', 300.00, 'doceBeijinho.webp', 'Leite Ninho', 'S', 'N', 'S', 3),
+(25, 'Cento Brigadeiro', 'Brigadeiro de Chocolate', 200.00, 'doceBrigadeiro.avif', 'Chocolate', 'S', 'N', 'S', 3),
+(26, 'Cento Dois Amores', 'Dois amores brigadeiro e beijinho', 120.00, 'doceDoisAmores.jpg', 'Brigadeiro e Beijinho', 'S', 'N', 'S', 3),
+(27, 'Meio cento de Mini Churros', 'Mini churros de Doce Leite', 50.00, 'doceMinichurros.jpg', 'Doce Leite', 'S', 'N', 'S', 3),
+(28, 'Meio cento Tortinha de Limão', 'Tortinha de Limão siciliano', 55.00, 'doceTortinhaLimao.webp', 'Limão Siciliano', 'S', 'N', 'S', 3),
+(29, 'Cento Bolinha de Queijo', 'Bolinha de Queijo crocante', 70.56, 'salgadinhoBolinhaQueijo.jpg', 'Queijo', 'S', 'N', 'S', 2),
+(30, 'Meio Cento de Coxinha de Frango', 'Coxinha de Frango com Requeijão', 60.12, 'salgadinhoCoxinhaFrango.jpg', 'Frango com Requeijão', 'S', 'N', 'S', 2),
+(31, 'Cento Empadinha de Frango', 'Empadinhas de frango', 80.99, 'salgadinhoEmpadinha.jpg', 'Frango', 'S', 'N', 'S', 2),
+(32, 'Meio Cento Enroladinho de Salsicha', 'Mini enroladinhos de salsinha assados', 50.99, 'salgadinhoEnroladinhoSalsicha.png', 'Salsicha', 'S', 'N', 'S', 2),
+(33, 'Cento Salgadinhos Sortidos', 'Salgadinhos sortidos, de pelo menos 5 tipos', 100.00, 'salgadinhoSortidos.jpeg', 'Sortidos', 'S', 'N', 'S', 2);
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE `tb_usuarios` (
   `cpf` bigint (11) NOT NULL,
   `fone` bigint (11) NOT NULL,
   `senha` varchar(32) NOT NULL,
-  `ativo` int(1) NOT NULL DEFAULT 1,
+  `ativo` VARCHAR(1) NOT NULL DEFAULT 'S' CHECK (ativo IN ('S', 'N')),
   `email` varchar(100) NOT NULL,
   `dt_nasc` date NOT NULL,
   `tipo` varchar(1) NOT NULL DEFAULT 'U',
@@ -111,13 +111,13 @@ CREATE TABLE `tb_usuarios` (
 --
 
 INSERT INTO `tb_usuarios` (`id_usuario`, `nome`, `cpf`, `fone`, `senha`, `ativo`, `email`, `dt_nasc`, `tipo`, `bairro`, `nmcasa`, `complemento`, `rua`, `token`, `token_validade`) VALUES
-(1, 'AdminGuiWillian', 13423812812, 45991347667, 'a688a47ac73fb58ce3828bcb184cb157', 1, 'webmaster@bakery.com', '2006-09-29', 'A', 'Bairro Exemplo', 1, 'Casa', 'Rua da nossa casa', NULL, NULL),
-(2, 'Guilherme', 34989387232, 45991349887, '202cb962ac59075b964b07152d234b70', 1, 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves', NULL, NULL),
-(3, 'William a', 9823948723, 45991344444, '202cb962ac59075b964b07152d234b70', 1, 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas', NULL, NULL),
-(4, 'Angélica', 12312312312, 0, '202cb962ac59075b964b07152d234b70', 1, 'angelica@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
-(5, 'Thomas', 12356789045, 0, 'ef6e65efc188e7dffd7335b646a85a21', 1, 'thomas@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
-(10, 'Guilherme de Souza', 12312312312, 0, '202cb962ac59075b964b07152d234b70', 1, 'guilheroiiiidaSilva@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
-(11, 'teste', 13423812828, 0, '202cb962ac59075b964b07152d234b70', 1, 'teste@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 0, 'Sem complemento', 'Rua Exemplo', NULL, NULL);
+(1, 'AdminGuiWillian', 13423812812, 45991347667, 'a688a47ac73fb58ce3828bcb184cb157', 'S', 'webmaster@bakery.com', '2006-09-29', 'A', 'Bairro Exemplo', 1200, 'Casa', 'Rua da nossa casa', NULL, NULL),
+(2, 'Guilherme', 34989387232, 45991349887, '202cb962ac59075b964b07152d234b70', 'S', 'guilherme@gmail.com', '2005-09-29', 'U', 'Consolata', 1908, 'Casa de esquina', 'Rua das coves', NULL, NULL),
+(3, 'William a', 9823948723, 45991344444, '202cb962ac59075b964b07152d234b70', 'S', 'willian@gmail.com', '2004-09-29', 'U', 'Casca velho', 4910, 'Prédio', 'Rua das Andorinhas', NULL, NULL),
+(4, 'Angélica', 12312312312, 45991344440, '202cb962ac59075b964b07152d234b70', 'S', 'angelica@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(5, 'Thomas', 12356789045, 45991344494, 'ef6e65efc188e7dffd7335b646a85a21', 'S', 'thomas@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(10, 'Guilherme de Souza', 12312312312, 45991344744, '202cb962ac59075b964b07152d234b70', 'S', 'guilheroiiiidaSilva@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL),
+(11, 'teste', 13423812828, 45991344478, '202cb962ac59075b964b07152d234b70', 'S', 'teste@gmail.com', '2000-01-01', 'U', 'Bairro Exemplo', 4910, 'Sem complemento', 'Rua Exemplo', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -154,16 +154,6 @@ CREATE TABLE `tb_vendas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Inserção de dados aleatórios na tabela `tb_vendas`
-INSERT INTO `tb_vendas` (`id_venda`, `tipovenda`, `dtvenda`, `frmpagamento`, `entregue`, `vlrentrega`, `data_entrega`, `dataagendamento`, `entregar`, `retirar`, `id_usuario`) VALUES 
-(1, 'online', '2024-10-29', 'cartão', 'sim', 5.00, '2024-11-01', '2024-10-29', '2024-10-30', '2024-10-30', 1), 
-(2, 'presencial', '2024-10-28', 'dinheiro', 'não', 0.00, '2024-10-30', '2024-10-28', '2024-10-28', '2024-10-29', 2), 
-(3, 'online', '2024-10-27', 'pix', 'sim', 7.00, '2024-11-02', '2024-10-27', '2024-10-28', '2024-10-29', 3);
-
--- Inserção de dados aleatórios na tabela `tb_vendaitens`
-INSERT INTO `tb_vendaitens` (`id_compraitem`, `valor`, `quantidade`, `id_venda`, `id_produto`) VALUES 
-(1, 25.00, 2, 1, 1), 
-(2, 30.00, 1, 2, 2), 
-(3, 50.00, 3, 3, 3);
 
 --
 -- Índices para tabelas despejadas
