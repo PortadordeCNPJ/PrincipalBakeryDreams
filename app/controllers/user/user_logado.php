@@ -18,10 +18,10 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
     // dd($emailUser);
 
     if ($emailLogado == $email && $senhaLogado == $senha) {
+        $_SESSION['email'] = $emailUser->email;
         $_SESSION['nome'] = $emailUser->nome;
         $_SESSION['tipo'] = $emailUser->tipo;
         $_SESSION['id_usuario'] = $emailUser->id_usuario;
-        $_SESSION['tipo'] = $emailUser->tipo;
         echo "<script>alert('Usuário logado!');</script>";
 
         if ($_SESSION['tipo'] == "U") {

@@ -3,6 +3,12 @@
 use app\classes\Cart;
 use app\models\ReadCart;
 
+if (empty($_SESSION)) {
+    $_SESSION['tipo'] = 'U';
+    $_SESSION['nome'] = "U";
+
+}
+
 $cart = new Cart;
 
 $read = new ReadCart;
@@ -80,15 +86,15 @@ $productsInCart = $cart->cart();
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <?php
-                            if (!empty($_SESSION)) {
-                                echo "<label for=''>Email</label>
-                                    <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
-                                    <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
-                            } else {
+                            if ($_SESSION['nome'] == "U") {
                             ?>
                                 <li><a class="dropdown-item" href="/user/user_login">Login</a></li>
                                 <li><a class="dropdown-item" href="/user/user_create">Cadastro</a></li>
                             <?php
+                            } else {
+                                echo "<label for=''>Email</label>
+                            <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
+                            <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
                             }
                             ?>
                         </ul>
