@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label class="form-label" for="imagem">imagem:</label>
-        <img src="../assets/images/<?php echo $productsFound->imagem ?>" alt="">
+        <img src="../assets/images/<?php echo $productsFound->imagem ?>" alt="" width="300">
         <input class="form-input" name="imagem" id="senha" type="file">
     </div>
 

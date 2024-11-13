@@ -12,58 +12,56 @@ $products = $cartProducts->products(new Cart);
 
 <script src="../../assets/js/scriptCartCount.js"></script>
 
-<h2>Cart | <a href="/cart_products">Home</a></h2>
-
-<div id="container">
-    <?php if (count($products['products']) <= 0) : ?>
-        <h3>Nenhum produto dentro do carrinho de compras</h3>
-    <?php else : ?>
+<header>
+    <h1><i class="fas fa-shopping-cart"></i> Carrinho de Compras</h1>
+    <a href="/cart_products" class="continue-shopping"><i class="fas fa-arrow-left"></i> Continuar Comprando</a>
+</header>
+<?php if (count($products['products']) <= 0) : ?>
+    <h1 style="text-align: center; margin-top: 8%;">Nenhum produto dentro do carrinho de compras</h1>
+<?php else : ?>
+    <main class="cart-container">
         <form action="/cart/confirm_purchase" method="POST">
-            <?php foreach ($products['products'] as $product) : ?>
-                <div class="cardProds">
-                    <div class="productsInsideCart">
-                        <img src="./assets/images/<?php echo $product['imagem']; ?>" class="imgsCardProduct" alt="">
-                    </div>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                    <div class="textProduct">
-                        <p>
-                            <?php echo $product['nome']; ?>
-                        </p>
-                        <p>
-                            <?php echo $product['descricao']; ?>
-                        </p>
 
-                        <!-- <p>
-                        <input id="subtotalCardCart" value="<?php //echo $product['subtotal'];
-                                                            ?>"></input>
-                    </p> -->
-                        <!-- <form action="/cart_quantidade" method="get" id="prodCart"> -->
-                        <input type="hidden" name="id_produto" value="<?php echo $product['id_produto']; ?>">
-                        <div class="texto-card">
-                            <div class="btn-count" onclick="abaixarQtd(<?php echo $product['id_produto']; ?>)">-</div>
-                            <input class="count" name="quantidade" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
-                            <div class="btn-count" onclick="almentarQtd(<?php echo $product['id_produto']; ?>)">+</div>
-                        </div>
-                        <p>
-                            <input type="hidden" id="valorCardCartFix-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
-                            <input id="valorCardCart-<?php echo $product['id_produto']; ?>" name="valor" value="<?php echo $product['valor']; ?>">
-                            <!-- <input id="valorCardCart-<?php echo $product['id_produto']; ?>" value="R$<?php echo number_format($product['valor'], 2, ',', '.'); ?>"> -->
-                        </p>
-                        <!-- </form> -->
-                        <a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove">Remove</a>
-                    </div>
-                </div>
-            <?php endforeach ?>
-            <div id="cart-total-clear">
-                <span id="cart-total">
-                    Total: R$ <?php echo number_format($products['total'], 2, ',', '.') ?>
-                </span>
+                    <?php foreach ($products['products'] as $product) : ?>
+                        <tr>
+                            <td><img src="./assets/images/<?php echo $product['imagem']; ?>" class="imgsCardProduct" alt=""> <?php echo $product['nome']; ?></td>
+                            <td>
+                                <div class="texto-card">
+                                    <div class="btn-count" onclick="abaixarQtd(<?php echo $product['id_produto']; ?>)">-</div>
+                                    <input class="count" name="quantidade" id="cart-input-qty-<?php echo $product['id_produto']; ?>" readonly value="<?php echo $product['qty']; ?>" />
+                                    <div class="btn-count" onclick="almentarQtd(<?php echo $product['id_produto']; ?>)">+</div>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo "R$" . number_format($product['valor'], 2, ',', '.'); ?>
+                            </td>
+                            <td><input style="width: 80px;" id="valorCardCart-<?php echo $product['id_produto']; ?>" name="valor" value="<?php echo $product['valor']; ?>"></td>
+                            <td style="text-align: center;"><a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove" class="remove-btn"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+                    <?php endforeach ?>
 
-                <span id="cart-clear">
-                    <a href="/cart_clear">Clear Cart</a>
-                </span>
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <h2>Resumo do Pedido</h2>
+                <p><a href="/cart_clear">Clear Cart</a></p>
+                <p>Entrega: <span>R$ 10,00</span></p>
+                <p><strong>Total: <span>R$ <?php echo number_format($products['total'], 2, ',', '.') ?></span></strong></p>
+                <button class="checkout-btn"><i class="fas fa-credit-card"></i> Finalizar Compra</button>
             </div>
-            <button type="submit">Confirmar compra</button>
         </form>
     <?php endif ?>
-</div>
+    </main>

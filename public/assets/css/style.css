@@ -557,3 +557,114 @@ ul {
 }
 
 /*------------- FIM CSS PARA FOOTER --------------------*/
+
+/*------------- INICIO CSS PARA O CSS DO CARRINHO --------------------*/
+
+header {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.continue-shopping {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.cart-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #ffe4e1;
+}
+
+.cart-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remove-btn {
+  background: #ff6347 !important;
+  color: #fff !important;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover {
+  background: #e55337;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cart-summary h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.cart-summary p {
+  margin: 5px 0;
+}
+
+.checkout-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #ff5a4d;
+}
+
+/*------------- FIM CSS PARA CSS DO CARRINHO --------------------*/
