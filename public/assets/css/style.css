@@ -668,3 +668,88 @@ input[type="number"] {
 }
 
 /*------------- FIM CSS PARA CSS DO CARRINHO --------------------*/
+
+/*------------- INICIO CSS PARA CSS DO RELATÓRIO DE VENDAS --------------------*/
+:root {
+  --primary-color: #FF6600;
+  /* Laranja */
+  --secondary-color: #FFD700;
+  /* Amarelo dourado */
+  --background-color: #FFF5E1;
+  /* Bege claro */
+  --text-color: #333;
+  /* Texto escuro */
+  --header-color: #FF4500;
+  /* Laranja escuro */
+}
+
+
+/* Cabeçalho */
+.header-sales {
+  background-color: var(--header-color);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Container do relatório */
+.report-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Resumo */
+.summary {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.summary h2 {
+  color: var(--primary-color);
+}
+
+/* Tabela de vendas */
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.sales-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.sales-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.sales-table td {
+  color: var(--text-color);
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 600px) {
+
+  .sales-table th,
+  .sales-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .report-container {
+    padding: 15px;
+  }
+}
+
+/*------------- FIM CSS PARA CSS DO RELATÓRIO DE VENDAS --------------------*/

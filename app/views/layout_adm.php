@@ -78,6 +78,9 @@ $productsInCart = $cart->cart();
                             <li class="comic-button-adm">
                                 <?php echo menuItemAdm("/consulta_produto", "Lista de Produtos"); ?>
                             </li>
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/sales_report", "Relatório de Vendas"); ?>
+                            </li>
                             <li class="nav-item dropdown comic-button-adm" style="z-index: 1;">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-regular fa-user"></i>

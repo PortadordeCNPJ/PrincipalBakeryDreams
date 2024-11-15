@@ -1,9 +1,9 @@
 <?php
 
-use app\models\ReadCart;
+use app\models\VendaItens;
 
-$product = new ReadCart;
+$product = new VendaItens;
 
-$produtcsCake = $product->salesReportCake();
+$produtcs_report = $product->salesReportCake();
 
 $layout_adm->add('sales_report');
