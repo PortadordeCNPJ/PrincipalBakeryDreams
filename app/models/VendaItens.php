@@ -8,11 +8,39 @@ class VendaItens extends Model
 
     public function salesReportCake()
     {
-        $sql = "select id_compraitem, {$this->table}.id_produto, tb_produtos.nome, sum(quantidade) as quantidade_uni, tb_produtos.valor, (sum(quantidade) * tb_produtos.valor) as valor_total_uni
-                FROM {$this->table} 
-                INNER JOIN tb_vendas ON tb_vendas.id_venda = {$this->table}.id_venda 
-                INNER JOIN tb_produtos ON tb_produtos.id_produto = {$this->table}.id_produto
-                GROUP BY {$this->table}.id_produto, tb_produtos.nome, tb_produtos.valor;";
+        $sql = "SELECT 
+    tb_vendaitens.id_produto, 
+    tb_produtos.nome, 
+    SUM(tb_vendaitens.quantidade) AS quantidade_uni, 
+    tb_produtos.valor, 
+    (SUM(tb_vendaitens.quantidade) * tb_produtos.valor) AS valor_total_uni,
+    (SELECT 
+        SUM(tb_vendaitens.quantidade * tb_produtos.valor)
+     FROM 
+        tb_vendaitens
+     INNER JOIN 
+        tb_produtos ON tb_produtos.id_produto = tb_vendaitens.id_produto
+    ) AS valor_total
+FROM 
+    tb_vendaitens 
+INNER JOIN 
+    tb_vendas ON tb_vendas.id_venda = tb_vendaitens.id_venda 
+INNER JOIN 
+    tb_produtos ON tb_produtos.id_produto = tb_vendaitens.id_produto
+GROUP BY 
+    tb_vendaitens.id_produto, 
+    tb_produtos.nome, 
+    tb_produtos.valor;
+";
+        $select = $this->connection->prepare($sql);
+        $select->execute();
+
+        return $select;
+    }
+
+    public function salesTotalValue() 
+    {
+        $sql = "SELECT SUM(tb_vendaitens.quantidade * tb_produtos.valor) AS valor_total_todas_compras FROM tb_vendaitens INNER JOIN tb_vendas ON tb_vendas.id_venda = tb_vendaitens.id_venda INNER JOIN tb_produtos ON tb_produtos.id_produto = tb_vendaitens.id_produto;";
         $select = $this->connection->prepare($sql);
         $select->execute();
 

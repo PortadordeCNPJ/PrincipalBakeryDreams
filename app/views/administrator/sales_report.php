@@ -5,7 +5,7 @@
 <section class="report-container">
     <div class="summary">
         <h2>Resumo</h2>
-        <p>Total de Vendas: <strong>R$ 12.345,67</strong></p>
+        <p>Total de Vendas: <strong>R$ <?php echo $total_value; ?></strong></p>
         <p>Produtos Vendidos: <strong>150</strong></p>
         <p>Clientes Atendidos: <strong>120</strong></p>
     </div>
@@ -25,7 +25,7 @@
                 <td>" . $produtc_reports->nome . "</td>
                 <td>" . $produtc_reports->quantidade_uni . "</td>
                 <td>R$ " . $produtc_reports->valor . "</td>
-                <td>" . $produtc_reports->valor_total_uni . "</td>
+                <td>R$ " . $produtc_reports->valor_total_uni . "</td>
             </tr>";
         }?>
         </tbody>
