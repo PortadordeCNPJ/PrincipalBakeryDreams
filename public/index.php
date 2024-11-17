@@ -41,6 +41,8 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         '/user_deslogado' => 'controllers/user/user_deslogado',
         '/user/user_login' => 'controllers/user/user_login',
         '/user/user_create' => 'controllers/user/user_create',
+        '/user/user_edit' => 'controllers/user/user_edit',
+        '/user_update_store' => 'controllers/user/user_update_store',
 
         //Para as página de dentro da pasta de cart
         '/cart' => 'controllers/cart/cart',

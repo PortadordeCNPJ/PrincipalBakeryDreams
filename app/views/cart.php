@@ -49,7 +49,7 @@ $products = $cartProducts->products(new Cart);
                             </td>
                             <td>
                                 <input type="hidden" id="valorCardCartFix-<?php echo $product['id_produto']; ?>" value="<?php echo $product['valor']; ?>">
-                                <input style="width: 80px;" id="valorCardCart-<?php echo $product['id_produto']; ?>" name="valor" value="<?php echo $product['valor']; ?>">
+                                <input style="width: 80px;" id="valorCardCart-<?php echo $product['id_produto']; ?>" class="cart-number" name="valor" value="<?php echo $product['valor']; ?>">
                             </td>
                             <td style="text-align: center;"><a href="/cart_remove?id_produto=<?php echo $product['id_produto'] ?>" id="cart-remove" class="remove-btn"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
@@ -62,7 +62,7 @@ $products = $cartProducts->products(new Cart);
                 <h2>Resumo do Pedido</h2>
                 <p><a href="/cart_clear">Clear Cart</a></p>
                 <p>Entrega: <span>R$ 10,00</span></p>
-                <p><strong>Total: <input style="width: 100px;" id="precototal" readonly value="R$ 0,00" /></strong></p>
+                <p><strong>Total: <input style="width: 100px;" id="precototal" class="cart-number" readonly value="R$ 0,00" /></strong></p>
                 <button class="checkout-btn"><i class="fas fa-credit-card"></i> Finalizar Compra</button>
             </div>
         </form>
