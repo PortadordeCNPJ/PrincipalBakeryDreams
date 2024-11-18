@@ -93,6 +93,7 @@ $productsInCart = $cart->cart();
                             } else {
                                 echo "<label for=''>Email</label>
                             <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
+                            <li><a class='dropdown-item' href='/user/user_edit'>Informações Pessoais</a></li>
                             <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
                             }
                             ?>
