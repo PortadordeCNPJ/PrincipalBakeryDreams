@@ -780,21 +780,21 @@ header {
 }
 
 /* Grupo de formulário */
-.form-group {
+.form-group-user {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 /* Rótulos dos campos */
-.form-label {
+.form-label-user {
   margin-bottom: 5px;
   color: #555;
   font-size: 14px;
 }
 
 /* Campos de entrada */
-.form-input {
+.form-input-user {
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -802,13 +802,13 @@ header {
 }
 
 /* Efeito de foco */
-.form-input:focus {
+.form-input-user:focus {
   border-color: #4caf50;
   outline: none;
 }
 
 /* Estilo do botão de envio */
-.form-button {
+.form-button-user {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -820,8 +820,27 @@ header {
 }
 
 /* Efeito de hover no botão */
-.form-button:hover {
+.form-button-user:hover {
   background-color: #45a049;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table tr.inactive {
+  background-color: #ffcccc; /* Vermelho claro para inativos */
+}
+
+.user-table tr:hover {
+  background-color: #f2f2f2;
 }
 
 /*------------- FIM CSS PARA CSS DO CLIENTE --------------------*/

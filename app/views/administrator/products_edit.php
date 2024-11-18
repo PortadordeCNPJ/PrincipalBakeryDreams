@@ -61,6 +61,5 @@
     </div>
     <div>
         <button class="form-button" type="submit">Cadastrar</button>
-        <a class="form-button" href="/administrator/admin">Cadastrar</a>
     </div>
 </form>/

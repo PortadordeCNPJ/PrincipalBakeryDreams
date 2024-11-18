@@ -2,7 +2,7 @@
 
 use app\models\User;
 
-if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
+if (empty($_POST) or (empty($_POST["email"])) or (empty($_POST["senha"]))) {
     echo "<script>alert('Usuario ou senha não encontros');</script>";
     header('location: /');
 } else {
@@ -14,23 +14,28 @@ if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
     $emailLogado = $emailUser->email;
     $senhaUser = $user->find('senha', $senha);
     $senhaLogado = $emailUser->senha;
-
+    $ativoLogado = $emailUser->ativo;
     // dd($emailUser);
 
-    if ($emailLogado == $email && $senhaLogado == $senha) {
-        $_SESSION['email'] = $emailUser->email;
-        $_SESSION['nome'] = $emailUser->nome;
-        $_SESSION['tipo'] = $emailUser->tipo;
-        $_SESSION['id_usuario'] = $emailUser->id_usuario;
-        echo "<script>alert('Usuário logado!');</script>";
+    if ($ativoLogado == "S") {
+        if ($emailLogado == $email && $senhaLogado == $senha) {
+            $_SESSION['email'] = $emailUser->email;
+            $_SESSION['nome'] = $emailUser->nome;
+            $_SESSION['tipo'] = $emailUser->tipo;
+            $_SESSION['id_usuario'] = $emailUser->id_usuario;
+            echo "<script>alert('Usuário logado!');</script>";
 
-        if ($_SESSION['tipo'] == "U") {
-            $layout->add('home');
+            if ($_SESSION['tipo'] == "U") {
+                $layout->add('home');
+            } else {
+                $layout_adm->add('admin');
+            }
         } else {
-            $layout_adm->add('admin');
+            echo "<script>alert('Usuario ou senha não encontrados!');</script>";
+            echo "<script>location.href='/user/user_login';</script>";
         }
     } else {
-        echo "<script>alert('Usuario ou senha não encontrados!');</script>";
+        echo "<script>alert('Usuario está inativo, contate um administrator');</script>";
         echo "<script>location.href='/user/user_login';</script>";
     }
 }

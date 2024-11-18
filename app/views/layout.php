@@ -6,7 +6,6 @@ use app\models\ReadCart;
 if (empty($_SESSION)) {
     $_SESSION['tipo'] = 'U';
     $_SESSION['nome'] = "U";
-
 }
 
 $cart = new Cart;

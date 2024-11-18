@@ -3,56 +3,57 @@
         <h2 class="form-title">Dados Pessoais</h2>
         <form class="personal-form" method="POST" action="/user_update_store">
             <div class="form-row">
-                <div class="form-group">
-                    <label for="email" class="form-label">E-mail</label>
-                    <input type="email" id="email" class="form-input" name="email" placeholder="seuemail@email.com.br" required value="<?= $userEncontrado->email ?>">
+                <div class="form-group-user">
+                    <input type="hidden" id="email" class="form-input-user" name="id_usuario" placeholder="seuemail@email.com.br" required value="<?= $userEncontrado->id_usuario ?>">
+                    <label for="email" class="form-label-user">E-mail</label>
+                    <input type="email" id="email" class="form-input-user" name="email" placeholder="seuemail@email.com.br" required value="<?= $userEncontrado->email ?>">
                 </div>
-                <div class="form-group">
-                    <label for="telefone" class="form-label">Telefone celular</label>
-                    <input type="tel" id="telefone" class="form-input" name="fone" placeholder="(45) 99134-9889" required value="<?= $userEncontrado->fone ?>">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nome" class="form-label">Nome completo</label>
-                    <input type="text" id="nome" class="form-input" name="nome" placeholder="João Andrade da Silva" required value="<?= $userEncontrado->nome ?>">
-                </div>
-                <div class="form-group">
-                    <label for="rg" class="form-label">Rua</label>
-                    <input type="text" id="rg" class="form-input" name="rua" placeholder="Digite a rua da sua casa" value="<?= $userEncontrado->rua ?>">
+                <div class="form-group-user">
+                    <label for="telefone" class="form-label-user">Telefone celular</label>
+                    <input type="tel" id="telefone" class="form-input-user" name="fone" placeholder="(45) 99134-9889" required value="<?= $userEncontrado->fone ?>">
                 </div>
             </div>
 
             <div class="form-row">
-                <div class="form-group">
-                    <label for="cpf" class="form-label">CPF</label>
-                    <input type="number" id="cpf" class="form-input" name="cpf" placeholder="Digite seu CPF" required value="<?= $userEncontrado->cpf ?>">
+                <div class="form-group-user">
+                    <label for="nome" class="form-label-user">Nome completo</label>
+                    <input type="text" id="nome" class="form-input-user" name="nome" placeholder="João Andrade da Silva" required value="<?= $userEncontrado->nome ?>">
                 </div>
-                <div class="form-group">
-                    <label for="cpf" class="form-label">Bairro</label>
-                    <input type="text" id="bairro" class="form-input" name="bairro" placeholder="Digite seu bairro" required value="<?= $userEncontrado->bairro ?>">
+                <div class="form-group-user">
+                    <label for="rg" class="form-label-user">Rua</label>
+                    <input type="text" id="rg" class="form-input-user" name="rua" placeholder="Digite a rua da sua casa" value="<?= $userEncontrado->rua ?>">
                 </div>
             </div>
 
             <div class="form-row">
-                <div class="form-group">
-                    <label for="data-nascimento" class="form-label">Data de Aniversário</label>
-                    <input type="date" id="data-nascimento" class="form-input" name="dt_nasc" required value="<?= $userEncontrado->dt_nasc ?>">
+                <div class="form-group-user">
+                    <label for="cpf" class="form-label-user">CPF</label>
+                    <input type="number" id="cpf" class="form-input-user" name="cpf" placeholder="Digite seu CPF" required value="<?= $userEncontrado->cpf ?>">
                 </div>
-                <div class="form-group">
-                    <label for="ncasa" class="form-label">Número da casa:</label>
-                    <input type="number" id="ncasa" class="form-input" name="nmcasa" placeholder="Digite número da casa" required value="<?= $userEncontrado->nmcasa ?>">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="ncasa" class="form-label">Complemento:</label>
-                    <input type="text" id="ncasa" class="form-input" name="complemento" placeholder="Digite o complemento" required value="<?= $userEncontrado->complemento ?>">
+                <div class="form-group-user">
+                    <label for="cpf" class="form-label-user">Bairro</label>
+                    <input type="text" id="bairro" class="form-input-user" name="bairro" placeholder="Digite seu bairro" required value="<?= $userEncontrado->bairro ?>">
                 </div>
             </div>
 
-            <button type="submit" class="form-button">Enviar</button>
+            <div class="form-row">
+                <div class="form-group-user">
+                    <label for="data-nascimento" class="form-label-user">Data de Aniversário</label>
+                    <input type="date" id="data-nascimento" class="form-input-user" name="dt_nasc" required value="<?= $userEncontrado->dt_nasc ?>">
+                </div>
+                <div class="form-group-user">
+                    <label for="ncasa" class="form-label-user">Número da casa:</label>
+                    <input type="number" id="ncasa" class="form-input-user" name="nmcasa" placeholder="Digite número da casa" required value="<?= $userEncontrado->nmcasa ?>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group-user">
+                    <label for="ncasa" class="form-label-user">Complemento:</label>
+                    <input type="text" id="ncasa" class="form-input-user" name="complemento" placeholder="Digite o complemento" required value="<?= $userEncontrado->complemento ?>">
+                </div>
+            </div>
+
+            <button type="submit" class="form-button-user">Enviar</button>
         </form>
     </div>
 </div>
