@@ -44,6 +44,6 @@ GROUP BY
         $select = $this->connection->prepare($sql);
         $select->execute();
 
-        return $select;
+        return $select->fetchAll();
     }
 }
