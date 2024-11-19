@@ -8,7 +8,7 @@ $produtcs_report = $product->salesReportCake();
 
 $produtcs_value = $product->salesTotalValue();
 
-$total_value = $produtcs_value->valor_total;
+// $total_value = $produtcs_value->valor_total;
 
 // var_dump($produtcs_report);
 // var_dump($produtcs_value);

@@ -7,7 +7,6 @@ function calcValor(id_produto) {
     const inputContagem = document.getElementById("cart-input-qty-" + id_produto);
 
     if (precoProdutoElemento && precoProdFix && inputContagem) {
-        debugger
         const quantidade = parseInt(inputContagem.value);
         const precoUnitario = parseFloat(precoProdFix.value);
         const precoTotalProduto = quantidade * precoUnitario;

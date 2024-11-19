@@ -19,7 +19,7 @@ if (isset($_GET['token'])) {
     if ($userToken) {
         // Se o token for válido, exibe o formulário para redefinir a senha
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $nova_senha =  md5($_POST['senha']);    
+            $nova_senha =  md5($_POST['senha']);
             $confirmar_senha = md5($_POST['confirmar_senha']);
 
             if ($nova_senha === $confirmar_senha) {
@@ -40,11 +40,14 @@ if (isset($_GET['token'])) {
     echo "Token não fornecido!";
 }
 ?>
-
-<!-- Formulário de redefinição de senha -->
-<form action="" method="POST">
-    <input type="hidden" name="token" value="<?php $token ?>">
-    <input type="password" name="senha" placeholder="Nova senha" required>
-    <input type="password" name="confirmar_senha" placeholder="Confirmar nova senha" required>
-    <button type="submit">Redefinir Senha</button>
-</form>
+<div class="container">
+    <section class="form-section">
+        <!-- Formulário de redefinição de senha -->
+        <form action="" method="POST" class="contact-form">
+            <input class="form-input" type="hidden" name="token" value="<?php $token ?>">
+            <input class="form-input" type="password" name="senha" placeholder="Nova senha" required>
+            <input class="form-input" type="password" name="confirmar_senha" placeholder="Confirmar nova senha" required>
+            <button type="submit" class="form-button">Redefinir Senha</button>
+        </form>
+    </section>
+</div>

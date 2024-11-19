@@ -37,6 +37,6 @@
     </section>
 
     <div class="cta">
-        <button onclick="location.href='contato.html'">Venha nos Conhecer!</button>
+        <button onclick="location.href='/pages/contato'">Venha nos Conhecer!</button>
     </div>
 </div>
