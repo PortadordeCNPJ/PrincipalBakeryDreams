@@ -4,9 +4,9 @@ use app\models\VendaItens;
 
 $user = new VendaItens;
 
-// $user->finalizarVenda();
+$user->finalizarVenda();
 
-// $userOla = $user->finalizarCompra();
+$userOla = $user->finalizarCompra();
 
 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
     // Aqui você pode adicionar o código para finalizar a compra, como inserir os dados no banco de dados, gerar um pedido, etc.
