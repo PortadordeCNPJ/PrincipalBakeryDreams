@@ -1042,7 +1042,9 @@ header {
 /*------------- FIM CSS PARA CSS DO CLIENTE --------------------*/
 
 
-.form-control, .btn-primary, .btn-secondary {
+.form-control,
+.btn-primary,
+.btn-secondary {
   background-color: #32444b;
   color: #fff;
   border: none;
@@ -1132,21 +1134,64 @@ header {
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
-      padding: 0 15px;
+    padding: 0 15px;
   }
 
   .carrinho-container {
-      width: 100%;
-      padding: 15px;
+    width: 100%;
+    padding: 15px;
   }
 }
 
 /* Customização para alinhar os itens da navbar à esquerda */
 .navbar-nav {
-  margin-left: 0; /* Alinha os itens da navbar à esquerda */
+  margin-left: 0;
+  /* Alinha os itens da navbar à esquerda */
 }
 
 .navbar-nav .nav-link {
-  padding-left: 0; /* Remove o espaçamento à esquerda */
-  padding-right: 15px; /* Dá um pequeno espaçamento à direita */
+  padding-left: 0;
+  /* Remove o espaçamento à esquerda */
+  padding-right: 15px;
+  /* Dá um pequeno espaçamento à direita */
+}
+
+/*------------- INICIO CSS PARA PAGE NOT FOUND --------------------*/
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.flex h1 {
+  font-size: 6rem;
+  color: #ff6600;
+  /* Combina com o laranja do cabeçalho */
+  margin: 0;
+}
+
+.flex h2 {
+  font-size: 2rem;
+  margin: 10px 0 20px;
+}
+
+.flex a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff6600;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.flex a:hover {
+  background-color: #cc5200;
+  /* Um laranja mais escuro para o hover */
 }
