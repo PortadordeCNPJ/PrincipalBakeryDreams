@@ -6,7 +6,6 @@
     <div class="summary">
         <h2>Resumo</h2>
         <p>Total de Vendas: <strong>R$ <?php echo $produtcs_value[0]->valor_total_todas_compras; ?></strong></p>
-        <p>Produtos Vendidos: <strong>150</strong></p>
     </div>
 
     <table class="sales-table">

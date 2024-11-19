@@ -14,7 +14,7 @@ if ($_SESSION['email'] == "") {
     $userEndereco = $userEncontrado->nmcasa;
 
     if ($userEndereco > 0) {
-        $valor = $_POST['valor'];
+        $valor = $_POST['preco-total'];
         $quantidade = $_POST['quantidade'];
         $layout->add('cart/confirm_purchase_finish');
     } else {

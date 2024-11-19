@@ -34,5 +34,5 @@ if (isset($validate->dt_nasc) && !empty($validate->dt_nasc)) {
     }
 } else {
     echo "<script>alert('Data de nascimento inválida.');</script>";
-    header('location: /');
+    header('location: /user/user_edit');
 }

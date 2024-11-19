@@ -15,7 +15,7 @@ if (!empty($_POST) && !empty($_POST['filter_user'])) {
     $layout_adm->add('user_list');
 
 } else {
-    echo "Nenhum filtro pesquisado";
+    header('location: /user_list');
 }
 
 
