@@ -91,8 +91,8 @@ $productsInCart = $cart->cart();
                                 <li><a class="dropdown-item" href="/user/user_create">Cadastro</a></li>
                             <?php
                             } else {
-                                echo "<label for=''>Email</label>
-                            <input type='text' disabled class='form-control' name='email' placeholder='Digite seu email' value='" . $_SESSION["nome"] . "'>
+                                echo "
+                            <li>" . $_SESSION["nome"] . "</li>
                             <li><a class='dropdown-item' href='/user/user_edit'>Informações Pessoais</a></li>
                             <li><a class='dropdown-item' href='/user_deslogado'>Sair</a></li>";
                             }
