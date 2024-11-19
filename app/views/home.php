@@ -18,28 +18,29 @@
         </div>
         <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
             <?php foreach ($products as $index => $product) : ?>
-                <?php if ($product->id_tipoproduto == 1) : ?>
-
-                    <div>
-                        <h3>
-                            <div class="cardProds">
-                                <div class="productsInsideCart">
-                                    <img src="../assets/images/<?php echo $product->imagem; ?>" class="imgsCardProduct" alt="">
+                <?php if ($product->ativo == 'S') : ?>
+                    <?php if ($product->id_tipoproduto == 1) : ?>
+                        <div>
+                            <h3>
+                                <div class="cardProds">
+                                    <div class="productsInsideCart">
+                                        <img src="../assets/images/<?php echo $product->imagem; ?>" class="imgsCardProduct" alt="">
+                                    </div>
+                                    <div class="textProduct">
+                                        <p>
+                                            <?php echo $product->nome; ?>
+                                        </p>
+                                        <p>
+                                            <?php echo $product->descricao; ?>
+                                        </p>
+                                        <p>
+                                            <a href="/produtos/cakes"> Visitar Página de Bolos </a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="textProduct">
-                                    <p>
-                                        <?php echo $product->nome; ?>
-                                    </p>
-                                    <p>
-                                        <?php echo $product->descricao; ?>
-                                    </p>
-                                    <p>
-                                        <a href="/produtos/cakes"> Visitar Página de Bolos </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </h3>
-                    </div>
+                            </h3>
+                        </div>
+                    <?php endif ?>
                 <?php endif ?>
             <?php endforeach ?>
         </div>

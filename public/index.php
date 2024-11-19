@@ -51,9 +51,11 @@ if (empty($_SESSION) or $_SESSION['tipo'] == 'U') {
         '/cart_remove' => 'controllers/cart/cart_remove',
         '/cart_products' => 'controllers/cart/cart_products',
         '/cart_quantidade' => 'controllers/cart/cart_quantidade',
+        '/finalizar_compra' => 'controllers/cart/finalizar_compra',
         '/cart/confirm_purchase' => 'controllers/cart/confirm_purchase',
         '/cart/confirm_purchase_store' => 'controllers/cart/confirm_purchase_store',
         '/cart/confirm_purchase_finish' => 'controllers/cart/confirm_purchase_finish',
+
 
         //Para o formulário que cadastra os produtos
         '/cadastro_store' => 'controllers/produtos/cadastro_store',

@@ -2,7 +2,7 @@
 
 <img class="img-form-1" src="../../assets/img/cake.png">
 
-<form id="form" class="colorful-form" method="post" action="/cadastro_store">
+<form id="form" class="colorful-form" method="post" action="/finalizar_compra">
 
     <div class="form-group">
         <label class="form-label" for="imagem">Tipo da venda:</label>

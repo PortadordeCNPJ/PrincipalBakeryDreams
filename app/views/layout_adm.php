@@ -79,6 +79,12 @@ $productsInCart = $cart->cart();
                                 <?php echo menuItemAdm("/consulta_produto", "Lista de Produtos"); ?>
                             </li>
                             <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/type_product_consult", "Lista de tipo de produtos"); ?>
+                            </li>
+                            <li class="comic-button-adm">
+                                <?php echo menuItemAdm("/type_product_create", "Cadastro lista de produtos"); ?>
+                            </li>
+                            <li class="comic-button-adm">
                                 <?php echo menuItemAdm("/sales_report", "Relatório de Vendas"); ?>
                             </li>
                             <li class="nav-item dropdown comic-button-adm" style="z-index: 1;">
