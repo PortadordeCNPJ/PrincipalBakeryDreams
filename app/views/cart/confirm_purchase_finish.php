@@ -6,14 +6,13 @@
 
     <div class="form-group">
         <label class="form-label" for="imagem">Tipo da venda:</label>
-        <label class="form-label-radio" for="sim">Entrega</label> <input type="radio" name="tipovenda" value="agendamento">
+        <label class="form-label-radio" for="sim">Entrega</label> <input checked type="radio" name="tipovenda" value="entrega">
         <label class="form-label-radio" for="nao">Retirada no local</label> <input type="radio" name="tipovenda" value="retirada">
     </div>
 
     <div class="form-group">
         <label class="form-label" for="imagem">Tipo da Recebimento:</label>
-        <label class="form-label-radio" for="sim">Agendamento</label> <input type="radio" name="tiporecebi" value="agendamento">
-        <label class="form-label-radio" for="nao">Pronta Entrega</label> <input type="radio" name="tiporecebi" value="confCompra">
+        <label class="form-label-radio" for="sim">Fazer um calendario aqui, para retirada e entrega com agendamento</label> <input type="radio" name="tiporecebi" value="agendamento">
     </div>
 
     <div class="form-group">

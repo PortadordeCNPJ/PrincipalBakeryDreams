@@ -61,7 +61,7 @@ $productsInCart = $cart->cart();
     <nav class="navbar navbar-expand-lg header-pg-princ navbar-custom">
         <div class="container">
             <div class="navbar-brand me-auto d-flex">
-                <a href="#">
+                <a href="/">
                     <img src="../../assets/images/logoSite.png" alt="" width="200" height="150">
                 </a>
             </div>

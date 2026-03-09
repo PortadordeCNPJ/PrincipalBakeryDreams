@@ -1,21 +1,29 @@
 <?php
 
+use app\models\User;
 use app\models\VendaItens;
 
 $user = new VendaItens;
+$userFind = new User;
 
-$user->finalizarVenda();
 
-$userOla = $user->finalizarCompra();
+//Adicionar mais formas de pagamento, como o cartão, mesmo que sendo possível usar
+//Quando usar o calendário, fazer as varificações de data, para ver se o cliente não adicionou uma data inválida.
+if ($_POST["tipovenda"] == "entrega") {
+    $id_usuario = $_SESSION["id_usuario"];
 
-if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
-    // Aqui você pode adicionar o código para finalizar a compra, como inserir os dados no banco de dados, gerar um pedido, etc.
+    $userEncontrado = $userFind->find('id_usuario', $id_usuario);
+    $userEndereco = $userEncontrado->rua;
 
-    // Limpa o carrinho após a finalização
-    unset($_SESSION['cart']);
-    $compra_finalizada = true;
+    if ($userEndereco !== "") {
+        $valor = $_POST['preco-total'];
+        $quantidade = $_POST['quantidade'];
+        $layout->add('cart/finalizar_compra');
+    } else {
+        $layout->add('cart/confirm_purchase');
+    }
 } else {
-    $compra_finalizada = false;
-}
+    //Arrumar essa bosta aqui, tudo ganbiarreira veia
 
-$layout->add('cart/finalizar_compra');
+    
+}
